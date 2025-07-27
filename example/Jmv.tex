@@ -1,0 +1,299 @@
+\documentclass[a4paper]{article}
+
+% Packages
+\usepackage{geometry}
+\geometry{left=1.5cm, right=1.5cm, top=2.54cm, bottom=2.54cm}
+\usepackage{graphicx, hyperref, setspace, amsmath, amssymb, titlesec, fancyhdr, multicol, parskip, indentfirst, etoolbox, caption, cite, hyperref, xcolor}
+
+
+
+% Title Formatting
+\titleformat{\section}{\centering\large\scshape}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection.}{1em}{}
+\setstretch{1.0} % Keep single spacing
+\setlength{\parskip}{6pt} % Space between paragraphs
+\titlespacing{\section}{0pt}{6pt}{6pt}
+\titlespacing{\subsection}{0pt}{6pt}{6pt}
+\titlespacing{\subsubsection}{0pt}{6pt}{6pt}
+% Document Title
+\title{
+    \textbf{Paper Title with First Letter of Each Word Capitalized} 
+    \thanks{
+        \sloppy
+        \textbf{Cite (APA):} Surname, N., Surname, N., \& Surname, N. (\the\year). Paper Title. \textit{Journal of Metaverse, Volume}(IssueNo), XX-XX. https://doi.org/10.57019/jmv.XXXXXXX
+    }
+}
+
+\date{} % No date
+\captionsetup{labelfont={small,sc}, textfont={small,sc}}
+% Section Numbering
+% Define numbering format
+\renewcommand{\thesection}{\Roman{section}.}
+\renewcommand{\thesubsection}{\textit{\Alph{subsection}.}}
+\renewcommand{\thesubsubsection}{\textit{\arabic{subsubsection}.}}
+\renewcommand{\thetable}{\Roman{table}} % Set table numbering to Roman
+\renewcommand{\thefigure}{\Roman{figure}} % Number figures in Roman numerals
+
+% Make titles italic as well
+
+\titleformat{\subsection}{\normalfont\large\itshape}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\normalfont\itshape}{\thesubsubsection}{1em}{}
+
+
+\setcounter{page}{5}
+
+% Fancy Header Configuration
+\pagestyle{fancy}
+\fancyhf{} % Clear all header/footer fields
+
+% First Page Header
+\fancypagestyle{firstpage}{
+    \fancyhead[C]{
+        \centering
+        {\fontsize{14pt}{10pt}\selectfont
+        \textbf{Journal of Metaverse}\\
+        \textbf{Research Article}}\\
+        {\fontsize{8pt}{10pt}\selectfont
+        \textbf{Received:} 2025-01-01 \textbf{Reviewing:} 2025-01-01 \& 2025-01-01 \textbf{Accepted:} 2025-01-01 \textbf{Online:} 2025-01-01 \textbf{Issue Date:} 2025-01-01}\\
+        \textbf{Year:} 202Y, \textbf{Volume:} X, \textbf{Issue:} X, \textbf{Pages:} XX-XX, \textbf{Doi:} 10.57019/jmv.XXXXXX
+    }
+}
+
+% Default Header for Other Pages
+\fancyhead[C]{\textbf{Journal of Metaverse}}
+
+\fancyfoot[L]{\includegraphics[width=1.5cm]{cc-by.png}}  % Adjust path & size
+\fancyfoot[R]{\includegraphics[width=1.5cm]{cc-by.png}}  % Adjust path & size
+\fancyfoot[C]{This work is licensed under a Creative Commons Attribution 4.0 International License.\\ \thepage}
+
+
+\begin{document}
+
+\maketitle
+\vspace{-1.5cm}
+\thispagestyle{firstpage}
+
+% Authors Block
+\begin{multicols}{3}
+    \centering
+    \textbf{Name SURNAME}\\
+    \textit{University of XXX}\\
+    \textit{City, Country}\\
+    \textit{email@email.edu}\\
+    \href{https://orcid.org/XXXX-XXXX-XXXX-XXXX}{%
+    \includegraphics[width=10pt]{orcid.png}
+    XXXX-XXXX-XXXX-XXXX
+	}
+	\vfill
+
+    \textbf{Name SURNAME}\\
+    \textit{University of XXX}\\
+    \textit{City, Country}\\
+    \textit{email@email.edu}\\
+    \href{https://orcid.org/XXXX-XXXX-XXXX-XXXX}{%
+    \includegraphics[width=10pt]{orcid.png}
+    XXXX-XXXX-XXXX-XXXX
+	}    
+    \vfill
+
+    \columnbreak
+
+    \textbf{Name SURNAME}\\
+    \textit{University of XXX}\\
+    \textit{City, Country}\\
+    \textit{email@email.edu}\\
+    \href{https://orcid.org/XXXX-XXXX-XXXX-XXXX}{%
+    \includegraphics[width=10pt]{orcid.png}
+    XXXX-XXXX-XXXX-XXXX
+	}  
+    \vfill
+
+    \textbf{Name SURNAME}\\
+    \textit{University of XXX}\\
+    \textit{City, Country}\\
+    \textit{email@email.edu}\\
+    \href{https://orcid.org/XXXX-XXXX-XXXX-XXXX}{%
+    \includegraphics[width=10pt]{orcid.png}
+    XXXX-XXXX-XXXX-XXXX
+	}  
+    \vfill
+
+    \columnbreak
+
+    \textbf{Name SURNAME}\\
+    \textit{University of XXX}\\
+    \textit{City, Country}\\
+    \textit{email@email.edu}\\
+    \href{https://orcid.org/XXXX-XXXX-XXXX-XXXX}{%
+    \includegraphics[width=10pt]{orcid.png}
+    XXXX-XXXX-XXXX-XXXX
+	}  
+    \vfill
+
+    \textbf{Name SURNAME}\\
+    \textit{University of XXX}\\
+    \textit{City, Country}\\
+    \textit{email@email.edu}\\
+    \href{https://orcid.org/XXXX-XXXX-XXXX-XXXX}{%
+    \includegraphics[width=10pt]{orcid.png}
+    XXXX-XXXX-XXXX-XXXX
+	}
+    \textit{(Corresponding Author)}\\
+    \vfill
+\end{multicols}
+
+\singlespacing
+\setlength{\parskip}{6pt}
+\setlength{\parindent}{0.5cm}
+
+\begin{multicols}{2}
+\setlength{\columnsep}{0.5cm}
+
+
+\noindent \textbf{\textit{Abstract---}The emergence of the metaverse has initiated a paradigm shift in how individuals interact, socialize, and transact within digital environments. This study explores the evolving architecture of decentralized virtual worlds, emphasizing the integration of blockchain technologies, digital asset ownership, and immersive social experiences. Leveraging empirical data from multiple blockchain-based metaverse platforms, we investigate user engagement metrics, asset distribution patterns, and behavioral trends within gamified ecosystems. Our findings reveal that the incorporation of play-to-earn mechanics, virtual real estate, and avatar customization significantly enhances user retention and economic activity. Moreover, decentralized governance and community-driven development are shown to influence both the scalability and perceived legitimacy of these platforms. By synthesizing insights from computer science, economics, and media studies, this paper provides a multidisciplinary perspective on the dynamics shaping the future of the metaverse. Our work lays the foundation for further empirical investigation and policy formulation aimed at fostering transparent, equitable, and sustainable virtual ecosystems.
+}
+
+\small	
+\noindent \textbf{\textit{Keywords---}\textit{Metaverse, virtual economies, blockchain, NFTs, play-to-earn, digital identity, decentralized platforms}}
+
+\section{Introduction}
+The development of civilization, along with technological advances, brings opportunities such as improved communication and access to information. The metaverse represents an evolving digital ecosystem, where virtual properties hold tangible economic value. This study analyzes Decentraland’s real estate market, assessing property pricing trends and market dynamics.
+
+The development of civilization, along with technological advances, brings opportunities such as improved communication and access to information. The metaverse represents an evolving digital ecosystem, where virtual properties hold tangible economic value. This study analyzes Decentraland’s real estate market, assessing property pricing trends and market dynamics.
+
+The development of civilization, along with technological advances, brings opportunities such as improved communication and access to information. The metaverse represents an evolving digital ecosystem, where virtual properties hold tangible economic value. This study analyzes Decentraland’s real estate market, assessing property pricing trends and market dynamics.
+
+\subsection{Background}
+According to \cite{1}, this method is highly effective. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+
+\subsubsection{Details}
+According to \cite{1}, this method is highly effective. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+
+\subsubsection{Sub Sub section}
+According to \cite{1}, this method is highly effective. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Here the list of it:
+
+\begin{itemize}
+    \item Main item
+    \begin{itemize}
+        \item Sub-item 1
+        \item Sub-item 2
+    \end{itemize}
+    \item Another main item
+\end{itemize}
+
+
+\subsection{Aim}
+It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum \cite{1,2,3,4}.
+
+\section{Methods}
+Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source\cite{1,5,7}. 
+
+In this study, we employ a mathematical approach to analyze the dataset. The core computation involves a summation formula incorporating logarithmic and trigonometric functions, expressed as shown in Equation~\eqref{eq:sumformula}:
+
+\begin{equation}
+S = \sum_{n=1}^{N} \log(n) + \ln(n) + \sin(n) + \cos(n) 
+\label{eq:sumformula}
+\end{equation}
+
+
+where \( S \) represents the summation result, \( N \) is the upper limit of summation, and the terms involve logarithmic and trigonometric transformations of the index variable \( n \). This formulation ensures comprehensive data transformation for further analysis.
+
+Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32 \cite{6,7}.As shown in Table~\ref{table:table1}, the market trends in Decentraland indicate a steady growth.
+
+\noindent
+\begin{minipage}{\columnwidth}
+\captionof{table}{Price and Area of Decentraland Properties} 
+\label{table:table1}
+\centering
+\begin{tabular}{|c|c|c|}
+    \hline
+    \textbf{Property ID} & \textbf{Price (MANA)} & \textbf{Area (m²)} \\
+    \hline
+    A1234 & 1000 & 50 \\
+    B5678 & 1500 & 80 \\
+    C9012 & 2000 & 100 \\
+    \hline
+\end{tabular}
+\end{minipage}
+
+This research examines transaction data from Decentraland's property market, utilizing statistical correlation analyses to assess valuation trends. A dataset of 207 transactions across 103 parcels was analyzed for spatial and economic attributes, with a focus on MANA cryptocurrency fluctuations.
+
+It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like). As shown in Figure~\ref{fig:markettrends}, the market trends in Decentraland indicate a steady growth.
+
+\noindent
+\begin{minipage}{\columnwidth}
+\centering
+\includegraphics[width=1\textwidth]{image.jpg}
+\captionof{figure}{Market Trends in Decentraland} % Caption for the figure
+\label{fig:markettrends} % Label for referencing
+\end{minipage}
+
+\section{Results}
+Our analysis reveals that Decentraland property values are strongly influenced by MANA’s exchange rate. Statistical evaluations indicate low correlation between traditional valuation factors and virtual property prices, suggesting a speculative nature in virtual real estate transactions.
+
+There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+
+\section{Discussion}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque feugiat arcu a erat dapibus tempor. Cras quis nibh euismod est suscipit fermentum eget ut ex. Suspendisse quis neque ipsum. Curabitur ullamcorper id dolor et blandit. Nam ut tempus est. Proin congue sagittis tincidunt. Duis vulputate lorem est, vel congue lacus consectetur sed. Suspendisse porta, nisl eget rhoncus tristique, enim risus suscipit nibh, nec iaculis justo purus non mi. Etiam at orci purus. Nullam laoreet mattis iaculis. Duis hendrerit metus at orci congue, non auctor nunc viverra. Vivamus venenatis, justo a pretium finibus, arcu tortor hendrerit augue, quis varius felis tellus sit amet ipsum. Aenean ornare arcu eu justo rutrum ullamcorper. Donec venenatis leo sit amet euismod fringilla.
+
+Nulla facilisi. Cras consequat vitae velit ut maximus. Nullam condimentum leo vitae lectus aliquet mattis. Praesent massa lacus, ornare in mi convallis, posuere auctor urna. Etiam aliquet arcu nunc, in consectetur orci hendrerit quis. Etiam pharetra pellentesque sapien vel ultrices. Praesent magna augue, pharetra posuere leo vel, porttitor sagittis turpis. Vestibulum efficitur dolor sit amet congue mattis. Cras vehicula placerat nisi. Aliquam feugiat vitae nulla a egestas. Cras in bibendum justo, id ultricies ipsum. Integer non lectus pellentesque, commodo eros eget, ullamcorper elit.
+
+Sed eu ullamcorper elit. Nam sed mauris eu nisl commodo lacinia. Proin vel mi pulvinar, commodo quam et, convallis nibh. Maecenas eget pellentesque lectus. Suspendisse eu dui erat. Praesent nec tristique nisl. Morbi lobortis erat quis nibh tincidunt, id pretium leo mattis. Aliquam at erat tincidunt, congue velit a, interdum libero. Suspendisse commodo augue in nunc viverra, non sagittis dolor porttitor. Vestibulum eu odio nec velit dignissim tempus at id metus. Pellentesque auctor odio vitae ante laoreet, a eleifend velit egestas. Nulla eleifend viverra nibh sed hendrerit. Nulla sagittis varius sapien, nec iaculis nisl dictum sed. Duis lobortis varius efficitur. Ut sit amet molestie neque, eget lacinia ante.
+
+Integer lorem ante, porttitor a venenatis ut, eleifend eget felis. Vestibulum cursus lorem a velit condimentum finibus. Nunc sapien ex, tempor ut nibh ac, tristique vestibulum nibh. Cras viverra augue tellus, vitae bibendum tellus placerat ac. Pellentesque convallis lobortis semper. Vestibulum vel mattis lorem. Integer aliquet, sapien a egestas interdum, sem nisi eleifend mauris, at ullamcorper neque lectus vitae nisl. Suspendisse blandit facilisis magna. Nullam vel ex cursus, accumsan mi at, aliquam mauris. Mauris massa massa, tincidunt eu feugiat ac, tincidunt lacinia dui. Nulla elit enim, vehicula sit amet vehicula sit amet, accumsan nec orci. In dignissim condimentum sagittis. Nullam ut mollis diam. Fusce vel quam augue. Nunc eu massa justo.
+
+\section{Conclusion}
+Donec eget elit id risus iaculis tristique. Maecenas justo mauris, sagittis id ipsum vitae, elementum consectetur neque. Nam pharetra ultrices sapien, vel semper odio bibendum non. Proin mi quam, mollis a posuere vitae, facilisis pharetra urna. Pellentesque tincidunt mauris et sagittis vestibulum. Curabitur semper suscipit metus, eget cursus lacus faucibus quis. Aliquam fermentum cursus pulvinar. Curabitur posuere felis nisl, a condimentum enim molestie non. Vivamus accumsan porta felis, a hendrerit erat malesuada in. Aliquam aliquam rhoncus mauris in feugiat.
+
+Nullam ligula nisl, interdum id libero ut, aliquam placerat erat. Proin ut lectus vel tellus ornare ultricies. Suspendisse potenti. Sed at dolor bibendum, feugiat turpis accumsan, interdum erat. Sed posuere turpis vel blandit convallis. Fusce ac elit velit. Ut sodales vulputate maximus. Nunc nec nibh in arcu luctus cursus. Sed vulputate accumsan fermentum. Curabitur maximus nec lacus nec posuere. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris congue est nec quam auctor blandit. Proin sit amet maximus nibh. In pharetra sem dolor, eget pharetra mi porttitor in. Suspendisse ac neque lacus.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras finibus ante ut metus vehicula vehicula. Cras justo lacus, efficitur quis odio quis, interdum efficitur libero. Donec sodales lectus vitae libero consectetur, vitae ornare lorem placerat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer a aliquam risus, ullamcorper aliquet velit. Cras vulputate magna augue. Vestibulum bibendum est vel interdum euismod. Fusce finibus nulla ex, non rhoncus lectus malesuada mattis. Duis venenatis nunc vel lacinia rutrum. Proin faucibus sapien nisl, vitae fringilla orci hendrerit a. Quisque condimentum condimentum felis vel ullamcorper. Quisque pharetra tortor quis nisl bibendum accumsan.
+
+Duis auctor semper turpis, vel mollis purus. Proin orci quam, pellentesque tincidunt ultricies eget, dignissim id orci. Maecenas sed fermentum ligula. Mauris facilisis sed dolor sed finibus. Curabitur luctus ultrices tempus. Etiam venenatis feugiat congue. Curabitur id purus purus. Curabitur nec enim tempus, volutpat erat in, auctor ligula. Phasellus rutrum tellus lectus. Aenean imperdiet pharetra nisl quis sodales. Praesent facilisis gravida pretium. Nam eget aliquet risus, nec dictum turpis.
+
+Proin vitae malesuada lectus. Aliquam erat volutpat. Aenean tincidunt consectetur pulvinar. Proin sed dolor magna. Donec in ornare tortor, in lacinia massa. Cras mollis, mi vel facilisis dictum, nisl ipsum egestas urna, sit amet dignissim turpis felis quis massa. Sed vel euismod turpis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+
+Vestibulum ullamcorper ipsum sit amet mi molestie, vel convallis ipsum malesuada. Pellentesque sed lacinia metus. Pellentesque posuere tempor diam eu pretium. Duis aliquam eget felis ac imperdiet. Quisque viverra erat turpis, vel venenatis tortor porttitor quis. Integer tincidunt vel purus a blandit. Mauris sit amet quam vel leo ultrices vulputate a at ante. Maecenas hendrerit maximus orci, eu euismod odio laoreet et. Donec in interdum elit. Praesent sed sollicitudin risus. Donec accumsan purus ut justo accumsan euismod. Sed tincidunt vehicula suscipit. Vestibulum dignissim ultricies dictum. Praesent vel nisi dolor. In at scelerisque mi. Nam malesuada nunc vel tellus convallis, ultrices facilisis dui gravida. 
+
+\section*{Acknowledgement}
+We thank AGH University of Krakow for their support.
+
+\section*{Funding}
+This research was funded by the AGH University of Krakow grant no 16.16.150.545.
+
+\section*{Authors' Contributions}
+All authors have participated in drafting the manuscript. All authors read and approved the final version of the manuscript.
+
+\section*{Conflict of Interest}
+The authors declare no conflict of interest.
+
+\section*{Data Availability}
+The data supporting the findings of this study are available upon request from the authors.
+
+\section*{Ethical Statement}
+In this article, the principles of scientific research and publication ethics were followed. This study did not involve human or animal subjects and did not require additional ethics committee approval.
+
+\section*{Declaration Of AI Usage}
+No AI tools were used in the creation of this manuscript.
+
+\begin{thebibliography}{8}
+\bibitem{1} Chen, C., \& Yao, M. Z. (2022). Strategic use of immersive media and narrative message in virtual marketing: Understanding the roles of telepresence and transportation. \textit{Psychology and Marketing, 39}(3), 524–542. https://doi.org/10.1002/mar.21630
+
+\bibitem{2} Deloitte. (2000). The evolving European model of professional sports finance. Journal of Sports Economics, 1(3), 257–276. https://doi.org/10.1177/152700250000100304
+
+\bibitem{3} Scribbr. (2020, August 20). Develop a theoretical framework in three steps [Video]. YouTube. https://youtu.be/4y1BAqOnhMM
+
+\bibitem{4} Slat, B., \& Worp, C. (2019, April 10). Whales likely impacted by Great Pacific garbage patch. The Ocean Cleanup. https://www.theoceancleanup.com/updates/whales-likely-impacted-by-great-pacific-garbage-patch/
+
+\bibitem{5} Slat, B., Worp, C., \& Holierhoek, L. (n.d.). Whales likely impacted by Great Pacific garbage patch. The Ocean Cleanup. Retrieved February 12, 2025, from https://www.theoceancleanup.com/updates/whales-likely-impacted-by-great-pacific-garbage-patch/
+
+\bibitem{6} Launiainen, P. (2018). A brief history of everything wireless: How invisible waves have changed the world. Springer Cham. https://doi.org/10.1007/978-3-319-78910-1
+
+\bibitem{7} Karataş, E., Adali, B., Aydin, Ö., \& DalkiliÇ, G. (2021, October). Mobile application that detects covid-19 from cough and image using smartphone recordings and machine learning. In 2021 Innovations in Intelligent Systems and Applications Conference (ASYU) (pp. 1-6). IEEE. https://doi.org/10.1109/ASYU52992.2021.95989618
+
+\bibitem{8} Marah, H., Challenger, M. (2023). An Architecture for Intelligent Agent-Based Digital Twin for Cyber-Physical Systems. In: Karaarslan, E., Aydin, Ö., Cali, Ü., Challenger, M. (eds) Digital Twin Driven Intelligent Systems and Emerging Metaverse. Springer, Singapore. https://doi.org/10.1007/978-981-99-0252-13
+
+\end{thebibliography}
+
+\end{multicols}
+\end{document}
