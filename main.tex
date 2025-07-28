@@ -1,10 +1,12 @@
 \documentclass[]{IEEEtran}
 
-
-
+% Paquete para soporte del idioma español
+% Importante para que la compilación de términos generados automaticamente se haga en español.
+\usepackage[spanish]{babel}
 
 
 % --- PAQUETE PARA HIPERVÍNCULOS ---
+% La finalidad de su uso en este proyecto es otorgar enlaces a las citas hechas a traves del documento.
 \usepackage{hyperref} % <---- Load this package LAST!
 \hypersetup{
     colorlinks=true,
@@ -14,6 +16,13 @@
     urlcolor=black,     % Color for external URLs
 }
 % ---------------------------------
+
+% Redefinir el nombre de las palabras clave a español
+\renewcommand{\IEEEkeywordsname}{Palabras Clave}
+
+
+
+
 
 % Estructura del documento como referencia para el futuro
 %\part           Optional - for very large documents
