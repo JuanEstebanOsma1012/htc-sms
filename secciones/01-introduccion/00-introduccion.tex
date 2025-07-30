@@ -1,21 +1,30 @@
 %sección I
 \section{Introducción}
-\IEEEPARstart{E}{l} objetivo de la computación científica es la resolución 
-de problemas. La computadora resulta necesaria para este propósito debido a 
-que algunos problemas del mundo real frecuentemente presentan un nivel de dificultad 
+\IEEEPARstart{E}{l} objetivo de la computación científica es la resolución
+de problemas. La computadora resulta necesaria para este propósito debido a
+que algunos problemas del mundo real frecuentemente presentan un nivel de dificultad
 o complejidad que excede las capacidades de analítica o resolución humana, sin embargo,
-estos pueden ser abordados efectivamente mediante el uso 
-de recursos computacionales~\cite{landau01}. 
+estos pueden ser abordados efectivamente mediante el uso
+de recursos computacionales~\cite{landau01}.
 
 
 No obstante, no todos los problemas cientificos son
-manejables para una sola computadora. Exiten problemas cuya ejecución en una sola maquina resulta 
-inviable debido a factores como su naturaleza o a el tamaño de su conjunto de datos. Es por esto 
-que los investigadores usan herramientas de computación de alta productividad 
-(\textit{Hight Throughput Computing} o HTC por sus siglas en inglés), las cuales tienen como 
-propósito el maximizar la cantidad de resultados producidos durante un periodo 
+manejables para una sola computadora. Exiten problemas cuya ejecución en una sola maquina resulta
+inviable debido a factores como su naturaleza o a el tamaño de su conjunto de datos. Es por esto
+que los investigadores usan herramientas de computación de alta productividad
+(\textit{Hight Throughput Computing} o HTC por sus siglas en inglés), las cuales tienen como
+propósito el maximizar la cantidad de resultados producidos durante un periodo
 largo de tiempo~\cite{juve-01}.
 
-Es en este contexto nace HTCondor, un sistema especializado de gestión de 
-cargas de trabajo para tareas de cómputo intensivo~\cite{chang-01}.
+En este contexto surge HTCondor, un sistema creado por la
+Universidad Wisconsin–Madison, especializado en la gestión de cargas
+de trabajo y diseñado específicamente para tareas de cómputo intensivo~\cite{chang-01, htcondor-description}.
+HTCondor permite a los científicos ejecutar tareas en un clúster dedicado, mientras que el
+software se encarga automáticamente de distribuir el trabajo entre los diferentes
+nodos de ejecución. Esta distribución se realiza siguiendo políticas establecidas
+tanto por los usuarios propietarios de los nodos ejecutores como por los
+propios científicos que solicitan los recursos~\cite{htcondor-description}.
 
+Dichos trabajos computacionales vienen en la forma de lenguajes de programación
+o modos de ejecución los cuales HTCondor llama \textit{contextos de ejecución}
+o \textit{universos} 
