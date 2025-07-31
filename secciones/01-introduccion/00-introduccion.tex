@@ -14,17 +14,44 @@ inviable debido a factores como su naturaleza o a el tamaño de su conjunto de d
 que los investigadores usan herramientas de computación de alta productividad
 (\textit{Hight Throughput Computing} o HTC por sus siglas en inglés), las cuales tienen como
 propósito el maximizar la cantidad de resultados producidos durante un periodo
-largo de tiempo~\cite{juve-01}.
+largo de tiempo~\cite{juve-01},
+%El propósito de la siguiente linea es el de servir de preambulo para el objetivo 2 del SMS. 
+tecnologías propias de la computación distribuida, disciplina que también
+ha encontrado interés en el ámbito educativo~\cite{Senol-01}.
 
 En este contexto surge HTCondor, un sistema creado por la
 Universidad Wisconsin–Madison, especializado en la gestión de cargas
 de trabajo y diseñado específicamente para tareas de cómputo intensivo~\cite{chang-01, htcondor-description}.
-HTCondor permite a los científicos ejecutar tareas en un clúster dedicado, mientras que el
-software se encarga automáticamente de distribuir el trabajo entre los diferentes
-nodos de ejecución. Esta distribución se realiza siguiendo políticas establecidas
-tanto por los usuarios propietarios de los nodos ejecutores como por los
-propios científicos que solicitan los recursos~\cite{htcondor-description}.
-
+HTCondor permite a los usuarios enviar tareas computacionales a un clúster,
+donde el sistema gestiona de forma autónoma la asignación y distribución del
+trabajo entre los nodos disponibles. El mecanismo de planificación opera bajo un
+modelo de políticas bidireccional: tanto los propietarios de los recursos computacionales
+como los usuarios solicitantes pueden establecer criterios y preferencias
+que determinan dónde y bajo qué condiciones se ejecutarán las tareas~\cite{htcondor-description}.
 Dichos trabajos computacionales vienen en la forma de lenguajes de programación
-o modos de ejecución los cuales HTCondor llama \textit{contextos de ejecución}
-o \textit{universos} 
+o \textit{contextos de ejecución} los cuales HTCondor llama
+\textit{universos}. Hasta la fecha en la que se escribe el presente artículo
+los universos HTCondor disponibles son los siguientes: \textit{vanilla, grid, java, scheduler,
+	local, parallel, vm, container y docker}.
+
+
+La diversidad de universos disponibles refleja la amplia gama de aplicaciones
+que HTCondor puede soportar, desde computación tradicional hasta entornos
+virtualizados y contenedorizados. No obstante, la literatura científica carece
+de una clasificación sistemática que permita comprender cómo estos universos
+se aplican en diferentes contextos y cuál es su impacto. En consecuencia,
+el presente documento exponemos un estudio de mapeo sistemático que busca,
+en primer lugar, clasificar trabajos relacionados con diversos dominios tecnológicos
+como lo son la computación distribuída y paralela, el desarrollo de software,
+virtualización, contenerización, la redes de computadora, entre otros. En segundo lugar,
+se busca identificar y categorizar trabajos vinculados con los universos de
+HTCondor como herramienta para fortalecer funciones esenciales universitarias
+como: investigación, docencia, extensión e industria.
+
+El resto del documento se estructura de la siguiente manera:
+la Sección~\ref{sec:motivacion} indica la motivación para este trabajo.
+La Sección~\ref{sec:trabajos-relacionados} presenta trabajos relacionados.
+La Sección~\ref{sec:metodo-revision} describe el método utilizado para llevar a cabo el SMS.
+La Sección~\ref{sec:analisis-discusion} contiene el análisis y discusión del trabajo realizado.
+La Sección~\ref{sec:amenazas-validez} discute las amenazas a la validez, y finalmente,
+la Sección~\ref{sec:conclusiones} presenta las conclusiones.

@@ -1,7 +1,3 @@
-## Do not ignore the main.pdf file
-
-!/build/main.pdf
-
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
@@ -329,3 +325,7 @@ TSWLatexianTemp*
 # Uncomment the next line to have this generated file ignored.
 #*Notes.bib
 .DS_Store
+
+## Do not ignore the main.pdf file
+!/build/main.pdf
+
