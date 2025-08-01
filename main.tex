@@ -1,4 +1,5 @@
 \documentclass[]{IEEEtran}
+\usepackage{graphicx}
 
 % Paquete para soporte del idioma español
 % Importante para que la compilación de términos generados automaticamente se haga en español.
@@ -40,6 +41,10 @@
 %    el archivo "main" de esa sección
 
 \begin{document}
+
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\renewcommand{\thesubsubsection}{\thesubsection.\arabic{subsubsection}}
 
 \title{
     Estudio de mapeo sistematico de la literatura sobre tecnologías de virtualización basadas en contenedores
