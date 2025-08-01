@@ -1,25 +1,47 @@
 % subseccion 4.2
 \subsection{Etapa 2: Búsqueda de Estudios}
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-%sub-subseccion 4.2.1 
-\subsubsection{Definiendo la Estrategia de Búsqueda}
-% Content for 4.2.1
-Nostrud ullamco aliqua voluptate nulla consequat quis id incididunt culpa non ea do non deserunt. Excepteur ut ea excepteur nulla irure esse laboris proident laboris aliqua id ullamco nisi ipsum. Cillum pariatur pariatur ad duis veniam excepteur. Ea tempor non do exercitation nostrud eu enim officia fugiat. Sint officia veniam consectetur nisi elit eu deserunt enim aliqua. Consectetur veniam incididunt cupidatat id eu Lorem labore eiusmod sunt.
+Esta etapa presenta la estrategia de búsqueda utilizada en el SMS\@. Esta estrategia será definida y descrita en detalle en las Subsecciones~\ref{subsubsec:estrategia-busqueda}--\ref{subsubsec:resultados-busqueda} (ver Fig.~!TODO). %!TODO Crear tabla de "Actividades de la etapa de busqueda de estudios.
+ El resultado de esta etapa fue de 168 estudios obtenidos de esta manera. Hubo 131 estudios por bases de datos, por snowballing, hubo 37 estudios, y finalmente, por inclusión directa, hubo tres estudios.
 \mbox{}\\
+
+ 
+%sub-subseccion 4.2.1 
+\subsubsection{Definiendo la Estrategia de Búsqueda}\label{subsubsec:estrategia-busqueda}
+Para desarrollar este SMS, hemos implementado una metodología híbrida. Esta metodología tiene como objetivo conseguir una cantidad más
+amplia de estudios indexados y procedentes de múltiples fuentes, superando los resultados que ofrecen en las bases de datos. De esta manera, integramos dos técnicas de búsqueda. La técnica inicial se denomina ``Búsqueda en bases de datos'' la cual consiste en realizar una búsqueda automatizada dentro de bases de datos académicas indexadas~\cite{Jalai-01}. La técnica secundaria recibe el
+nombre de \textit{Snowballing} o  \textit{bola de nieve} y representa un procedimiento manual fundamentado en una  previa recolección de textos iniciales para
+identificar investigaciones adicionales mediante sus bibliografías y citaciones~\cite{Jalai-01,Goodman-01}.
+
+Para apoyar el proceso llevado a cabo en este SMS, hemos utilizado los siguientes elementos: a) Bases de datos académicas. b) El software SMS-Builder desarrollado por Candela et al.~\cite{sms-builder-repo} diseñado específicamente para facilitar la construcción de estudios de mapeo sistemático. c) Herramientas para apoyar la gestión de referencias como Mendeley y Google Scholar. %Aquí omití EndNote porque pues no lo usamos.
 
 
 %sub-subseccion 4.2.2
 \subsubsection{Estrategia de Búsqueda 1: Bases de Datos}
-Irure irure veniam qui cillum Lorem occaecat do voluptate sunt ut. Cupidatat sunt nostrud magna eu est labore. Aliquip ut exercitation tempor adipisicing reprehenderit aliquip eu nisi in. Do ex consequat dolore sit est aliqua nulla enim. Laborum anim nulla do nisi. Culpa voluptate irure ullamco qui. Nisi et sunt veniam reprehenderit mollit.
+Esta estrategia comprende dos componentes. El primer componente se denomina ``Identificación de estudios''. Se enfoca en establecer las palabras clave para construir las cadenas de búsqueda que permitan completar las consultas en las bibliotecas digitales. El segundo componente se denomina ``Selección de estudios''. Se enfoca en aplicar varios criterios para refinar los resultados de búsqueda de estudios y seleccionar aquellos con el valor más significativo para el SMS.\@
+
+\textit{Identificación de estudios}: con el fin de asegurar la viabilidad del SMS y por consenso de los autores, se decidió limitar el número de bases de datos a cinco, incluyendo ACM, IEEE Xplore, Springer, ScienceDirect, Taylor \& Francis. En esta parte del proceso, es necesario establecer las palabras clave utilizadas posteriormente en las cadenas de búsqueda de cada una de las bases de datos. Nuevamente utilizamos el modelo PICOC como guía metodológica para identificar términos o frases clave que cumplan este propósito. Refinamos estos términos incluyendo sinónimos (Ver Tabla !TODO).
+
+Las palabras clave principales que seleccionamos fueron \textit{HTCondor, HTC, Universe, Project, Research}. Para ampliar la perspectiva de investigación, utilizamos el operador booleano ``OR'' para agregar sinónimos a las palabras clave principales.
+Finalmente, el conjunto de palabras clave seleccionadas para la construcción de la cadena de búsqueda se encuentran en la Tabla !TODO.
+
+Para dirigir la investigación hacia la intersección de estos dos grupos de términos, se utilizó el operador booleano ``AND''. Una vez que identificamos las palabras clave, continuamos construyendo las cadenas de búsqueda para las bibliotecas digitales utilizando un proceso iterativo. La construcción iterativa de las cadenas de búsqueda consiste en realizar un proceso heurístico con las palabras clave, sinónimos y conceptos relacionados mediante el uso de disyunciones y conjunciones que se ajustan a las reglas sintácticas de cada base de datos considerada en la búsqueda automática. Por lo tanto, estas cadenas varían según las características y funciones de cada base de datos. Ver Tabla 8.
+
+Después de construir las cadenas de búsqueda, las enviamos a cada motor de base de datos. La Tabla 9 muestra el conjunto de resultados obtenidos. Identificamos un total de XXXXXXXXXXXX estudios preliminarmente, y es notable que la base de datos  YYYYYYYY contribuyó con el NNNNNNNN\% de los resultados.
+
 \mbox{}\\
+
+
+\textit{Selección de estudios}: para refinar los resultados obtenidos hasta este punto, aplicamos los criterios de inclusión y exclusión definidos en la fase de planificación. La Tabla !TODO muestra los resultados de este paso. Reducimos el número total de estudios a XXXXXXXXX. Según las diferentes bases de datos consultadas, Springer todavía tiene la contribución más considerable, con el 43.30\% de los estudios.
+
+De los 418 estudios seleccionados, aplicamos la exclusión de 69 estudios porque eran duplicados. Después de esta eliminación, ahora los estudios incluidos son 349. A partir de este nuevo conjunto de datos, realizamos una revisión llamada ``Screening'', este procedimiento consiste en verificar el título, resumen y palabras clave de cada estudio para determinar si están en el contexto de la investigación, es decir, si están en la línea indicada por los objetivos del SMS. El proceso de screening nos permitió descartar 218 estudios porque algunos de ellos hacían referencia a campos diferentes y otros se enfocaban de maneras distintas, como vender algún producto comercial.
+
+Por lo tanto, concluimos la primera estrategia de búsqueda con un total de 131 estudios seleccionados. La Figura 4 muestra una visión general de las actividades y resultados obtenidos en la estrategia de búsqueda 1.
 
 % sub-subsetion for 4.2.3
 \subsubsection{Estrategia de Búsqueda 2: Bola de Nieve (Snowballing)}
-Quis ut deserunt in nulla aliquip exercitation. Voluptate non laborum do eu dolor mollit officia cupidatat do ea id id ullamco. Dolore velit anim est pariatur eiusmod occaecat duis labore reprehenderit nisi esse. Eu laboris cillum ullamco non velit veniam labore eiusmod laboris sint. Consequat officia aliquip velit officia do ex nulla cupidatat elit dolore deserunt sint.
 \mbox{}\\
 
 % sub=-subsection 4.2.4
-\subsubsection{Resultados de la Búsqueda de Estudios}
-Nostrud enim magna culpa labore in culpa aliqua dolore ea amet sit magna exercitation sunt. Voluptate qui aliqua velit ipsum ullamco dolor ad velit cupidatat dolore sint. Nisi cillum dolore magna tempor minim ullamco anim quis ipsum consequat officia.
+\subsubsection{Resultados de la Búsqueda de Estudios}\label{subsubsec:resultados-busqueda}
 \mbox{}\\
