@@ -133,9 +133,42 @@ Las RQs Y el modelo PICOC sirven como la linea base para seleccionar los tópico
 % 4.1.5
 %sub-subseccion - criterios de inclusión y exclusión
 \subsubsection{Criterios de inclusión y exclusión}
-\mbox{}\\
+Los criterios de inclusión y exclusión que se definieron para el estudio están en la Tabla \ref{table:Criteria}.
 
+\begin{table*}[htbp]
+	
+	\centering
+	\renewcommand{\arraystretch}{1.7}  % Espaciado entre filas
+	\renewcommand{\tablename}{Tabla}  % <- Cambia "Cuadro" por "Tabla"
+	\setlength{\tabcolsep}{3pt}      % Espaciado horizontal en celdas
+	\vspace{10pt}                     % Espacio arriba de la tabla (opcional)
+	\begin{tabularx}{\textwidth}{|>{\arraybackslash}m{2.3cm}|>{\arraybackslash}X|>{\arraybackslash}X|}
+		\hline	
+		\textbf{Categoría} & \textbf{Criterios de inclusión} & \textbf{Criterios de exclusión} \\
+		\hline
+		Campos &  Todos. & - \\
+		\hline
+		Tipo de publicación & Artículos de investigación. & Tesis, capítulos de libros, libros, revistas, \textit{proceedings}, \textit{papers}, y todo lo demás que no esté en los criterios de inclusión. \\
+		\hline
+		Área o disciplina & Ciencias de la computación, Ingeniería (En la base de datos ACM se asume que todos los artículos están relacionados con estos temas ya que no permite filtrar). & Áreas no relacionadas a ciencias de la computación e ingeniería. \\
+		\hline
+		Periodo & Desde 1980 hasta 2024. & - \\
+		\hline
+		Idioma & Inglés. & - \\
+		\hline
+	\end{tabularx}
+	\vspace{6pt}  % Espacio entre tabla y caption
+	\caption{Criterios de inclusión y exclusión del SMS.}
+	\label{table:Criteria}
+	
+\end{table*}
+
+Se definió este periodo (44 años), buscando que los estudios más relevantes en toda la historia de HTCondor estén incluidos en el mapeo y que, debido a la limitada documentación que se encuentra en torno a esta tecnología, se hace posible para los investigadores realizar una labor investigativa rigurosa tomando un periodo tan amplio y así propender por la entrega de valor de este SMS. Además, se limitaron los estudios a artículos de investigación en búsqueda de más rigor en la revisión por pares y la alta rigurosidad e impacto en el campo de las ciencias de la computación, de los estudios tomados para este mapeo.
+
+% TODO: Hay que revisar estos criterios de calidad, porque las formulas y valores raros hay que reemplazarlos de forma matematica con LaTex y no solo ponerlos en italica, además creo que la formula implica más de un investigador revisando el mismo estudio, lo que no aplica en nuestro caso
 % 4.1.6
 % sub-subseccion - Criterios de calidad
 \subsubsection{Criterios de calidad}
-\mbox{}\\
+Al final de la etapa de planeación se adoptaron tres criterios de calidad.
+El primer criterio de calidad es una adaptación del CVI (\textit{Content Value Index}) [Sepulveda's article citations 25 and 26]. En este caso, se juzgaron los documentos identificando aquellos más relevantes para el SMS. Se usó una escala cuantitativa de 0 a 5 para este indice. Donde 0 significa una débil relación del estudio con los objetivos del SMS y 5 implica una fuerte relación. Ver Formula (\ref{label}). Donde \textit{k} es el numero total impar de estudios y \textit{f(n)} es el valor asignado para el estudio \textit{n}.
+Formula 1
