@@ -11,6 +11,19 @@
 
 \usepackage{tabularx}
 
+\usepackage{titlesec}
+% Force line breaks after subsubsections
+\titleformat{\subsubsection}
+  {\normalfont\normalsize\itshape}{\thesubsubsection}{1em}{}[\vspace{1ex}]
+  \titlespacing{\subsubsection}
+  {0pt} % left indentation
+  {3ex plus 1ex minus 0.5ex} % space before de subsubsection
+  {1ex plus 0.5ex minus 0.2ex} % space after de subsubsection
+  % ------ explaining the latter part: -----------
+  % 2ex = Base spacing (2 times the height of letter "x" in current font)
+  % plus 0.5ex = Maximum additional space LaTeX can add if needed
+  % minus 0.2ex = Maximum space LaTeX can remove if needed
+
 
 % --- PAQUETE PARA HIPERVÍNCULOS ---
 % La finalidad de su uso en este proyecto es otorgar enlaces a las citas hechas a traves del documento.
