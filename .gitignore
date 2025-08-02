@@ -329,3 +329,4 @@ TSWLatexianTemp*
 ## Do not ignore the main.pdf file
 !/build/main.pdf
 
+temp
