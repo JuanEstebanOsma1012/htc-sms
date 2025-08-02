@@ -1,11 +1,21 @@
 % subseccion 4.2
 \subsection{Etapa 2: Búsqueda de Estudios}
 
-Esta etapa presenta la estrategia de búsqueda utilizada en el SMS\@. Esta estrategia será definida y descrita en detalle en las Subsecciones~\ref{subsubsec:estrategia-busqueda}--\ref{subsubsec:resultados-busqueda} (ver Fig.~!TODO). %!TODO Crear tabla de "Actividades de la etapa de busqueda de estudios.
- El resultado de esta etapa fue de 168 estudios obtenidos de esta manera. Hubo 131 estudios por bases de datos, por snowballing, hubo 37 estudios, y finalmente, por inclusión directa, hubo tres estudios.
+Esta etapa presenta la estrategia de búsqueda utilizada en el SMS\@. Esta estrategia será definida y descrita en detalle en las Subsecciones~\ref{subsubsec:estrategia-busqueda}--\ref{subsubsec:resultados-busqueda} (ver Fig. \ref{fig:busqueda-estudios}).
+%!TODO Crear tabla de "Actividades de la etapa de busqueda de estudios.
+El resultado de esta etapa fue de 168 estudios obtenidos de esta manera. Hubo 131 estudios por bases de datos, por snowballing, hubo 37 estudios, y finalmente, por inclusión directa, hubo tres estudios.
 
 
- 
+% -------- Tabla : Actividades de la etapa de búsqueda de estudios. ------------
+\begin{figure}[htbp]
+	\centering
+	\vspace{10pt}
+	\includegraphics[scale=0.3]{resources/figures/fig03-fase1-planeacion.png}
+	\vspace{6pt}
+	\caption{Actividades de la etapa de búsqueda de estudios.}
+	\label{fig:busqueda-estudios}
+\end{figure}
+
 %sub-subseccion 4.2.1 
 \subsubsection{Definiendo la Estrategia de Búsqueda}\label{subsubsec:estrategia-busqueda}
 
@@ -23,7 +33,32 @@ Para apoyar el proceso llevado a cabo en este SMS, hemos utilizado los siguiente
 
 Esta estrategia comprende dos componentes. El primer componente se denomina ``Identificación de estudios''. Se enfoca en establecer las palabras clave para construir las cadenas de búsqueda que permitan completar las consultas en las bibliotecas digitales. El segundo componente se denomina ``Selección de estudios''. Se enfoca en aplicar varios criterios para refinar los resultados de búsqueda de estudios y seleccionar aquellos con el valor más significativo para el SMS.\@
 
-\textit{Identificación de estudios}: con el fin de asegurar la viabilidad del SMS y por consenso de los autores, se decidió limitar el número de bases de datos a cinco, incluyendo ACM, IEEE Xplore, Springer, ScienceDirect, Taylor \& Francis. En esta parte del proceso, es necesario establecer las palabras clave utilizadas posteriormente en las cadenas de búsqueda de cada una de las bases de datos. Nuevamente utilizamos el modelo PICOC como guía metodológica para identificar términos o frases clave que cumplan este propósito. Refinamos estos términos incluyendo sinónimos (Ver Tabla !TODO).
+\textit{Identificación de estudios}: con el fin de asegurar la viabilidad del SMS y por consenso de los autores, se decidió limitar el número de bases de datos a cinco, incluyendo ACM, IEEE Xplore, Springer, ScienceDirect, Taylor \& Francis. En esta parte del proceso, es necesario establecer las palabras clave utilizadas posteriormente en las cadenas de búsqueda de cada una de las bases de datos. Nuevamente utilizamos el modelo PICOC como guía metodológica para identificar términos o frases clave que cumplan este propósito. Refinamos estos términos incluyendo sinónimos (Ver Tabla \ref{table:picoc_keywords}).
+
+% -------- Tabla : Palabras clave del modelo PICOC. ------------
+\begin{table}[htbp]
+	\centering
+	\caption{Keywords identified using the PICOC model}
+	\label{table:picoc_keywords}
+	\begin{tabular}{p{1.8cm}p{5.7cm}}
+		\toprule
+		\textbf{Component} & \textbf{Keywords}                                                                        \\
+		\midrule
+		Population         & Management, Frameworks, good practices, Processes, Technologies                          \\
+		\addlinespace[0.3em]
+		Intervention       & Identification (Set, Group, Part or Elements)                                            \\
+		\addlinespace[0.3em]
+		Comparison         & Success stories, Case study                                                              \\
+		\addlinespace[0.3em]
+		Outcomes           & Set of frameworks, processes, tools, technologies, good practices                        \\
+		\addlinespace[0.3em]
+		Context            & Research technology ecosystem, Digital ecosystem, Enterprise ecosystem, Computer science \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+% --------------------------------------------------------------
+
+
 
 Las palabras clave principales que seleccionamos fueron \textit{HTCondor, HTC, Universe, Project, Research}. Para ampliar la perspectiva de investigación, utilizamos el operador booleano ``OR'' para agregar sinónimos a las palabras clave principales.
 Finalmente, el conjunto de palabras clave seleccionadas para la construcción de la cadena de búsqueda se encuentran en la Tabla !TODO.

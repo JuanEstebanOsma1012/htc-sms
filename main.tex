@@ -6,6 +6,11 @@
 % Use natbib for compressed citations
 \usepackage[numbers,compress]{natbib}
 
+\usepackage[utf8]{inputenc}
+\usepackage{array}
+\usepackage{booktabs}
+
+
 \usepackage{multirow, array} % para las tablas
 \usepackage{graphicx}
 
@@ -40,7 +45,8 @@
 % Redefinir el nombre de las palabras clave a español
 \renewcommand{\IEEEkeywordsname}{Palabras Clave}
 
-
+% Redefinir el nombre de las tablas al español - CORRECT WAY with babel
+\addto\captionsspanish{\renewcommand{\tablename}{Tabla}}
 
 
 
