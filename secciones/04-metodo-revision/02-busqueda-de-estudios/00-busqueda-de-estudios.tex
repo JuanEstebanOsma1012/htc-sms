@@ -1,9 +1,18 @@
+%% Definición de varaibles
+\newcommand{\totalStudies}{114}
+\newcommand{\databaseStudies}{99}
+\newcommand{\snowballStudies}{14}
+%Que yo recuerde en nuestro trabajo aún no hicimos inclusión directa de trabajos, sin embargo lo coloco aquí para el futuro.
+\newcommand{\directInclusionStudies}{0}
+
+
+
+
 % subseccion 4.2
 \subsection{Etapa 2: Búsqueda de Estudios}
 
 Esta etapa presenta la estrategia de búsqueda utilizada en el SMS\@. Esta estrategia será definida y descrita en detalle en las Subsecciones~\ref{subsubsec:estrategia-busqueda}--\ref{subsubsec:resultados-busqueda} (ver Fig. \ref{fig:busqueda-estudios}).
-%!TODO Crear tabla de "Actividades de la etapa de busqueda de estudios.
-El resultado de esta etapa fue de 168 estudios obtenidos de esta manera. Hubo 131 estudios por bases de datos, por snowballing, hubo 37 estudios, y finalmente, por inclusión directa, hubo tres estudios.
+El resultado de esta etapa fue \totalStudies{} estudios obtenidos de esta manera. Hubo \databaseStudies{} estudios por bases de datos y por snowballing, hubo \snowballStudies{} estudios.
 
 
 % -------- Tabla : Actividades de la etapa de búsqueda de estudios. ------------
@@ -33,49 +42,110 @@ Para apoyar el proceso llevado a cabo en este SMS, hemos utilizado los siguiente
 
 Esta estrategia comprende dos componentes. El primer componente se denomina ``Identificación de estudios''. Se enfoca en establecer las palabras clave para construir las cadenas de búsqueda que permitan completar las consultas en las bibliotecas digitales. El segundo componente se denomina ``Selección de estudios''. Se enfoca en aplicar varios criterios para refinar los resultados de búsqueda de estudios y seleccionar aquellos con el valor más significativo para el SMS.\@
 
-\textit{Identificación de estudios}: con el fin de asegurar la viabilidad del SMS y por consenso de los autores, se decidió limitar el número de bases de datos a cinco, incluyendo ACM, IEEE Xplore, Springer, ScienceDirect, Taylor \& Francis. En esta parte del proceso, es necesario establecer las palabras clave utilizadas posteriormente en las cadenas de búsqueda de cada una de las bases de datos. Nuevamente utilizamos el modelo PICOC como guía metodológica para identificar términos o frases clave que cumplan este propósito. Refinamos estos términos incluyendo sinónimos (Ver Tabla \ref{table:picoc_keywords}).
+\bolditalic{Identificación de estudios}: con el fin de asegurar la viabilidad del SMS y por consenso de los autores, se decidió limitar el número de bases de datos a cinco, incluyendo ACM, IEEE Xplore, Springer, ScienceDirect, Taylor \& Francis. En esta parte del proceso, es necesario establecer las palabras clave utilizadas posteriormente en las cadenas de búsqueda de cada una de las bases de datos. Nuevamente utilizamos el modelo PICOC como guía metodológica para identificar términos o frases clave que cumplan este propósito. Refinamos estos términos incluyendo sinónimos (Ver Tabla \ref{table:picoc_keywords}).
 
 % -------- Tabla : Palabras clave del modelo PICOC. ------------
 \begin{table}[htbp]
-    \centering
-    \caption{Palabras clave identificadas usando el modelo PICOC}
-    \label{table:picoc_keywords}
-    \renewcommand{\arraystretch}{1.5}  % Increase row height globally
-    \begin{tabular}{p{1.8cm}p{5.7cm}}
-        \toprule
-        \textbf{Componente}              & \textbf{Palabras clave}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      \\
-        \midrule
-        \textbf{Población}               & Trabajos relacionados, Universos, HTCondor, Computación distribuida y paralela, HTC, Desarrollo de Software, Virtualización y microservicios, Redes de computadoras, Infraestructura computacional, Inteligencia artificial, Análisis de datos, Pensamiento computacional, Investigación, Docencia, Extensión                                                                                                                                                                                                                                \\
-        \addlinespace[0.8em]
-        \textbf{Intervención}            & Identificación, Clasificación, Universos, HTCondor, Computación distribuida y paralela, HTC, Desarrollo de Software, Virtualización y microservicios, Redes de computadoras, Infraestructura computacional, Inteligencia artificial, Análisis de datos, Pensamiento computacional, Investigación, Docencia, Extensión                                                                                                                                                                                                                        \\
-        \addlinespace[0.8em]
-        \textbf{Criterios de aceptación} & Casos de estudio culminados                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  \\
-        \addlinespace[0.8em]
-        \textbf{Resultados              } & Taxonomía, Universos, HTCondor, Computación distribuida y paralela, HTC, Desarrollo de Software, Virtualización y microservicios, Redes de computadoras, Infraestructura computacional, Inteligencia artificial, Análisis de datos, Pensamiento computacional, Investigación, Docencia, Extensión                                                                                                                                                                                                                                            \\
-        \addlinespace[0.8em]
-        \textbf{Contexto}                & Universos, HTCondor, Computación distribuida y paralela, HTC, Desarrollo de Software, Virtualización y microservicios, Redes de computadoras, Infraestructura computacional, Inteligencia artificial, Análisis de datos, Pensamiento computacional, Investigación, Docencia, Extensión \\
-        \bottomrule
-    \end{tabular}
+	\centering
+	\caption{Palabras clave identificadas usando el modelo PICOC}
+	\label{table:picoc_keywords}
+	\renewcommand{\arraystretch}{1.5}  % Increase row height globally
+	\begin{tabular}{p{1.8cm}p{5.7cm}}
+		\toprule
+		\textbf{Componente}               & \textbf{Palabras clave}                                                                                                                                                                                                                                                                                               \\
+		\midrule
+		\textbf{Población}                & Trabajos relacionados, Universos, HTCondor, Computación distribuida y paralela, HTC, Desarrollo de Software, Virtualización y microservicios, Redes de computadoras, Infraestructura computacional, Inteligencia artificial, Análisis de datos, Pensamiento computacional, Investigación, Docencia, Extensión         \\
+		\addlinespace[0.8em]
+		\textbf{Intervención}             & Identificación, Clasificación, Universos, HTCondor, Computación distribuida y paralela, HTC, Desarrollo de Software, Virtualización y microservicios, Redes de computadoras, Infraestructura computacional, Inteligencia artificial, Análisis de datos, Pensamiento computacional, Investigación, Docencia, Extensión \\
+		\addlinespace[0.8em]
+		\textbf{Criterios de aceptación}  & Casos de estudio culminados                                                                                                                                                                                                                                                                                           \\
+		\addlinespace[0.8em]
+		\textbf{Resultados              } & Taxonomía, Universos, HTCondor, Computación distribuida y paralela, HTC, Desarrollo de Software, Virtualización y microservicios, Redes de computadoras, Infraestructura computacional, Inteligencia artificial, Análisis de datos, Pensamiento computacional, Investigación, Docencia, Extensión                     \\
+		\addlinespace[0.8em]
+		\textbf{Contexto}                 & Universos, HTCondor, Computación distribuida y paralela, HTC, Desarrollo de Software, Virtualización y microservicios, Redes de computadoras, Infraestructura computacional, Inteligencia artificial, Análisis de datos, Pensamiento computacional, Investigación, Docencia, Extensión                                \\
+		\bottomrule
+	\end{tabular}
 \end{table}
 % --------------------------------------------------------------
 
 
 
 Las palabras clave principales que seleccionamos fueron \textit{HTCondor, HTC, Universe, Project, Research}. Para ampliar la perspectiva de investigación, utilizamos el operador booleano ``OR'' para agregar sinónimos a las palabras clave principales.
-Finalmente, el conjunto de palabras clave seleccionadas para la construcción de la cadena de búsqueda se encuentran en la Tabla !TODO.
-
-Para dirigir la investigación hacia la intersección de estos dos grupos de términos, se utilizó el operador booleano ``AND''. Una vez que identificamos las palabras clave, continuamos construyendo las cadenas de búsqueda para las bibliotecas digitales utilizando un proceso iterativo. La construcción iterativa de las cadenas de búsqueda consiste en realizar un proceso heurístico con las palabras clave, sinónimos y conceptos relacionados mediante el uso de disyunciones y conjunciones que se ajustan a las reglas sintácticas de cada base de datos considerada en la búsqueda automática. Por lo tanto, estas cadenas varían según las características y funciones de cada base de datos. Ver Tabla 8.
-
-Después de construir las cadenas de búsqueda, las enviamos a cada motor de base de datos. La Tabla 9 muestra el conjunto de resultados obtenidos. Identificamos un total de XXXXXXXXXXXX estudios preliminarmente, y es notable que la base de datos  YYYYYYYY contribuyó con el NNNNNNNN\% de los resultados.
+Finalmente, el conjunto de palabras clave seleccionadas para la construcción de la cadena de búsqueda se encuentran en la Tabla \ref{table:database_search_keywords}. 
 
 
 
+% -------- Tabla : Palabras clave para búsqueda en base de datos . ------------
+\begin{table}[htbp]
+	\centering
+	\caption{Palabras clave para búsqueda en base de datos}
+	\label{table:database_search_keywords}
+	\renewcommand{\arraystretch}{1}  % Increase row height globally
+	\begin{tabular}{p{1.8cm}p{5.7cm}}
+		\toprule
+		\textbf{Palabra}  & \textbf{Sinónimos y conceptos relacionados}                \\
+		\midrule
+		\textbf{HTCondor} & Condor                                                     \\
+		\addlinespace[0.8em]
+		\textbf{HTC}      & HPC, High Throughput Computing, High Performance Computing \\
+		\addlinespace[0.8em]
+		\textbf{Universe} & Execution Environment                                      \\
+		\addlinespace[0.8em]
+		\textbf{Project}  & Work                                                       \\
+		\addlinespace[0.8em]
+		\textbf{Research} & Teaching, Industry                                         \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+% --------------------------------------------------------------
 
-\textit{Selección de estudios}: para refinar los resultados obtenidos hasta este punto, aplicamos los criterios de inclusión y exclusión definidos en la fase de planificación. La Tabla !TODO muestra los resultados de este paso. Reducimos el número total de estudios a XXXXXXXXX. Según las diferentes bases de datos consultadas, Springer todavía tiene la contribución más considerable, con el 43.30\% de los estudios.
 
-De los 418 estudios seleccionados, aplicamos la exclusión de 69 estudios porque eran duplicados. Después de esta eliminación, ahora los estudios incluidos son 349. A partir de este nuevo conjunto de datos, realizamos una revisión llamada ``Screening'', este procedimiento consiste en verificar el título, resumen y palabras clave de cada estudio para determinar si están en el contexto de la investigación, es decir, si están en la línea indicada por los objetivos del SMS. El proceso de screening nos permitió descartar 218 estudios porque algunos de ellos hacían referencia a campos diferentes y otros se enfocaban de maneras distintas, como vender algún producto comercial.
 
-Por lo tanto, concluimos la primera estrategia de búsqueda con un total de 131 estudios seleccionados. La Figura 4 muestra una visión general de las actividades y resultados obtenidos en la estrategia de búsqueda 1.
+
+
+
+
+% --------------- Tabla CADENAS DE Búsqueda-----------------------------------------
+% -------- Tabla : Cadenas de búsqueda por base de datos ------------
+\begin{table*}[htbp]
+	\centering
+	\caption{Cadenas de búsqueda utilizadas en las bases de datos}
+	\label{table:cadenas_de_busqueda}
+	\renewcommand{\arraystretch}{1.5}  % Increase row height globally
+	\begin{tabular}{p{4cm}p{8.5cm}p{3.5cm}}
+		\toprule
+		\textbf{Base de Datos}       & \textbf{Cadena de Búsqueda}                                                                                                                                                                                         & \textbf{Campos}  \\
+		\midrule
+		\textbf{ACM Digital Library} & ((HTCondor OR Condor) AND (HTC OR ``High Throughput Computing'' OR HPC OR ``High Performance Computing'') AND (Universe OR ``Execution Environment'') AND (Project OR Work) AND (Research OR Teaching OR Industry)) & Todos los campos \\
+		\addlinespace[0.8em]
+		\textbf{IEEE Xplore}         & !TODO                                                                                                                                                                                                               & Todos los campos \\
+		\addlinespace[0.8em]
+		\textbf{Springer}            & ((HTCondor $|$ Condor) + (HTC $|$ ``High Throughput Computing'' $|$ HPC $|$ ``High Performance Computing'') + (Universe $|$ ``Execution Environment'') + (Project $|$ Work) + (Research $|$ Teaching $|$ Industry)) & Todos los campos \\
+		\addlinespace[0.8em]
+		\textbf{ScienceDirect}       & (HTCondor OR ``High Throughput Computing'' OR HTC) AND (Universe OR Project OR Research OR Framework OR Application)                                                                                                & Todos los campos \\
+		\addlinespace[0.8em]
+		\textbf{Taylor \& Francis}   & !TODO                                                                                                                                                                                                               & Todos los campos \\
+		\bottomrule
+	\end{tabular}
+\end{table*}
+% --------------------------------------------------------------
+
+
+
+
+
+Para dirigir la investigación hacia la intersección de estos dos grupos de términos, se utilizó el operador booleano ``AND''. Una vez que identificamos las palabras clave, continuamos construyendo las cadenas de búsqueda para las bibliotecas digitales utilizando un proceso iterativo. La construcción iterativa de las cadenas de búsqueda consiste en realizar un proceso heurístico con las palabras clave, sinónimos y conceptos relacionados mediante el uso de disyunciones y conjunciones que se ajustan a las reglas sintácticas de cada base de datos considerada en la búsqueda automática. Por lo tanto, estas cadenas varían según las características y funciones de cada base de datos. Ver Tabla \ref{table:cadenas_de_busqueda}.
+
+Después de construídas las cadenas de búsqueda, estas fueron enviadas a cada motor de base de datos. La Tabla XXXXXXXXX  muestra el conjunto de resultados obtenidos. Identificamos un total de XXXXXXXXXXXX estudios preliminarmente, y es notable que la base de datos  YYYYYYYY contribuyó con el NNNNNNNN\% de los resultados.
+
+
+
+
+\bolditalic{Selección de estudios}: para refinar los resultados obtenidos hasta este punto, aplicamos los criterios de inclusión y exclusión definidos en la fase de planificación. La Tabla !TODO muestra los resultados de este paso. Reducimos el número total de estudios a XXXXXXXXX. Según las diferentes bases de datos consultadas, Springer todavía tiene la contribución más considerable, con el XXXXXXXXXXXX de los estudios.
+
+De los XXXXXXXXXXX estudios seleccionados, aplicamos la exclusión de XXXXXXXX estudios porque eran duplicados. Después de esta eliminación, ahora los estudios incluidos son XXXXXXXXXXX. A partir de este nuevo conjunto de datos, realizamos una revisión llamada ``Screening'', este procedimiento consiste en verificar el título, resumen y palabras clave de cada estudio para determinar si están en el contexto de la investigación, es decir, si están en la línea indicada por los objetivos del SMS. El proceso de screening nos permitió descartar XXXXXXXXXX estudios porque algunos de ellos hacían referencia a campos diferentes y otros se enfocaban de maneras distintas, como vender algún producto comercial.
+
+Por lo tanto, concluimos la primera estrategia de búsqueda con un total de XXXXXXXXX estudios seleccionados. La Figura XXXXXXXX muestra una visión general de las actividades y resultados obtenidos en la estrategia de búsqueda 1.
 
 % sub-subsetion for 4.2.3
 \subsubsection{Estrategia de Búsqueda 2: Bola de Nieve (Snowballing)}
