@@ -36,7 +36,7 @@
 \newcommand{\isprp}{\fpeval{round(\ispr*100/\itot,2)}}
 \newcommand{\itfp}{\fpeval{round(\itf*100/\itot,2)}}
 
-%Cantidad de estudios excluídos.
+%Cantidad de estudios excluídos por ser duplicados
 \newcommand{\numEstEx}{3}
 
 %Cantidad de estudios luego de depuración = (estudios totales luego de exclusión - estudios duplicados)
@@ -211,9 +211,16 @@ Después de construidas las cadenas de búsqueda, estas fueron enviadas a cada m
 
 %% Aplicando exclusion duplicada
 
-De los \itot{} estudios seleccionados, se aplicó la exclusión de tres estudios dado que estos eran duplicados. Después de esta depuración, los estudios totales son \depTot{}. A partir de este nuevo conjunto de datos, se realizó una revisión con el nombre de  \bolditalic{screening}, este procedimiento consiste en verificar el título, resumen y palabras clave de cada estudio para determinar si estos se encuentran circunscritos en el contexto de la investigación, es decir, si están alineados a los objetivos propuestos para el SMS. El proceso de screening nos permitió descartar \screenTot{} estudios dado que algunos de ellos hacían referencia a disciplinas académicas diferentes y otros no estaban alineados con los objetivos de investigación planteados.
+De los \itot{} estudios seleccionados, se aplicó la exclusión de tres estudios dado que estos eran duplicados. Después de esta depuración, los estudios totales son \depTot{}. A partir de este nuevo conjunto de datos, se realizó una revisión con el nombre de  \bolditalic{screening}, este procedimiento consiste en verificar el título, resumen y palabras clave de cada estudio para determinar si estos se encuentran circunscritos en el contexto de la investigación, es decir, si están alineados a los objetivos propuestos para el SMS. El proceso de screening nos permitió descartar \screen{} estudios dado que algunos de ellos hacían referencia a disciplinas académicas diferentes y otros no estaban alineados con los objetivos de investigación planteados.
 
-Por lo tanto, concluimos la primera estrategia de búsqueda con un total de \screenTot{} estudios seleccionados. La Figura XXXXXXXX muestra una visión general de las actividades y resultados obtenidos en la estrategia de búsqueda 1.
+Por lo tanto, concluimos la primera estrategia de búsqueda con un total de \screenTot{} estudios seleccionados. La Figura \ref{fig:overview} muestra una visión general de las actividades y resultados obtenidos en la estrategia de búsqueda 1.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[scale=0.25]{resources/figures/overview.png}
+    \caption{Vista general de las actividades y resultados obtenidos en la estrategia de búsqueda por bases de datos}
+    \label{fig:overview}
+\end{figure}
 
 
 \begin{table*}[htbp]
