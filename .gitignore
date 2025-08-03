@@ -326,7 +326,5 @@ TSWLatexianTemp*
 #*Notes.bib
 .DS_Store
 
-## Do not ignore the main.pdf file
-!/build/main.pdf
 
 temp
