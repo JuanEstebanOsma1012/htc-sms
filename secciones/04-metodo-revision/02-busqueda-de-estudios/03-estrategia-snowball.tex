@@ -1,4 +1,23 @@
 % sub-subsetion for 4.2.3 ----- ESTRATEGIA DE BUSQUEDA POR SNOWBALL
 \subsubsection{Estrategia de Búsqueda 2: Bola de Nieve (Snowballing)}
 
+\newcommand{\csiSelected}{24} %Estudios identficados con el SCI
+\newcommand{\afterCsiTotal}{\fpeval{\screenTot-\csiSelected}} % Estudios totales luegos del SCI
 
+
+La estrategia de búsqueda de bola de nieve comienza con la identificación del conjunto base de documentos a utilizar, seguido de una revisión y selección de documentos. La revisión consiste en verificar la lista de referencias mediante la identificación de nuevos documentos (bola de nieve hacia atrás). De manera similar, se identifican los documentos que citan el documento revisado (bola de nieve hacia adelante), lo cual requiere el uso de una base de datos que indique esta información. En todos los casos, la sección de documentos aplica los criterios de exclusión \cite{Wohlin-01}.
+Esta estrategia comprende dos pasos. El primer paso se denomina ``Construcción de línea base de bola de nieve'' y se enfoca en establecer estudios para iniciar el análisis de referencias y citas. Para la composición de este conjunto de estudios, utilizamos varios criterios basados en el CVI (Índice de Valor de Contenido), SCI (Índice de Citas de Estudios), además de también usar la inclusión directa. El segundo paso se denomina ``Selección de estudios'', y se enfoca en el análisis de referencias (Bola de nieve hacia atrás) y citas (Bola de nieve hacia adelante) de cada estudio.
+
+
+% Snowball baseline building 
+\bolditalic{Construcción de línea base de bola de nieve}: Basándose en los \screenTot{} estudios seleccionados, realizamos un análisis de frecuencia con el cuál obtuvimos \csiSelected{} estudios por medio del índice SCI con, dando un total de \afterCsiTotal{} estudios. 
+% ---- No hicimos ninguna inclusión directa. 
+%Como parte del proceso seguido para realizar el SMS, es posible incluir estudios directamente. Esta inclusión directa permite flexibilidad en el método seguido al considerar estudios fuera de los criterios de exclusión. En nuestro caso particular, se incluyeron tres estudios del tipo proceedings.
+
+
+% Creo que no tomamos en cuenta el CVI y dado que tampoco hicimos inclusión directa, el siguiente parrafo sobra. 
+% El total de los estudios identificados por CVI (XXXX), SCI (XXXXXXXX), e inclusión directa (XXXXXXXX) suman XXXXXXXX y constituyen la línea base para el inicio de la bola de nieve.
+
+
+\bolditalic{Selección de estudios}: Comenzamos con una iteración hacia atrás revisando en cada uno de los XXXX estudios las referencias existentes. Esta revisión nos permitió identificar nuevos artículos que cumplen con los requisitos de inclusión. El resultado fue XXXXXXXX nuevos estudios.
+Posteriormente hicimos una iteración hacia adelante revisando aquellos estudios que citan los documentos de línea base. Esta actividad se realizó a través de Google Scholar y siguiendo la práctica en el estudio [XXXX]. El resultado de esta actividad fue XXXXXXXX nuevos estudios. En total, la estrategia de búsqueda de bola de nieve permitió la identificación de XXXXXXXX estudios, XXXXXXXX de ellos a través de iteraciones Hacia adelante-Hacia atrás y tres estudios que integramos por inclusión directa. Ver Fig. XXXXXXXX.
