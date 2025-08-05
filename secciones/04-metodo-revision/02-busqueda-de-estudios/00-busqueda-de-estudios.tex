@@ -7,6 +7,7 @@ Esta etapa presenta la estrategia de búsqueda usada en la revisión sistemátic
     \includegraphics[width=0.8\textwidth]{resources/images/planeacion/estrategias-busqueda.png}
     \caption{Composición de la etapa de búsqueda de estudios}\label{fig:etapa2}
 \end{figure*}
+\mbox{}\\
 
 %sub-subseccion 4.2.1 
 \subsubsection{Definiendo la Estrategia de Búsqueda}\label{subsubsec:Definiendo la Estrategia de Busqueda}
@@ -17,10 +18,64 @@ En este sentido, se combinaron dos estrategias de búsqueda. La primer estrategi
 La segunda estrategia es la denominada ``Bola de Nieve'' (Snowballing) y consiste en la búsqueda manual de artículos a partir de un conjunto base de artículos usando las referencias y las citas de los mismos. Esta estrategia se basa en la premisa de que los artículos relevantes citan otros artículos relevantes y, por lo tanto, permite encontrar artículos que no están indexados en las bases de datos académicas.~\cite{jalali2012systematic} y \cite{goodman1961snowball}.
 \mbox{}\\
 %sub-subseccion 4.2.2
+
 \subsubsection{Estrategia de Búsqueda 1: Bases de Datos}
 \mbox{}\\
 Esta estrategia consta de 2 componentes. El primer componente es denominado ``Identificación de estudios''. Esto se enfoca en definir las palabras clave para construir las cadenas de búsqueda que conducen a completar las búsquedas en las bases de datos académicas.
-\mbox{}\\
+El segundo componente es llamado ``Selección de estudios''. Se enfoca en aplicar varios criterios para refinar la búsqueda de resultados de estudios y así obtener el mayor valor del proceso de búsqueda. \\ \\
+
+\begin{itemize}
+    \item \textbf{Identificación de estudios:} En búsqueda de la viabilidad del estudio y por acuerdo de los autores, se limitó la búsqueda a cinco bases de datos académicas: \textit{ACM}, \textit{IEEE Xplore}, \textit{Springer}, \textit{Science Direct} y \textit{Taylor and Francis}. En esta parte del proceso es necesario establecer las palabras claves definidas antes y construir las cadenas de búsqueda específica para cada base de datos. Nuevamente se usó el modelo PICOC como guía metodológica para identificar términos claves o frases completas que se relacionan con las tecnologías de virtualización basadas en contenedores. En la construcción de estas cadenas de búsqueda se usaron sinónimos para ampliar el espectro de resultados. (Ver cuadro~\ref{tab:palabras-clave}).\\ 
+    Las principales palabras clave identificadas fueron: \textit{Container-based virtualization}, \textit{Education}, \textit{Research}, \textit{Industry}. Para ampliar y refinar los resultados se usaron operadores booleanos como \textit{AND} y \textit{OR}. Además, se usaron comillas para buscar frases completas y paréntesis para agrupar términos relacionados. Finalmente, el conjunto de palabras clave seleccionadas para construir las cadenas de búsqueda se presenta en el cuadro~\ref{tab:keywords}.\\
+    Para dirigir la búsqueda hacia la intercepción de los dominios de TI y la VBC se usó el operador booleano \textit{AND}. Una vez identificadas las palabras clave, se procedió con la construcción de las cadenas de búsqueda para cada base de datos, usando un proceso iterativo. El proceso de construcción de las cadenas de búsqueda consitió en realizar un proceso heúristico con las palabras clave, sinónimos y conceptos relacionados, haciendo uso de conjunciones y disyunciones conforme a las reglas de cada base de datos.\\ 
+    Así, estas cadenas de búsqueda varían de acuerdo con las reglas de cada base de datos. Ver cuadro~\ref{tab:cadenas-busqueda}.\\
+
+\end{itemize}
+
+\begin{table}[tbp]
+    \scriptsize % reduce tamaño del texto
+    \centering
+    \renewcommand{\arraystretch}{1.3}
+    \begin{tabularx}{\columnwidth}{>{\centering\arraybackslash}m{0.18\columnwidth} >{\RaggedRight\arraybackslash}X}
+        \hline
+        \textbf{Aspecto} & \textbf{Descripción} \\
+        \hline
+        Población & VBC, Dominios de TI, Educación, Investigación, Extensión \\
+        Intervención & Identificación, Clasificación \\
+        Comparación & Tasa de éxito, Evidencia de uso \\
+        Salida & Clasificación de trabajos relacionados con VBC en cada dominio de TI \\
+        Contexto & Docencia, Investigación, Extensión \\
+        \hline
+    \end{tabularx}
+    \caption{Palabras clave identificadas usando el modelo PICOC}\label{tab:palabras-clave}
+\end{table}
+
+\begin{table}[tbp]
+    \scriptsize % reduce tamaño del texto
+    \centering
+    \renewcommand{\arraystretch}{1.3}
+    \begin{tabularx}{\columnwidth}{>{\centering\arraybackslash}m{0.18\columnwidth} >{\RaggedRight\arraybackslash}X}
+        \hline
+        \textbf{Palabras clave} & \textbf{Sinónimos} \\
+        \hline
+        Container-based virtualization & Application virtualization, Docker, Lightweight Virtualization \\
+        Education & Education System, Education Development, Higher Education \\
+        Research & Research Group, Research Proposal \\
+        Industry & IT Services, Technology Infrastructure, Cloud Computing \\
+        \hline
+    \end{tabularx}
+    \caption{Palabras clave para la búsqueda en base de datos}\label{tab:keywords}
+\end{table}
+
+
+
+
+
+
+
+
+
+
 
 % sub-subsetion for 4.2.3
 \subsubsection{Estrategia de Búsqueda 2: Bola de Nieve (Snowballing)}
