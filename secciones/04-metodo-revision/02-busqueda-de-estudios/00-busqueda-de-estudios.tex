@@ -70,6 +70,52 @@ El segundo componente es llamado ``Selección de estudios''. Se enfoca en aplica
 
 
 
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+\begin{sidewaystable*}[htbp]
+\centering
+\scriptsize
+\renewcommand{\arraystretch}{1.5}
+\caption{Cadenas de búsqueda por dominio y base de datos}
+\label{tab:cadenas-busqueda}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{|P{0.18\linewidth}|P{0.20\linewidth}|P{0.20\linewidth}|P{0.20\linewidth}|P{0.20\linewidth}|}
+\hline
+\textbf{Dominio / Base de Datos} & \textbf{ACM Digital Library} & \textbf{IEEE Xplore} & \textbf{ScienceDirect} & \textbf{SpringerLink} \\
+\hline
+
+\textbf{Educación AND VBC} 
+& \tiny (Title:("Container-based virtualization" OR "Application virtualization" OR "Docker" OR "Lightweight Virtualization") AND Title:("Education" OR "Education System" OR "Education Development" OR "Higher Education")) OR (Abstract:("Container-based virtualization" OR "Application virtualization" OR "Docker" OR "Lightweight Virtualization") AND Abstract:("Education" OR "Education System" OR "Education Development" OR "Higher Education")) OR (Keyword:("Container-based virtualization" OR "Application virtualization" OR "Docker" OR "Lightweight Virtualization") AND Keyword:("Education" OR "Education System" OR "Education Development" OR "Higher Education"))
+& ("container-based virtualization") AND ("education" OR "educational use") 
+& ("container-based virtualization" AND "education") 
+& ("container-based virtualization" OR docker) AND ("education" OR "learning environment") \\
+\hline
+
+\textbf{Investigación AND VBC} 
+& \tiny (Title:("Container-based virtualization" OR "Application virtualization" OR "Docker" OR "Lightweight Virtualization") AND Title:("Research" OR "Research Group" OR "Research Proposal")) OR (Abstract:("Container-based virtualization" OR "Application virtualization" OR "Docker" OR "Lightweight Virtualization") AND Abstract:("Research" OR "Research Group" OR "Research Proposal")) OR (Keyword:("Container-based virtualization" OR "Application virtualization" OR "Docker" OR "Lightweight Virtualization") AND Keyword:("Research" OR "Research Group" OR "Research Proposal"))
+& ("container-based virtualization") AND ("scientific research" OR "research proposal") 
+& ("container-based virtualization" AND "research") 
+& ("container-based virtualization" OR docker) AND ("research" OR "experiments") \\
+\hline
+
+\textbf{Industria AND VBC} 
+& \tiny (Title:("Container-based virtualization" OR "Application virtualization" OR "Docker" OR "Lightweight Virtualization") AND Title:("Industry" OR "IT Services" OR "Technology Infrastructure" OR "Cloud Computing")) OR (Abstract:("Container-based virtualization" OR "Application virtualization" OR "Docker" OR "Lightweight Virtualization") AND Abstract:("Industry" OR "IT Services" OR "Technology Infrastructure" OR "Cloud Computing")) OR (Keyword:("Container-based virtualization" OR "Application virtualization" OR "Docker" OR "Lightweight Virtualization") AND Keyword:("Industry" OR "IT Services" OR "Technology Infrastructure" OR "Cloud Computing"))
+& ("container-based virtualization") AND ("IT industry" OR "enterprise deployment") 
+& ("container-based virtualization" AND "industry") 
+& ("container-based virtualization" OR docker) AND ("industry" OR "production environment") \\
+\hline
+
+\textbf{Taylor and Francis} 
+& ("container-based virtualization") AND ("higher education" OR "education system") 
+& ("container-based virtualization") AND ("research group" OR "academic research") 
+& ("container-based virtualization") AND ("IT services" OR "technology infrastructure") 
+& --- \\
+\hline
+
+\end{tabular}
+\end{adjustbox}
+\end{sidewaystable*}
+
 
 
 
