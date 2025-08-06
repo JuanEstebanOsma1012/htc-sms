@@ -1,4 +1,51 @@
 % subseccion 4.4
-\subsection{Etapa 4: Extracción de Datos}
+\subsection{Etapa 4: Extracción de Datos}\label{sec:extraccion-de-datos}
 
-Velit laboris labore nostrud ipsum non consectetur deserunt proident. Fugiat tempor nisi nisi fugiat reprehenderit velit ut Lorem minim velit ipsum adipisicing dolor. Et dolor consequat aliquip fugiat voluptate incididunt laborum sint adipisicing aliquip mollit dolor. Officia ea reprehenderit est ullamco exercitation laboris nulla quis sint pariatur laborum eiusmod in. Ex ex dolore eiusmod ut cillum eu minim fugiat est dolor sint do proident.
+Una vez aplicados los procedimientos de búsqueda y selección de estudios, así como la evaluación de su calidad, se seleccionaron \totalEtapaDos{} estudios primarios. Estos estudios se etiquetaron con el prefijo SPS (Selected Primary Study) seguido de un número. La lista completa de estos estudios se encuentra en la Tabla \ref{table:selected_primary_studies}.
+
+A partir de los \totalEtapaDos{} estudios primarios seleccionados (SPS), se diseñaron y completaron los formularios para obtener datos relevantes para la SMS. La información contenida en los SPSs se relacionó con las preguntas de investigación a través de los temas definidos en la fase de planificación y consignados mediante los modelos GQM y PICOC. Además, se extrajeron metadatos como palabras clave para identificar aspectos subyacentes de los SPSs.
+
+
+% -------- Tabla : Estudios Primarios Seleccionados (SPSs) ------------
+\begin{table*}[htbp]
+	\centering
+	\caption{Los \totalStudies{} estudios primarios seleccionados (SPSs)}
+	\label{table:selected_primary_studies}
+	\renewcommand{\arraystretch}{1.2}
+	\setlength{\tabcolsep}{4pt} % Reduce space between columns
+	\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} r l @{\extracolsep{\fill}} r l @{\extracolsep{\fill}} r l @{\extracolsep{\fill}} r l @{\extracolsep{\fill}} r}
+		\toprule
+		\textbf{ID} & \textbf{Ref} & \textbf{ID} & \textbf{Ref} & \textbf{ID} & \textbf{Ref} & \textbf{ID} & \textbf{Ref} & \textbf{ID} & \textbf{Ref} \\
+		\midrule
+		SPS001      & [1]          & SPS002      & [2]          & SPS003      & [3]          & SPS004      & [4]          & SPS005      & [5]          \\
+		SPS006      & [6]          & SPS007      & [7]          & SPS008      & [8]          & SPS009      & [9]          & SPS010      & [10]         \\
+		SPS011      & [11]         & SPS012      & [12]         & SPS013      & [13]         & SPS014      & [14]         & SPS015      & [15]         \\
+		SPS016      & [16]         & SPS017      & [17]         & SPS018      & [18]         & SPS019      & [19]         & SPS020      & [20]         \\
+		SPS021      & [21]         & SPS022      & [22]         & SPS023      & [23]         & SPS024      & [24]         & SPS025      & [25]         \\
+		SPS026      & [26]         & SPS027      & [27]         & SPS028      & [28]         & SPS029      & [29]         & SPS030      & [30]         \\
+		SPS031      & [31]         & SPS032      & [32]         & SPS033      & [33]         & SPS034      & [34]         & SPS035      & [35]         \\
+		SPS036      & [36]         & SPS037      & [37]         & SPS038      & [38]         & SPS039      & [39]         & SPS040      & [40]         \\
+		SPS041      & [41]         & SPS042      & [42]         & SPS043      & [43]         & SPS044      & [44]         & SPS045      & [45]         \\
+		SPS046      & [46]         & SPS047      & [47]         & SPS048      & [48]         & SPS049      & [49]         & SPS050      & [50]         \\
+		SPS051      & [51]         & SPS052      & [52]         & SPS053      & [53]         & SPS054      & [54]         & SPS055      & [55]         \\
+		SPS056      & [56]         & SPS057      & [57]         & SPS058      & [58]         & SPS059      & [59]         & SPS060      & [60]         \\
+		SPS061      & [61]         & SPS062      & [62]         & SPS063      & [63]         & SPS064      & [64]         & SPS065      & [65]         \\
+		SPS066      & [66]         & SPS067      & [67]         & SPS068      & [68]         & SPS069      & [69]         & SPS070      & [70]         \\
+		SPS071      & [71]         & SPS072      & [72]         & SPS073      & [73]         & SPS074      & [74]         & SPS075      & [75]         \\
+		SPS076      & [76]         & SPS077      & [77]         & SPS078      & [78]         & SPS079      & [79]         & SPS080      & [80]         \\
+		SPS081      & [81]         & SPS082      & [82]         & SPS083      & [83]         & SPS084      & [84]         & SPS085      & [85]         \\
+		SPS086      & [86]         & SPS087      & [87]         & SPS088      & [88]         & SPS089      & [89]         & SPS090      & [90]         \\
+		SPS091      & [91]         & SPS092      & [92]         & SPS093      & [93]         & SPS094      & [94]         & SPS095      & [95]         \\
+		SPS096      & [96]         & SPS097      & [97]         & SPS098      & [98]         & SPS099      & [99]         & SPS100      & [100]        \\
+		SPS101      & [101]        & SPS102      & [102]        & SPS103      & [103]        & SPS104      & [104]        & SPS105      & [105]        \\
+		SPS106      & [106]        & SPS107      & [107]        & SPS108      & [108]        & SPS109      & [109]        & SPS110      & [110]        \\
+		SPS111      & [111]        & SPS112      & [112]        & SPS113      & [113]        & SPS114      & [114]        &             &              \\
+		\bottomrule
+	\end{tabular*}
+\end{table*}
+% --------------------------------------------------------------
+
+
+El proceso fue respaldado por diversas herramientas informáticas, como hojas de cálculo, software especializado en la gestión de referencias bibliográficas (por ejemplo, EndNote y Mendeley), y SMS-Builder \cite{sms-builder-repo} para la construcción del análisis de datos. Toda la información de este SMS ha sido publicada en el sitio \cite{sms-builder-own-container}.
+
+Los interesados pueden obtener un contenedor Docker \textcolor{red}{(!TODO Colocar el link del Dockerhub donde se encuentra alojado el contenedor con todo el SMS)} que incluye una versión funcional de SMS-Builder con todos los datos utilizados en este estudio. Se invita a los lectores a interactuar con esta herramienta tecnológica para obtener información complementaria a la que se presenta en este artículo
