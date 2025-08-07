@@ -25,11 +25,15 @@ Esta estrategia consta de 2 componentes. El primer componente es denominado ``Id
 El segundo componente es llamado ``Selección de estudios''. Se enfoca en aplicar varios criterios para refinar la búsqueda de resultados de estudios y así obtener el mayor valor del proceso de búsqueda. \\ \\
 
 \begin{itemize}
-    \item \textbf{Identificación de estudios:} En búsqueda de la viabilidad del estudio y por acuerdo de los autores, se limitó la búsqueda a cinco bases de datos académicas: \textit{ACM}, \textit{IEEE Xplore}, \textit{Springer}, \textit{Science Direct} y \textit{Taylor and Francis}. En esta parte del proceso es necesario establecer las palabras claves definidas antes y construir las cadenas de búsqueda específica para cada base de datos. Nuevamente se usó el modelo PICOC como guía metodológica para identificar términos claves o frases completas que se relacionan con las tecnologías de virtualización basadas en contenedores. En la construcción de estas cadenas de búsqueda se usaron sinónimos para ampliar el espectro de resultados. (Ver cuadro~\ref{tab:palabras-clave}).\\ 
+    \item \textbf{Identificación de estudios: } En búsqueda de la viabilidad del estudio y por acuerdo de los autores, se limitó la búsqueda a cinco bases de datos académicas: \textit{ACM}, \textit{IEEE Xplore}, \textit{Springer}, \textit{Science Direct} y \textit{Taylor and Francis}. En esta parte del proceso es necesario establecer las palabras claves definidas antes y construir las cadenas de búsqueda específica para cada base de datos. Nuevamente se usó el modelo PICOC como guía metodológica para identificar términos claves o frases completas que se relacionan con las tecnologías de virtualización basadas en contenedores. En la construcción de estas cadenas de búsqueda se usaron sinónimos para ampliar el espectro de resultados. (Ver cuadro~\ref{tab:palabras-clave}).\\ 
     Las principales palabras clave identificadas fueron: \textit{Container-based virtualization}, \textit{Education}, \textit{Research}, \textit{Industry}. Para ampliar y refinar los resultados se usaron operadores booleanos como \textit{AND} y \textit{OR}. Además, se usaron comillas para buscar frases completas y paréntesis para agrupar términos relacionados. Finalmente, el conjunto de palabras clave seleccionadas para construir las cadenas de búsqueda se presenta en el cuadro~\ref{tab:keywords}.\\
-    Para dirigir la búsqueda hacia la intercepción de los dominios de TI y la VBC se usó el operador booleano \textit{AND}. Una vez identificadas las palabras clave, se procedió con la construcción de las cadenas de búsqueda para cada base de datos, usando un proceso iterativo. El proceso de construcción de las cadenas de búsqueda consitió en realizar un proceso heúristico con las palabras clave, sinónimos y conceptos relacionados, haciendo uso de conjunciones y disyunciones conforme a las reglas de cada base de datos.\\ 
-    Así, estas cadenas de búsqueda varían de acuerdo con las reglas de cada base de datos. Ver cuadro~\ref{tab:cadenas-busqueda}.\\
+    Para dirigir la búsqueda hacia la intercepción de los dominios de TI y la VBC se usó el operador booleano \textit{AND}. Una vez identificadas las palabras clave, se procedió con la construcción de las cadenas de búsqueda para cada base de datos, usando un proceso iterativo. El proceso de construcción de las cadenas de búsqueda consitió en realizar un proceso heúristico con las palabras clave, sinónimos y conceptos relacionados, haciendo uso de conjunciones y disyunciones conforme a las reglas de cada base de datos. Así, estas cadenas de búsqueda varían de acuerdo con las reglas de cada base de datos. Ver cuadro~\ref{tab:cadenas-busqueda}.\\
 
+    Luego de la construcción de las cadenas de búsqueda, se procedió a ejecutarlas en cada base de datos. El cuadro~\ref{tab:resultados-busqueda-sin-criterio} muestra el conjunto de resultados obtenidos. Se identificó un total de 6530 preliminares, destacando que la base de datos \textit{Springer} es la que más resultados aportó, con un total de 4562 artículos, equivalente al 69.8\% del total.\\
+
+    \item \textbf{Selección de estudios: } Para refinar los resutados obtenidos en este proceso, se aplicaron los criterios de inclusión y exclusión definidos en la etapa de planeación. La tabla~\ref{tab:resultados-busqueda-criterios} muestra el resultado de este paso. Se redujo el total de artículos a 976. Springer se mantuvo como la base de datos con mayor número de artículos, con un total de 592, equivalente al 60.65\% del total. De los 976 artículos seleccionados se eliminaron 274 artículos duplicados, dejando un total de 771 artículos únicos. De este nuevo conjunto de datos, se realizó una revisión llamada \textit{Screening}. Este proceso consistió en revisar el título, resumen y las palabras clave de cada artículo para determinar si están en el contexto de la investigación, esto significa que están alineado con las metas del estudio. 
+    El proceso de \textit{Screening} permitió descartar 593 artículos debido a que se relacionaban con diferentes temas u otros enfoques que no aportaban valor a la investigación. Este proceso concluyó con un total de 110 estudios.
+    De esta manera finaliza la estrategia de búsqueda en bases de datos, la figura \ref{fig:resumen-busqueda-bds} muestra un resumen de la metodología seguida en esta estrategia de búsqueda.\\
 \end{itemize}
 
 \begin{table}[tbp]
@@ -67,8 +71,45 @@ El segundo componente es llamado ``Selección de estudios''. Se enfoca en aplica
     \caption{Palabras clave para la búsqueda en base de datos}\label{tab:keywords}
 \end{table}
 
+\begin{table*}[tbp]
+    \scriptsize % reduce tamaño del texto
+    \centering
+    \renewcommand{\arraystretch}{1.3}
+    \begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X 
+                                 >{\centering\arraybackslash}X 
+                                 >{\centering\arraybackslash}X 
+                                 >{\centering\arraybackslash}X 
+                                 >{\centering\arraybackslash}X 
+                                 >{\centering\arraybackslash}X}
+        \hline
+        \textbf{Criterio} & \textbf{ACM} & \textbf{IEEE} & \textbf{Science Direct} & \textbf{Springer} & \textbf{Taylor and Francis} \\
+        \hline
+        Resultados de cadenas de búsqueda solo con palabras clave & 189 & 426 & 4562 & 353 & 1000 \\
+        Porcentaje de contribución & 2.89\% & 6.52\% & 69.86\% & 5.4\% & 15.31\% \\
+        \hline
+    \end{tabularx}
+    \caption{Resultados de búsqueda por base de datos usando palabras clave}\label{tab:resultados-busqueda-sin-criterio}
+\end{table*}
 
-
+\begin{table*}[tbp]
+    \scriptsize % reduce tamaño del texto
+    \centering
+    \renewcommand{\arraystretch}{1.3}
+    \begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X 
+                                 >{\centering\arraybackslash}X 
+                                 >{\centering\arraybackslash}X 
+                                 >{\centering\arraybackslash}X 
+                                 >{\centering\arraybackslash}X 
+                                 >{\centering\arraybackslash}X}
+        \hline
+        \textbf{Criterio} & \textbf{ACM} & \textbf{IEEE} & \textbf{Science Direct} & \textbf{Springer} & \textbf{Taylor and Francis} \\
+        \hline
+        Resultados de cadenas de búsqueda solo con palabras clave & 48 & 134 & 46 & 592 & 156\\
+        Porcentaje de contribución & 4.91\% & 13.72\% & 4.71\% & 60.65\% & 15.98\%\\
+        \hline
+    \end{tabularx}
+    \caption{Resultados de búsqueda por base de datos usando palabras clave}\label{tab:resultados-busqueda-criterios}
+\end{table*}
 
 \newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
 
@@ -112,21 +153,50 @@ El segundo componente es llamado ``Selección de estudios''. Se enfoca en aplica
 \end{sidewaystable*}
 
 
-
-
-
-
-
-
-
+\begin{figure*}[tbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{resources/images/busqueda-estudios/busqueda-bd.png}
+    \caption{Resumen de las actividades y resultados obtenidos en la estrategia de búsqueda en base de datos}\label{fig:resumen-busqueda-bds}
+\end{figure*}
 
 % sub-subsetion for 4.2.3
 \subsubsection{Estrategia de Búsqueda 2: Bola de Nieve (Snowballing)}
-Quis ut deserunt in nulla aliquip exercitation. Voluptate non laborum do eu dolor mollit officia cupidatat do ea id id ullamco. Dolore velit anim est pariatur eiusmod occaecat duis labore reprehenderit nisi esse. Eu laboris cillum ullamco non velit veniam labore eiusmod laboris sint. Consequat officia aliquip velit officia do ex nulla cupidatat elit dolore deserunt sint.
-\mbox{}\\
+La estrategia de búsqueda de bola de nieve inicia con la identificación del conjunto base de artículos. Este conjunto base se usó en la revisión y selección de artículos relevantes. La identificación consistió en revisar las referencias de cada artículo para identificar nuevos artículos (Bola de nieve hacia atrás). Similarmente, se revisaron los artículos que citan los artículos base (Bola de nieve hacia adelante) lo que requirió usar una base de datos que indique esta información. En ambos casos, se aplicaron los criterios de inclusión y exclusión definidos en la etapa de planeación \cite{10.1145/2601248.2601268}. \\ \\
+Esta estrategia se realizó en dos pasos. El primer paso es llamado \textit{Construcción de la línea base} y tiene como objetivo establecer los artículos sobre los cuales se realizarán un análisis de citas y referencias. Para la construcción de este conjunto de estudios, se usó varios criterios basados en el CVI \textit{(Content Value Index)}, SCI \textit{(Study Citation Index)}, además de usar el criterio de inclusión directa. El segundo paso es llamado \textit{Selección de estudios} y se enfoca en el análisis de la referencias \textit{(Backward Snowballing)} y citas \textit{(Forward Snowballing)} de cada artículo. \\ \\
+La construcción de la línea base inicia con los 110 artículos obtenidos en la estrategia de búsqueda en bases de datos. De estos, se seleccionaron 24 artículos aplicando el critero de calidad SCI. La elección de este criterio se justifica en el hecho de que este criterio no depende de la valoración de los autores, sino que se basa en la cantidad de citas que recibe un artículo siendo este un indicador no subjetivo. El resultado de este paso es un total de 24 artículos seleccionados para la línea base. Los 24 artículos seleccionados se obtuvieron de hacer una análisis de frecuencia en las citas y extraer el primer cuartil (Q1) de los artículos más citados.\\ \\
+Como parte del proceso del SMS, es posible agregar estudios por inclusión directa. La inclusión directa aporta flexibilidad al proceso de búsqueda permitiendo añadir artículos que los autores consideran relevantes para el estudio. En este sentido, se agregaron 2 artículos por inclusión directa, lo que llevó a un total de 26 artículos en la línea base.\\ \\
+Luego de la construcción de la línea base, se procedió con el análisis de las referencias, lo que aportó un total de 495 artículos nuevos. El proceso de búsqueda hacia adelante fue realizado haciendo uso de Google Scholar, quien proporciona información sobre las veces que que un artículo se ha citado y siguiendo las practicas de~\cite{8747000}. 
+Con respecto a la búsqueda hacia atrás fue un total de 87 nuevos artículos.\\
+
+Se procedió a eliminar 14 duplicados entre los resultados de las búsquedas hacia atrás y hacia adelante. Acto seguido, se realizó nuevamente el \textit{Screening}. Este proceso de \textit{Screening}, al igual que el anterior, revisó el título, resumen y palabras claves, permitiendo reducir a 116 los artículos seleccionados usando estrategia de búsqueda. Ver figura~\ref{fig:resumen-busqueda-snowballing} para un resumen de la estrategia de búsqueda bola de nieve.\\ \\
+\mbox{}
+
+\begin{figure*}[tbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{resources/images/busqueda-estudios/busqueda-snowball.png}
+    \caption{Resumen de la estrategia de búsqueda - Bola de nieve}\label{fig:resumen-busqueda-snowballing}
+\end{figure*}
+
+\begin{table}[htbp]
+\renewcommand{\arraystretch}{1.3}
+\begin{tabularx}{\columnwidth}{
+    >{\centering\arraybackslash}m{0.3\textwidth}
+    >{\centering\arraybackslash}X
+    >{\centering\arraybackslash}m{0.15\textwidth}
+}
+\toprule
+\textbf{Estrategia} & \textbf{Estudios} & \textbf{\%} \\
+\midrule
+Bases de Datos & 110 & 48.67\% \\
+Bola de Nieve & 116 & 51.33\% \\
+\textbf{Total} & \textbf{226} & \textbf{100\%} \\
+\bottomrule
+\end{tabularx}
+\caption{Resultados de la búsqueda de estudios}\label{tab:resultados-busqueda}
+\end{table}
 
 % sub=-subsection 4.2.4
-\subsubsection{Resultados de la Búsqueda de Estudios}
-\label{subsubsec:resultados-busqueda}
-Nostrud enim magna culpa labore in culpa aliqua dolore ea amet sit magna exercitation sunt. Voluptate qui aliqua velit ipsum ullamco dolor ad velit cupidatat dolore sint. Nisi cillum dolore magna tempor minim ullamco anim quis ipsum consequat officia.
+\subsubsection{Resultados de la Búsqueda de Estudios}\label{subsubsec:resultados-busqueda}
+\mbox{}\\
+Finalmente, se resumen la búsqueda de artículos en 110 estudios obtenidos a través de bases de datos académicas y 116 estudios identificados mediante bola de nieve, para un total de 226 estudios identificación. Ver cuadro~\ref{tab:resultados-busqueda}
 \mbox{}\\
