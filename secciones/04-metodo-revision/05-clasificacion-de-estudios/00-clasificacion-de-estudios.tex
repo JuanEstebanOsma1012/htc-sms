@@ -1,4 +1,113 @@
 % subseccion 4.5
-\subsection{Etapa 5: Clasificación de Estudios}
+\subsection{Etapa 5: Clasificación de Estudios}\label{subsec:clasificacion-de-estudios}
 
-Officia aliqua sit mollit ipsum. Qui veniam labore Lorem ex eiusmod amet mollit. Enim ad elit dolor aute consequat. Enim voluptate ut in ut incididunt minim commodo et esse dolore tempor ex aute. Occaecat duis incididunt officia aute laborum et aliquip proident ut culpa labore. Enim aliqua veniam occaecat reprehenderit enim eu reprehenderit nostrud adipisicing id.
+La clasificación de los (SPS) se realizó mediante la agrupación por temas, tal como se muestra en la Tabla \ref{table:sps_classification_by_topic_rq}. Esta tabla presenta un resumen de los estudios que responden a las preguntas de investigación RQ1 y RQ2.
+
+% Tabla 13 V1 ----------CLASIFICACION SPSs POR PREGUNTA DE RQs y Topicos
+%\begin{table*}[htbp]
+%	\centering
+%	\caption{Clasificación de SPSs por tópicos y RQs}
+%	\label{table:sps_classification_by_topic_rq}
+%	\renewcommand{\arraystretch}{1.2}
+%	\setlength{\tabcolsep}{3pt}
+%	\begin{tabularx}{\textwidth}{p{0.8cm}p{2.2cm}XXXXXXX}
+%		\toprule
+%		\textbf{RQ}           & \textbf{Tópico}         & \textbf{1993-1997} & \textbf{1998-2002} & \textbf{2003-2007}   & \textbf{2008-2012}                                                                                                            & \textbf{2013-2017}                                                                         & \textbf{2018-2022}                                                                  & \textbf{2023-2025}                 \\
+%		\midrule
+%		\multirow{12}{*}{RQ1} & Artificial Intelligence &                    &                    &                      & SPS106 SPS105                                                                                                                 & SPS110 SPS111                                                                              & SPS049 SPS073 SPS096 SPS109                                                         & SPS021 SPS044 SPS068               \\
+%		\addlinespace[0.3em]
+%		                      & Cloud Computing         &                    &                    &                      & SPS078 SPS091 SPS092 SPS055 SPS058 SPS106 SPS051 SPS065 SPS023                                                                & SPS018 SPS047 SPS050 SPS063 SPS030 SPS048 SPS057 SPS062 SPS009 SPS012 SPS015 SPS022 SPS059 & SPS054 SPS056 SPS097 SPS011 SPS046 SPS053 SPS039 SPS025                             & SPS021 SPS081 SPS112               \\
+%		\addlinespace[0.3em]
+%		                      & Containerization        &                    &                    &                      &                                                                                                                               & SPS108 SPS026                                                                              & SPS019 SPS035 SPS011 SPS053 SPS025 SPS034 SPS080 SPS084 SPS085                      & SPS037 SPS038 SPS044 SPS081 SPS004 \\
+%		\addlinespace[0.3em]
+%		                      & Grid Computing          &                    & SPS014 SPS100      & SPS052 SPS001 SPS069 & SPS006 SPS098 SPS017 SPS040 SPS060 SPS089 SPS091 SPS092 SPS114 SPS055 SPS061 SPS107 SPS003 SPS008 SPS028 SPS065 SPS005 SPS087 & SPS018 SPS075 SPS048 SPS057 SPS062 SPS002 SPS009 SPS074 SPS015 SPS066                      & SPS064 SPS046 SPS053 SPS090 SPS029                                                  & SPS112                             \\
+%		\addlinespace[0.3em]
+%		                      & HPC                     &                    & SPS071             &                      & SPS006 SPS101 SPS103 SPS017 SPS077 SPS106 SPS065 SPS105 SPS024 SPS072 SPS093                                                  & SPS050 SPS075 SPS013 SPS074 SPS082 SPS066 SPS079 SPS094                                    & SPS035 SPS073 SPS046 SPS010 SPS025 SPS034 SPS080 SPS041 SPS042 SPS084 SPS085 SPS104 & SPS037 SPS038 SPS112 SPS068        \\
+%		\addlinespace[0.3em]
+%		                      & Java                    &                    &                    &                      &                                                                                                                               &                                                                                            &                                                                                     & SPS043                             \\
+%		\addlinespace[0.3em]
+%		                      & Virtualization          &                    &                    &                      & SPS017 SPS088 SPS065                                                                                                          & SPS062 SPS108 SPS022                                                                       & SPS097 SPS034 SPS085                                                                & SPS044 SPS081                      \\
+%		\addlinespace[0.3em]
+%		                      & Kubernetes              &                    &                    &                      &                                                                                                                               &                                                                                            & SPS034 SPS027 SPS084                                                                & SPS081 SPS004                      \\
+%		\addlinespace[0.3em]
+%		                      & Network                 &                    &                    & SPS052               &                                                                                                                               & SPS047 SPS002 SPS076                                                                       &                                                                                     &                                    \\
+%		\addlinespace[0.3em]
+%		                      & Parallel                & SPS070             & SPS071             &                      & SPS006 SPS103 SPS092 SPS061 SPS106 SPS007 SPS105 SPS072                                                                       & SPS075 SPS110 SPS009 SPS066 SPS026 SPS032                                                  & SPS054 SPS046 SPS083 SPS010 SPS096 SPS025 SPS045 SPS041                             & SPS038 SPS043                      \\
+%		\addlinespace[0.3em]
+%		                      & Docker                  &                    &                    &                      &                                                                                                                               & SPS036                                                                                     & SPS019 SPS053 SPS085                                                                & SPS004                             \\
+%		\addlinespace[0.3em]
+%		                      & HTC                     & SPS070             & SPS033             & SPS086 SPS016 SPS095 & SPS031 SPS067 SPS103 SPS017 SPS020 SPS078 SPS089 SPS058 SPS088 SPS028 SPS113 SPS087                                           & SPS018 SPS047 SPS050 SPS063 SPS076 SPS108 SPS032 SPS111                                    & SPS049 SPS097 SPS039 SPS045 SPS080 SPS090 SPS102 SPS109 SPS027 SPS029               & SPS044 SPS099                      \\
+%		\midrule
+%		\multirow{3}{*}{RQ2}  & Teaching                &                    &                    &                      & SPS024                                                                                                                        & SPS057 SPS074 SPS032 SPS079                                                                & SPS109                                                                              &                                    \\
+%		\addlinespace[0.3em]
+%		                      & Research                &                    & SPS100             & SPS052               & SPS101 SPS114 SPS107                                                                                                          & SPS110 SPS094 SPS111                                                                       & SPS097 SPS096 SPS080 SPS090 SPS102 SPS084 SPS104                                    & SPS037 SPS081 SPS099 SPS112        \\
+%		\addlinespace[0.3em]
+%		                      & Extension               &                    &                    &                      &                                                                                                                               &                                                                                            & SPS034 SPS085                                                                       & SPS068                             \\
+%		\bottomrule
+%	\end{tabularx}
+%\end{table*}
+
+% ------------------------------------------------------------------------
+
+
+% Tabla 13 V2 ----------CLASIFICACION SPSs POR PREGUNTA DE RQs y Topicos
+\begin{table*}[htbp]
+	\centering
+	\caption{Clasificación de SPSs por tópicos y RQs}
+	\label{table:sps_classification_by_topic_rq}
+	\renewcommand{\arraystretch}{1.2}
+	\setlength{\tabcolsep}{6pt}
+	\begin{tabularx}{\textwidth}{p{0.8cm}p{2.5cm}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X}
+		\toprule
+		\textbf{RQ}                           & \textbf{Tópico}         & \textbf{1993-2007}                                      & \textbf{2008-2012}                                                                                                            & \textbf{2013-2017}                                                                         & \textbf{2018-2022}                                                                  & \textbf{2023-2025}                 \\
+		\midrule
+		\multirow{12}{*}[-11em]{\textbf{RQ1}} & Artificial Intelligence &                                                         & SPS106 SPS105                                                                                                                 & SPS110 SPS111                                                                              & SPS049 SPS073 SPS096 SPS109                                                         & SPS021 SPS044 SPS068               \\
+		\addlinespace[0.3em]
+		                                      & Cloud Computing         &                                                         & SPS078 SPS091 SPS092 SPS055 SPS058 SPS106 SPS051 SPS065 SPS023                                                                & SPS018 SPS047 SPS050 SPS063 SPS030 SPS048 SPS057 SPS062 SPS009 SPS012 SPS015 SPS022 SPS059 & SPS054 SPS056 SPS097 SPS011 SPS046 SPS053 SPS039 SPS025                             & SPS021 SPS081 SPS112               \\
+		\addlinespace[0.3em]
+		                                      & Containerization        &                                                         &                                                                                                                               & SPS108 SPS026                                                                              & SPS019 SPS035 SPS011 SPS053 SPS025 SPS034 SPS080 SPS084 SPS085                      & SPS037 SPS038 SPS044 SPS081 SPS004 \\
+		\addlinespace[0.3em]
+		                                      & Grid Computing          & SPS014 SPS100 SPS052 SPS001 SPS069 SPS006 SPS098        & SPS006 SPS098 SPS017 SPS040 SPS060 SPS089 SPS091 SPS092 SPS114 SPS055 SPS061 SPS107 SPS003 SPS008 SPS028 SPS065 SPS005 SPS087 & SPS018 SPS075 SPS048 SPS057 SPS062 SPS002 SPS009 SPS074 SPS015 SPS066                      & SPS064 SPS046 SPS053 SPS090 SPS029                                                  & SPS112                             \\
+		\addlinespace[0.3em]
+		                                      & HPC                     & SPS071 SPS006 SPS101 SPS103                             & SPS006 SPS101 SPS103 SPS017 SPS077 SPS106 SPS065 SPS105 SPS024 SPS072 SPS093                                                  & SPS050 SPS075 SPS013 SPS074 SPS082 SPS066 SPS079 SPS094                                    & SPS035 SPS073 SPS046 SPS010 SPS025 SPS034 SPS080 SPS041 SPS042 SPS084 SPS085 SPS104 & SPS037 SPS038 SPS112 SPS068        \\
+		\addlinespace[0.3em]
+		                                      & Java                    &                                                         &                                                                                                                               &                                                                                            &                                                                                     & SPS043                             \\
+		\addlinespace[0.3em]
+		                                      & Virtualization          &                                                         & SPS017 SPS088 SPS065                                                                                                          & SPS062 SPS108 SPS022                                                                       & SPS097 SPS034 SPS085                                                                & SPS044 SPS081                      \\
+		\addlinespace[0.3em]
+		                                      & Kubernetes              &                                                         &                                                                                                                               &                                                                                            & SPS034 SPS027 SPS084                                                                & SPS081 SPS004                      \\
+		\addlinespace[0.3em]
+		                                      & Network                 & SPS052                                                  &                                                                                                                               & SPS047 SPS002 SPS076                                                                       &                                                                                     &                                    \\
+		\addlinespace[0.3em]
+		                                      & Parallel                & SPS070 SPS071 SPS006 SPS103                             & SPS006 SPS103 SPS092 SPS061 SPS106 SPS007 SPS105 SPS072                                                                       & SPS075 SPS110 SPS009 SPS066 SPS026 SPS032                                                  & SPS054 SPS046 SPS083 SPS010 SPS096 SPS025 SPS045 SPS041                             & SPS038 SPS043                      \\
+		\addlinespace[0.3em]
+		                                      & Docker                  &                                                         &                                                                                                                               & SPS036                                                                                     & SPS019 SPS053 SPS085                                                                & SPS004                             \\
+		\addlinespace[0.3em]
+		                                      & HTC                     & SPS070 SPS033 SPS086 SPS016 SPS095 SPS031 SPS067 SPS103 & SPS031 SPS067 SPS103 SPS017 SPS020 SPS078 SPS089 SPS058 SPS088 SPS028 SPS113 SPS087                                           & SPS018 SPS047 SPS050 SPS063 SPS076 SPS108 SPS032 SPS111                                    & SPS049 SPS097 SPS039 SPS045 SPS080 SPS090 SPS102 SPS109 SPS027 SPS029               & SPS044 SPS099                      \\
+		\midrule
+		\multirow{3}{*}[-2em]{\textbf{RQ2}}   & Teaching                &                                                         & SPS024                                                                                                                        & SPS057 SPS074 SPS032 SPS079                                                                & SPS109                                                                              &                                    \\
+		\addlinespace[0.3em]
+		                                      & Research                & SPS100 SPS052 SPS101                                    & SPS101 SPS114 SPS107                                                                                                          & SPS110 SPS094 SPS111                                                                       & SPS097 SPS096 SPS080 SPS090 SPS102 SPS084 SPS104                                    & SPS037 SPS081 SPS099 SPS112        \\
+		\addlinespace[0.3em]
+		                                      & Extension               &                                                         &                                                                                                                               &                                                                                            & SPS034 SPS085                                                                       & SPS068                             \\
+		\bottomrule
+	\end{tabularx}
+\end{table*}
+% ------------------------------------------------------------------------
+
+
+
+
+
+%!TODO Este párrafo debe corregirse en el futúro 
+\textcolor{red}{La agrupación de los estudios por temas implica que un mismo SPS puede estar relacionado con uno o más temas. Por ejemplo, el estudio XXXXXX se vincula simultáneamente a los temas [LISTA DE TEMAS], lo que infiere una relación con RQ1 y RQ2, respectivamente.}
+
+Tras esta primera clasificación, se evaluaron los SPSs en función de los criterios de inclusión/exclusión y los criterios de calidad, como los índices CVI, SCI e IRRQ. Los criterios utilizados para el análisis y la clasificación de los SPSs coinciden con los criterios de calidad. Consulte las Tablas !TODO, !TODO y !TODO.
+
+
+%!TODO tabla de estudios clasificados por CVI y Clasificación por tópicos
+%
+%!TODO tabla de estudios más relevantes por SCI 
+%
+%!TODO Estudios que cumplían por completo el indice IRRQ
+
