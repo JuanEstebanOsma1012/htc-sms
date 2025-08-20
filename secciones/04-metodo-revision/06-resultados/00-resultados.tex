@@ -88,6 +88,18 @@ La Figura \ref{fig:SPSsByKeywords} muestra un analisis cruzado entre los SPSs, p
 
 %sub-subseccion 4.6.2
 \subsubsection{Visualización de Nube de Palabras}
-Otro resultado obtenido de los 114 SPSs del SMS, es la construcción de una nube de palabras. Con este tipo de grafico, se busca identificar las palabras y conceptos más frecuentes y que tienen la mayor importancia. La Figura \ref{} muestra la nube de palabras generada con la herramienta XXXXX, cuya construcción se realizó a partir de las palabras clave de los SPSs.
 
-Dentro de las palabras claves más frecuentes, se destacan "XXXXX", "XXXXX" y "XXXXX", con una contribución del XX.XX\% en conjunto. El segundo nivel de relevancia en terminos de nube de palabras corresponden a "XXXXX", "XXXXX" y "XXXXX", con una contribución del XX.XX\%. Finalmente, las palabras menos frecuentes incluyen "XXXXX", "XXXXX" y "XXXXX", con una contribución del XX.XX\%.
+\begin{figure}[htbp]
+	\centering
+	\vspace{10pt}
+	\includegraphics[scale=0.7]{resources/figures/wordcloud.png}
+	\vspace{6pt}
+	\caption{Nube de palabras de los palabras clave.}
+	\label{fig:WordCloud}
+\end{figure}
+
+Otro resultado obtenido de los 114 SPSs del SMS, es la construcción de una nube de palabras. Con este tipo de grafico, se busca identificar las palabras y conceptos más frecuentes y que tienen la mayor importancia. La Figura \ref{fig:WordCloud} muestra la nube de palabras generada con la herramienta NubeDePalabras.es, cuya construcción se realizó a partir de las palabras clave de los SPSs.
+
+Dentro de las palabras claves más frecuentes, se destacan ``Cloud computing'', ``Grid computing'' y ``Distributed computing'', con una contribución del 18.59\% en conjunto a la nube de palabras. El segundo nivel de relevancia en terminos de nube de palabras corresponden a ``HPC'', ``High Throughput Computing'' y ``Scheduling'', con una contribución del 11.98\%. Finalmente, tenemos un tercer nivel que incluye ``Resource Management'', ``High Performance Computing'' y ``Scientific workflow'', con una contribución del 7.85\%.
+
+Cabe recalcar que los calculos se hicieron con base en las palabras tomadas para la nube, en este caso se excluyeron todas las palabras con solo una aparición en la nube de palabras, por lo que se uncluyeron todas las palabras con dos apariciones o más. Todo esto con el fin de extraer la información más relevante y no contaminar al lector con información no tan relevante. Luego, los porcentajes que se extrajeron fueron tomados de la cantidad de apariciones de las palabras con dos apariciones o más.
