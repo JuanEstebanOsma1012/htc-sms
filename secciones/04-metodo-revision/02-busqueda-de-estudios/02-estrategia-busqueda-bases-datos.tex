@@ -40,9 +40,6 @@
 %Cantidad de estudios totales luego del screening
 \newcommand{\screenTot}{\fpeval{\depTot-\screen}}
 
-
-
-
 %sub-subseccion 4.2.2
 \subsubsection{Estrategia de Búsqueda 1: Bases de Datos}
 
@@ -55,20 +52,21 @@ Esta estrategia comprende dos componentes. El primer componente se denomina ``Id
 	\centering
 	\caption{Palabras clave identificadas usando el modelo PICOC}
 	\label{table:picoc_keywords}
-	\renewcommand{\arraystretch}{1.5}  % Increase row height globally
-	\begin{tabular}{p{1.8cm}p{5.7cm}}
+	\renewcommand{\arraystretch}{1}  % Increase row height globally
+	\begin{tabular}{p{1.8cm}p{6cm}}
 		\toprule
-		\textbf{Componente}               & \textbf{Palabras clave}                                                                                                                                                                                                                                                                                               \\
+		\textbf{Componente} & \textbf{Palabras clave} \\
 		\midrule
-		\textbf{Población}                & Trabajos relacionados, Universos, HTCondor, Computación distribuida y paralela, HTC, Desarrollo de Software, Virtualización y microservicios, Redes de computadoras, Infraestructura computacional, Inteligencia artificial, Análisis de datos, Pensamiento computacional, Investigación, Docencia, Extensión         \\
+		\textbf{Población} & Universos, HTCondor, Computación distribuida y paralela, HTC, Desarrollo de Software, Virtualización y microservicios, Redes de computadoras, Infraestructura computacional, Inteligencia artificial, Análisis de datos, Pensamiento computacional, Investigación, Docencia, Extensión.\\
 		\addlinespace[0.8em]
-		\textbf{Intervención}             & Identificación, Clasificación, Universos, HTCondor, Computación distribuida y paralela, HTC, Desarrollo de Software, Virtualización y microservicios, Redes de computadoras, Infraestructura computacional, Inteligencia artificial, Análisis de datos, Pensamiento computacional, Investigación, Docencia, Extensión \\
+		\textbf{Intervención} & Identificación y clasificación.\\
 		\addlinespace[0.8em]
-		\textbf{Criterios de aceptación}  & Casos de estudio culminados                                                                                                                                                                                                                                                                                           \\
+		\textbf{Criterios de aceptación} & 
+        Casos de proyecto documentados, cumplimiento de criterios de inclusión y exclusión y aparición en bases de datos seleccionadas.\\
 		\addlinespace[0.8em]
-		\textbf{Resultados              } & Taxonomía, Universos, HTCondor, Computación distribuida y paralela, HTC, Desarrollo de Software, Virtualización y microservicios, Redes de computadoras, Infraestructura computacional, Inteligencia artificial, Análisis de datos, Pensamiento computacional, Investigación, Docencia, Extensión                     \\
+		\textbf{Salidas} & Taxonomía que organiza los trabajos relacionados con la población.\\
 		\addlinespace[0.8em]
-		\textbf{Contexto}                 & Universos, HTCondor, Computación distribuida y paralela, HTC, Desarrollo de Software, Virtualización y microservicios, Redes de computadoras, Infraestructura computacional, Inteligencia artificial, Análisis de datos, Pensamiento computacional, Investigación, Docencia, Extensión                                \\
+		\textbf{Contexto} & Universos HTCondor en dominios de computación distribuida y paralela, que potencian las funciones sustantivas universitarias de investigación, docencia y extensión.\\
 		\bottomrule
 	\end{tabular}
 \end{table}
@@ -87,7 +85,7 @@ Finalmente, el conjunto de palabras clave seleccionadas para la construcción de
 	\caption{Palabras clave para búsqueda en base de datos}
 	\label{table:database_search_keywords}
 	\renewcommand{\arraystretch}{1}  % Increase row height globally
-	\begin{tabular}{p{1.8cm}p{5.7cm}}
+	\begin{tabular}{p{1.4cm}p{6.4cm}}
 		\toprule
 		\textbf{Palabra}  & \textbf{Sinónimos y conceptos relacionados}                \\
 		\midrule
@@ -115,20 +113,20 @@ Finalmente, el conjunto de palabras clave seleccionadas para la construcción de
 	\centering
 	\caption{Cadenas de búsqueda utilizadas en las bases de datos}
 	\label{table:cadenas_de_busqueda}
-	\renewcommand{\arraystretch}{1.5}  % Increase row height globally
-	\begin{tabular}{p{4cm}p{8.5cm}p{3.5cm}}
+	\renewcommand{\arraystretch}{1}  % Increase row height globally
+	\begin{tabular}{p{3.2cm}p{11cm}p{2.5cm}}
 		\toprule
-		\textbf{Base de Datos}       & \textbf{Cadena de Búsqueda}                                                                                                                                                                                         & \textbf{Campos}  \\
+		\textbf{Base de Datos}       & \textbf{Cadena de Búsqueda} & \textbf{Campos}  \\
 		\midrule
-		\textbf{ACM Digital Library} & ((HTCondor OR Condor) AND (HTC OR ``High Throughput Computing'' OR HPC OR ``High Performance Computing'') AND (Universe OR ``Execution Environment'') AND (Project OR Work) AND (Research OR Teaching OR Industry)) & Todos los campos \\
+		\textbf{ACM Full Text Collection} & ((HTCondor OR Condor) AND (HTC OR ``High Throughput Computin'' OR HPC OR ``High Performance Computing'') AND (Universe OR ``Execution Environment'') AND (Project OR Work) AND (Research OR Teaching OR Industry)) & Todos los campos\\
 		\addlinespace[0.8em]
-		\textbf{IEEE Xplore}         & !TODO                                                                                                                                                                                                               & Todos los campos \\
+		\textbf{IEEE Xplore} & (HTCondor OR Condor) AND (HTC OR (High Throughput Computing)) AND (Universe OR (Runtime Environment)) AND (Research OR Teaching OR Industry) & Todos los campos\\
 		\addlinespace[0.8em]
-		\textbf{Springer}            & ((HTCondor $|$ Condor) + (HTC $|$ ``High Throughput Computing'' $|$ HPC $|$ ``High Performance Computing'') + (Universe $|$ ``Execution Environment'') + (Project $|$ Work) + (Research $|$ Teaching $|$ Industry)) & Todos los campos \\
+		\textbf{Springer} & ((HTCondor | Condor) + (HTC | ``High Throughput Computing'' | HPC | ``High Performance Computing'') + (Universe | ``Execution Environment'') + (Project | Work) + (Research | Teaching | Industry)) & Todos los campos\\
 		\addlinespace[0.8em]
-		\textbf{ScienceDirect}       & (HTCondor OR ``High Throughput Computing'' OR HTC) AND (Universe OR Project OR Research OR Framework OR Application)                                                                                                & Todos los campos \\
+		\textbf{ScienceDirect} & (HTCondor OR Condor) (HTC OR ``High Throughput Computing'' OR HPC OR ``High Performance Computing'') (Universe OR ``Execution Environment'') (Project OR Work) (Research OR Teaching OR Industry) & Todos los campos\\
 		\addlinespace[0.8em]
-		\textbf{Taylor \& Francis}   & !TODO                                                                                                                                                                                                               & Todos los campos \\
+		\textbf{Taylor \& Francis}   & (HTCondor OR Condor) AND (HTC OR (High Throughput Computing)) AND (Universe OR (Runtime Environment)) AND (Research OR Teaching OR Industry) & Todos los campos \\
 		\bottomrule
 	\end{tabular}
 \end{table*}
@@ -149,9 +147,10 @@ Después de construidas las cadenas de búsqueda, estas fueron enviadas a cada m
 	\centering
 	\caption{Resultados de las cadenas de búsqueda}
 	\label{table:search_results}
-	\begin{tabular}{p{4.5cm}p{1.5cm}p{1.5cm}p{2cm}p{1.8cm}p{1.8cm}p{1.5cm}}
+    \renewcommand{\arraystretch}{1}  % Increase row height globally
+	\begin{tabular}{p{4.8cm}p{1.7cm}p{1.7cm}p{1.7cm}p{1.7cm}p{2cm}p{1.4cm}}
 		\toprule
-		\textbf{Criterios}                                        & \textbf{ACM} & \textbf{IEEE} & \textbf{ScienceDirect} & \textbf{Springer} & \textbf{Taylor \& Francis} & \textbf{Total} \\
+		\textbf{Criterios}                                        & \textbf{ACM} & \textbf{IEEE} & \textbf{ScienceDirect} & \textbf{Springer} & \textbf{Taylor\&Francis} & \textbf{Total} \\
 		\midrule
 		\textbf{Cadena de búsqueda con palabras clave únicamente} & \acm{}       & \ieee{}       & \sd{}                  & \spr{}            & \tf{}                      & \tot{}         \\
 		\addlinespace[0.8em]
@@ -164,7 +163,7 @@ Después de construidas las cadenas de búsqueda, estas fueron enviadas a cada m
 
 
 
-\bolditalic{Selección de estudios}: para refinar los resultados obtenidos hasta este punto, aplicamos los criterios de inclusión y exclusión definidos en la fase de planificación. La Tabla \ref{table:search_results_exclusion} muestra los resultados de este paso. Despues de aplicado dicho filtro, el número total de estudios obtenido fue \itot. Según las diferentes bases de datos consultadas, ACM continúa teniendo la contribución más considerable, con el \iacmp\% de los estudios.
+\bolditalic{Selección de estudios}: para refinar los resultados obtenidos hasta este punto, aplicamos los criterios de inclusión y exclusión definidos en la fase de planificación. La Tabla \ref{table:search_results_exclusion} muestra los resultados de este paso. Después de aplicado dicho filtro, el número total de estudios obtenido fue \itot. Según las diferentes bases de datos consultadas, ACM continúa teniendo la contribución más considerable, con el \iacmp\% de los estudios.
 
 
 
@@ -187,7 +186,7 @@ Por lo tanto, concluimos la primera estrategia de búsqueda con un total de \scr
 	\centering
 	\caption{Resultados de las cadenas de búsqueda con criterios de exclusión}
 	\label{table:search_results_exclusion}
-	\begin{tabular}{p{4.5cm}p{1.5cm}p{1.5cm}p{2cm}p{1.8cm}p{1.8cm}p{1.5cm}}
+	\begin{tabular}{p{4.8cm}p{1.7cm}p{1.7cm}p{1.7cm}p{1.7cm}p{2cm}p{1.4cm}}
 		\toprule
 		\textbf{Criterios}                                        & \textbf{ACM} & \textbf{IEEE} & \textbf{ScienceDirect} & \textbf{Springer} & \textbf{Taylor \& Francis} & \textbf{Total} \\
 		\midrule

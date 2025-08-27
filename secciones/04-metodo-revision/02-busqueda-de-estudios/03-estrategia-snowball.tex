@@ -22,11 +22,16 @@ Esta estrategia comprende dos pasos. El primer paso se denomina ``Construcción 
 % Snowball baseline building 
 \bolditalic{Construcción de línea base de bola de nieve}: Basándonos en los \screenTot{} estudios seleccionados durante la fase de screening, se realizó un análisis exhaustivo de frecuencia y relevancia académica mediante el cual se evaluó la calidad e impacto científico de cada publicación. A través de la aplicación sistemática del índice SCI  como criterio de selección por calidad, se logró identificar y extraer \csiSelected{} estudios de alta relevancia que constituyen la base fundamental para la implementación de la estrategia de búsqueda por bola de nieve. Estos estudios seleccionados, caracterizados por su alto índice de citación y reconocimiento en la comunidad científica, servirán como punto de partida para las iteraciones de snowball hacia adelante (\textit{forward snowballing}, es decir, aquellos trabajos citados en nuestros estudios base) y hacia atrás (\textit{backward snowballing}, esto es, aquellos trabajos que citaron nuestros estudios base), permitiendo así expandir la búsqueda bibliográfica de manera dirigida hacia literatura de calidad comprobada en el dominio de los universos HTCondor.
 
+\bolditalic{Selección de estudios}: Para esta actividad se decidió hacer dos iteraciones de bola de nieve. Se comienza con la primera iteración hacia atrás revisando en cada uno de los \csiSelected{} estudios semilla. Esta revisión permitió identificar nuevos artículos que cumplen con nuevos requisitos de inclusión fabricados para este proceso. Ver Figura \ref{figure:Snowball}. Así pues, la primera iteración se hizo el proceso de bola de nieve hacia atrás, lo que permitió obtener \firstBackwardSnowballStudies.  Posteriormente se realiza la iteración hacia adelante, revisando aquellos estudios que citan los documentos de línea base, obteniendo como resultado \firstForwardSnowballStudies{}.
 
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[scale=0.55]{resources/figures/sms-Snowball.drawio.png}
+	\caption{Estrategia de búsqueda por bola de nieve.}
+	\label{figure:Snowball}
+\end{figure}
 
-\bolditalic{Selección de estudios}: Para esta actividad se decidió hacer dos iteraciones de bola de nieve. Se comienza con la primera iteración hacia atrás revisando en cada uno de los \csiSelected{} estudios las referencias existentes. Esta revisión permitió identificar nuevos artículos que cumplen con nuevos requicitos de inclusión fabricados para este preceso (ver Fig. \ref{table:inclusion_exclusion_criteria}). Así pues, la primera iteración se procede a hacer el proceso de bola de nieve hacia atrás, lo que permitió obtener \firstBackwardSnowballStudies.  Posteriormente se realiza la iteración hacia adelante, revisando aquellos estudios que citan los documentos de línea base, obteniendo como resultado \firstForwardSnowballStudies{}.
-
-Para la segunda iteración se obtuvieron \secondBackwardSnowballStudies{} para la bolda de nieve hacia atrás y \secondForwardSnowballStudies{} para la bola de nieve hacia adelante, consiguiendo así otros \secondSnowballIterationStudies{}.
+Para la segunda iteración se obtuvieron \secondBackwardSnowballStudies{} para la bola de nieve hacia atrás y \secondForwardSnowballStudies{} para la bola de nieve hacia adelante, consiguiendo así otros \secondSnowballIterationStudies{}.
 
 
 Esta actividad se realizó a través de Google Scholar y siguiendo la práctica en el estudio \cite{Ali-01}. El resultado conseguido fueron \snowballNewStudies{} nuevos estudios.
@@ -37,7 +42,7 @@ Esta actividad se realizó a través de Google Scholar y siguiendo la práctica 
 	\caption{Criterios de inclusión/exclusión}
 	\label{table:inclusion_exclusion_criteria}
 	\renewcommand{\arraystretch}{1}  % Increase row height globally
-	\begin{tabular}{p{1.5cm}p{2.2cm}p{2.8cm}}
+	\begin{tabular}{p{1.5cm}p{2.2cm}p{3.9cm}}
 		\toprule
 		\textbf{Categoría}           & \textbf{Inclusión}         & \textbf{Exclusión}                                                                                                          \\
 		\midrule
