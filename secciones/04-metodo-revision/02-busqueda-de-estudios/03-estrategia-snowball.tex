@@ -15,17 +15,21 @@
 
 \newcommand{\snowballNewStudies}{\fpeval{\firstSnowballIterationStudies+\secondSnowballIterationStudies}}
 
-La estrategia de búsqueda por bola de nieve comienza con la identificación del conjunto base de documentos a utilizar, seguido de una revisión y selección de documentos. La revisión consiste en verificar la lista de referencias con el fin de identificar nuevos documentos (bola de nieve hacia atrás). De manera similar, se identifican los documentos que citan el documento revisado (bola de nieve hacia adelante), lo cual requiere el uso de una base de datos que indique esta información; para dicho fin se hizo uso de Google Scholar. En todos los casos, la sección de documentos aplica los criterios de exclusión \cite{Wohlin-01}.
-\\
-Esta estrategia comprende dos pasos. El primer paso se denomina ``Construcción de línea base de bola de nieve'' y se enfoca en establecer estudios para iniciar el análisis de referencias y citas. Para la composición de este conjunto de estudios, utilizamos varios criterios basados en el CVI (Índice de Valor de Contenido), SCI (Índice de Citas de Estudios), además de también usar la inclusión directa. El segundo paso se denomina ``Selección de estudios'', y se enfoca en el análisis de referencias (Bola de nieve hacia atrás) y citas (Bola de nieve hacia adelante) de cada estudio.
+La estrategia de búsqueda por bola de nieve comienza con la identificación del conjunto base de documentos a utilizar, seguido de una revisión y selección de documentos. La revisión consiste en verificar la lista de referencias con el fin de identificar nuevos documentos (bola de nieve hacia atrás). De manera similar, se identifican los documentos que citan el documento revisado (bola de nieve hacia adelante), lo cual requiere el uso de un buscador que indique esta información; para dicho fin se hizo uso de Google Scholar. En todos los casos, la sección de documentos aplica los criterios de exclusión \cite{Wohlin-01}.
+
+Esta estrategia comprende dos pasos. El primer paso se denomina ``Construcción de línea base de bola de nieve'' y se enfoca en establecer estudios para iniciar el análisis de referencias y citas. Para la composición de este conjunto de estudios, utilizamos criterios basados en el SCI (Índice de Citas de Estudios). El segundo paso se denomina ``Selección de estudios'', y se enfoca en el análisis de referencias (Bola de nieve hacia atrás) y citas (Bola de nieve hacia adelante) de cada estudio.
 
 
 % Snowball baseline building 
 
-\bolditalic{Construcción de línea base de bola de nieve}: Basándonos en los \screenTot{} estudios seleccionados durante la fase de \textit{screening}, se realizó un análisis exhaustivo de frecuencia y relevancia académica mediante el cual se evaluó la calidad e impacto científico de cada publicación. A través de la aplicación sistemática del índice SCI  como criterio de selección por calidad, se logró identificar y extraer \csiSelected{} estudios de alta relevancia que constituyen la base fundamental para la implementación de la estrategia de búsqueda por bola de nieve. Estos estudios seleccionados, caracterizados por su alto índice de citación y reconocimiento en la comunidad científica, servirán como punto de partida para las iteraciones de snowball hacia adelante (\textit{forward snowballing}, esto es, aquellos trabajos que citaron nuestros estudios base) y hacia atrás (\textit{backward snowballing}, es decir, aquellos trabajos citados en nuestros estudios base), permitiendo así expandir la búsqueda bibliográfica de manera dirigida hacia literatura de calidad comprobada en el dominio de los universos HTCondor.
+\bolditalic{Construcción de línea base de bola de nieve}: Basándonos en los \screenTot{} estudios seleccionados durante la fase de \textit{screening}, se realizó un análisis exhaustivo de frecuencia y relevancia académica mediante el cual se evaluó la calidad e impacto científico de cada publicación.
+
+A través de la aplicación sistemática del índice SCI como criterio de selección por calidad, se logró identificar y extraer \csiSelected{} estudios de alta relevancia que constituyen la base fundamental para la implementación de la estrategia de búsqueda por bola de nieve. Luego, se aplicaron los criterios de inclusión y exclusión propuestos en la Tabla \ref{table:inclusion_exclusion_criteria} para limitar la cantidad de estudios a los más recientes según el período de publicación, con esto se logró disminuir a \newSnowballStudies{} la cantidad de estudios semilla de la bola de nieve.
+
+Estos últimos estudios, caracterizados por su alto índice de citación y reconocimiento en la comunidad científica, servirán como punto de partida para las iteraciones de \textit{snowball} hacia adelante (\textit{forward snowballing}, esto es, aquellos trabajos que citaron nuestros estudios base) y hacia atrás (\textit{backward snowballing}, es decir, aquellos trabajos citados en nuestros estudios base), permitiendo así expandir la búsqueda bibliográfica de manera dirigida en el dominio de los universos HTCondor.
 
 
-\bolditalic{Selección de estudios}: Para esta actividad se decidió hacer dos iteraciones de bola de nieve. Se comienza con la primera iteración hacia atrás revisando en cada uno de los \csiSelected{} estudios semilla. Esta revisión permitió identificar nuevos artículos que cumplen con nuevos requisitos de inclusión fabricados para este proceso. Ver Figura \ref{figure:Snowball}. Así pues, en la primera iteración se hizo el proceso de bola de nieve hacia atrás, lo que permitió obtener \firstBackwardSnowballStudies.  Posteriormente se realiza la iteración hacia adelante, revisando aquellos estudios que citan los documentos de línea base, obteniendo como resultado \firstForwardSnowballStudies{}.
+\bolditalic{Selección de estudios}: Para esta actividad se decidió hacer dos iteraciones de bola de nieve. Se comienza con la primera iteración revisando que estudios citaron y que estudios fueron citados por cada uno de los \newSnowballStudies{} estudios semilla. Esta revisión permitió identificar \firstSnowballIterationStudies{} nuevos artículos que cumplen con nuevos criterios de inclusión y exclusión fabricados para este proceso. Luego, se procede con la segunda iteración de la bola de nieve, la cual se aplica para cada uno de los \firstSnowballIterationStudies{} estudios extraídos en la primera iteración. Esta revisión permitió identificar otros \secondSnowballIterationStudies{} nuevos estudios para ser incluidos en el SMS. Ver Figura \ref{figure:Snowball}.\\
 
 \begin{figure}[htbp]
 	\centering
@@ -34,10 +38,7 @@ Esta estrategia comprende dos pasos. El primer paso se denomina ``Construcción 
 	\label{figure:Snowball}
 \end{figure}
 
-Para la segunda iteración se obtuvieron \secondBackwardSnowballStudies{} para la bola de nieve hacia atrás y \secondForwardSnowballStudies{} para la bola de nieve hacia adelante, consiguiendo así otros \secondSnowballIterationStudies{}.
-
-
-Esta actividad se realizó a través de Google Scholar y siguiendo la práctica en el estudio \cite{Ali-01}. El resultado conseguido fueron \snowballNewStudies{} nuevos estudios.
+Esta actividad se realizó a través de Google Scholar y siguiendo la práctica en el estudio \cite{Ali-01}. El resultado conseguido fueron \snowballNewStudies{} nuevos estudios. Cabe recalcar que lo presentado en esta sección y en la Figura \ref{figure:Snowball} es un resumen representativo del proceso de \textit{snowball}, sin embargo, se omiten pasos que se realizaron pero no aportan al objetivo del estudio.
 
 % -------- Tabla : Criterios de inclusión/exclusión ------------
 \begin{table}[htbp]
