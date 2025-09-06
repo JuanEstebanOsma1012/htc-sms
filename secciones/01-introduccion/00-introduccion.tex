@@ -1,54 +1,24 @@
 %sección I
 \section{Introducción}
-\IEEEPARstart{E}{l} objetivo de la computación científica es la resolución
-de problemas \cite{landau01}. La computadora resulta necesaria para este propósito debido a
-que algunos problemas del mundo real frecuentemente presentan un nivel de dificultad
-o complejidad que excede las capacidades de analítica o resolución humana, sin embargo,
-estos pueden ser abordados efectivamente mediante el uso
-de recursos computacionales~\cite{landau01}.
+\IEEEPARstart{T}{he} objective of scientific computing is to solve complex problems that often exceed human analytical capabilities~\cite{landau01}. Computers are indispensable in this context, as many real-world problems involve levels of difficulty or data scale that make purely analytical approaches infeasible, nevertheless, making use of computational resources allow these problems to be effectively addressed~\cite{landau01}.
 
 
-No obstante, no todos los problemas científicos son
-manejables para una sola computadora. Existen problemas cuya ejecución en una sola maquina resulta
-inviable debido a factores como su naturaleza o a el tamaño de su conjunto de datos. Es por esto
-que los investigadores usan herramientas de computación distribuida para producir resultados. A su vez, la computación distribuida es una disciplina que también
-ha encontrado interés en el ámbito educativo~\cite{Senol-01} y tiene como
-propósito el maximizar la cantidad de resultados producidos durante un periodo
-largo de tiempo~\cite{juve-01}.
-
-En este contexto surge HTCondor, un sistema creado por la
-Universidad Wisconsin–Madison, especializado en la gestión de cargas
-de trabajo y diseñado específicamente para tareas de cómputo intensivo~\cite{chang-01, htcondor-description}.
-HTCondor permite a los usuarios enviar tareas computacionales a un clúster,
-donde el sistema gestiona de forma autónoma la asignación, planificación y distribución del
-trabajo entre los nodos disponibles. El mecanismo de planificación opera bajo un
-modelo de políticas bidireccional: tanto los propietarios de los recursos computacionales
-como los usuarios solicitantes pueden establecer criterios y preferencias
-que determinan dónde y bajo qué condiciones se ejecutarán las tareas~\cite{htcondor-description}.
-Dichos trabajos computacionales vienen en la forma de lenguajes de programación
-o \textit{contextos de ejecución} los cuales HTCondor llama
-\textit{universos}. Hasta la fecha en la que se escribe el presente artículo
-los universos HTCondor disponibles son los siguientes: \textit{vanilla, grid, java, scheduler,
-	local, parallel, vm, container y docker}.
+However, not all scientific problems can be addressed by a single computer. Certain problems are computationally infeasible to execute on a single machine due to factors such as their inherent complexity or the size of their input datasets. For this reason, researchers employ distributed computing tools to produce results in a reasonable time. Some of these tools belong to the realm of High Throughput Computing (HTC), a paradigm whose goal is maximizing the volume of results produced over extended periods of time~\cite{juve-01} and that has attracted interest in the educational field~\cite{Senol-01}
 
 
-La diversidad de universos disponibles refleja la amplia gama de aplicaciones
-que HTCondor puede soportar, desde computación tradicional hasta entornos
-virtualizados y contenedorizados. No obstante, la literatura científica carece
-de una clasificación sistemática que permita comprender cómo estos universos
-se aplican en diferentes contextos y cuál es su impacto. En consecuencia,
-el presente documento exponemos un estudio de mapeo sistemático que busca,
-en primer lugar, clasificar trabajos relacionados con diversos dominios tecnológicos
-como lo son la computación distribuída y paralela, el desarrollo de software,
-virtualización, contenerización, la redes de computadora, entre otros. En segundo lugar,
-se busca identificar y categorizar trabajos vinculados con los universos de
-HTCondor como herramienta para fortalecer funciones esenciales universitarias
-como: investigación, docencia, extensión e industria.
+Within this domain, HTCondor, developed at the University of Wisconsin–Madison, has emerged as a workload management system designed specifically for compute-intensive applications~\cite{chang-01, htcondor-description}. HTCondor allows users to submit tasks to a pool, where the system autonomously manages resource allocation, scheduling, and distribution across nodes. Its scheduling mechanism follows a bidirectional policy: both resource owners and job submitters may define conditions and preferences that influence how and where tasks are executed~\cite{htcondor-description}.
 
-El resto del documento se estructura de la siguiente manera:
-la Sección~\ref{sec:motivacion} indica la motivación para este trabajo.
-La Sección~\ref{sec:trabajos-relacionados} presenta trabajos relacionados.
-La Sección~\ref{sec:metodo-revision} describe el método utilizado para llevar a cabo el SMS.
-La Sección~\ref{sec:analisis-discusion} contiene el análisis y discusión del trabajo realizado.
-La Sección~\ref{sec:amenazas-validez} discute las amenazas a la validez, y finalmente,
-la Sección~\ref{sec:conclusiones} presenta las conclusiones.
+
+HTCondor organizes computational jobs into distinct execution environments, known as universes. At the time of writing, the available universes include: vanilla, grid, java, scheduler, local, parallel, vm, container, and docker. This diversity reflects the system’s adaptability, ranging from traditional computing tasks to virtualized and containerized environments.
+
+
+Despite this versatility, the literature lacks a systematic classification that clarifies the contexts in which HTCondor universes are applied and their broader impact. To address this gap, this paper presents a systematic mapping study (SMS) with two objectives: first, to classify works across technological domains such as distributed and parallel computing, software development, virtualization, containerization, and networking; second, to identify and categorize research that leverages HTCondor universes as tools supporting core university functions such as research, teaching, outreach, and industry collaboration.
+
+
+The remainder of this document is structured as follows:
+Section~\ref{sec:motivacion} outlines the motivation for this work.
+Section~\ref{sec:trabajos-relacionados} reviews related studies.
+Section~\ref{sec:metodo-revision} describes the method employed to conduct the SMS.
+Section~\ref{sec:analisis-discusion} presents the analysis and discussion of the study.
+Section~\ref{sec:amenazas-validez} discusses threats to validity, and finally,
+Section~\ref{sec:conclusiones} provides the conclusions.
