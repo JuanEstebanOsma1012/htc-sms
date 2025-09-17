@@ -1,9 +1,11 @@
 % subseccion 4.1  
 \subsection{Stage 1: Planning}\label{sec:planeacion}
 
-At this stage, we established the general purpose of the research and defined goals, research questions, metrics, classification topics, inclusion/exclusion criteria,and quality criteria. See Fig. \ref{fig:PlanningStageOverview}.
+At this stage, we established the general purpose of the research and defined goals, research questions, metrics, classification topics, inclusion/exclusion criteria, and quality criteria. See Fig.~\ref{fig:PlanningStageOverview}.
 
-For the components ``Study Objectives'', ``Research Questions'', and ``Metrics'' of the planning stage, the {\itshape Goal-Question-Metric} (GQM) model \cite{basili1992software, caldiera1994goal} was applied. These components consider the conceptual, operational, and quantitative levels, respectively, according to \cite{Sepúlveda202141}. % !TODO Es apropiado colocar esta última cita?  
+For the components ``Study Objectives'', ``Research Questions'', and ``Metrics'' of the planning stage, the {\itshape Goal-Question-Metric} (GQM) model \cite{basili1992software, caldiera1994goal} was applied. These components consider the conceptual, operational, and quantitative levels, respectively, according to \cite{Sepúlveda202141}. 
+% !TODO Es apropiado colocar esta última cita?  
+
 
 \begin{figure}[htbp]
 	\centering
@@ -15,7 +17,7 @@ For the components ``Study Objectives'', ``Research Questions'', and ``Metrics''
 % 4.1.1
 %sub-subsection - study objectives
 \subsubsection{Study Objectives}
-Taking into account the aspects described in the motivation section, two objectives were defined for the study, detailed in Table \ref{table:Goals}.
+Considering the aspects described in the motivation section, two objectives were defined for the study and are detailed in Table~\ref{table:Goals}.
 
 \begin{table}[htbp]
 	\centering
@@ -36,7 +38,7 @@ Taking into account the aspects described in the motivation section, two objecti
 % 4.1.2
 %sub-subsection - research question
 \subsubsection{Research Question}
-For the construction of the research questions (RQs), the PICOC model \cite{Needleman20026, Petticrew2008systematic} was used. This model allows us to establish the aspects ``Population,'' ``Intervention,'' ``Comparison,'' ``Outcomes,'' and ``Context.'' This ensures situating the study in an appropriate environment and delivering value. See Table \ref{table:PICOC}.
+For the construction of the research questions (RQs), the GQM and PICOC models~\cite{Needleman20026, Petticrew2008systematic} were used. This model allows us to establish the aspects ``Population,'' ``Intervention,'' ``Comparison,'' ``Outcomes,'' and ``Context''. This ensures situating the study in an appropriate environment and delivering value. See Table \ref{table:PICOC}.
 
 Drawing on the PICOC model, two research questions (RQs) were formulated, as presented in Table~\ref{table:RQs}.
 
@@ -81,7 +83,7 @@ Drawing on the PICOC model, two research questions (RQs) were formulated, as pre
 % 4.1.3
 %sub-subsection - metrics
 \subsubsection{Metrics}
-The SMS metrics were defined using a quantitative approach in accordance with the classification structure. The details of the metrics are shown in Table \ref{table:Metrics}. The criteria established restrict documents to a validity period of 44 years because of the scarcity of documentation on HTCondor and to provide readers with a broad range of articles, from foundational works to more recent studies. In addition, the study type was limiteed to primary studies indexed in recognized databases to ensure peer-review rigor.
+The SMS metrics were defined using a quantitative approach in accordance with our classification structure. The details of the metrics are shown in Table \ref{table:Metrics}. The criteria established restrict documents to a validity period of 44 years because of the scarcity of documentation on HTCondor and to provide readers with a broad range of articles, from foundational works to more recent studies. In addition, the study type was limiteed to primary studies indexed in recognized databases to ensure peer-review rigor.
 
 \begin{table}[htbp]
 	\centering
@@ -135,14 +137,34 @@ The inclusion and exclusion criteria defined for the study are shown in Table \r
 	\end{tabular}
 \end{table*}
 
-A period of 44 years was defined in order to include the most relevant studies throughout the history of HTCondor, making it possible (as a consequence of the limited documentation available on this technology) for future researchers to conduct rigorous work over such a broad time frame and thereby ensure the value of the present SMS. In addition, the study type was limited to journal articles.
+A period of 44 years was defined (as a consequence of the scarce documentation available on this technology) in order to include the most relevant studies throughout the history of HTCondor, making it possible for future researchers to conduct rigorous work over such a broad time frame and thereby ensure the value of the present SMS.~In addition, the study type was limited to journal articles seeking greater rigor in peer review.
+
+
+%4.1.6 Quality Criteria
+
+\subsubsection{Quality Criteria}
+At the end of the planning stage, we have adopted three quality criteria.
+
+% ###### CVI ######## 
+The first quality criterion is an adaptation of the CVI (Content Value Index)~\cite{Almanasreh2019214, yaghmaei2003content}. In this case, we judged the documents by identifying those most relevant to the SMS.~We used a quantitative scale from 0 to 5 for this index, where 0 implies a low relationship of the studies with the SMS goals and 5 implies a high relationship. See formula (\ref{equation:CVI}). $k$ is the odd total workers, $f(n)$ is the value assigned by the worker $n$.
+
+\begin{equation}
+\label{equation:CVI}
+CVI = \frac{\sum_{n=1}^{k} f(n)}{k}
+\end{equation}
+
+%###### SCI ######
+The second quality criterion considers the number of citations of each study concerning publication age  (A), which we call SCI (Study Citation Index). See  formula (\ref{equation:SCI}). $C$ is Citations between 1980 to 2024, and $A$ is \textit{Age of study}. With this formula, we seek to balance the citation of the studies. Thus, a citation in a  paper from 2024 has a higher value than in a paper from 1980.
+ 
 
 \begin{equation}
 	\label{equation:SCI}
 	SCI = \frac{C}{A}
 \end{equation}
 
-The third quality criterion used corresponds to the relationship of the studies with the research questions; this criterion is named IRRQ (\textit{Index of Relationship to Research Questions}) (see Formula \ref{equation:IRRQ}), where \textit{N} corresponds to the number of RQs to which the study is related. Subsequently, \textit{N} is divided by 2, as this is the number of research questions defined.
+
+\hbox{}
+The third quality criterion used corresponds to the relationship of the studies with the research questions; this criterion is named IRRQ (\textit{Index of Relationship to Research Questions}), see Formula (\ref{equation:IRRQ}), where \textit{N} corresponds to the number of RQs to which the study is related. Subsequently, \textit{N} is divided by 2, as this is the number of research questions defined.
 
 \begin{equation}
 	\label{equation:IRRQ}
