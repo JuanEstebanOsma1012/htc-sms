@@ -1,148 +1,151 @@
 % subseccion 4.1  
-\subsection{Fase 1: Planeación}\label{sec:planeacion}
-En esta etapa se estableció el propósito general para el SMS y se definieron los objetivos del estudio, preguntas de investigación, métricas, tópicos de clasificación, criterios de inclusión y exclusión y criterios de calidad. Ver Figura \ref{fig:PlanningStageOverview}.
-Para los componentes ``Objetivos del estudio'', ``Preguntas de investigación'' y ``Métricas'', de la etapa de planificación, se aplicó el modelo {\itshape Goal-Question-Metric} (GQM por sus siglas en inglés) \cite{basili1992software, caldiera1994goal}. Estos componentes consideran el nivel conceptual, operacional y cuantitativo, respectivamente según \cite{Sepúlveda202141}.
+\subsection{Stage 1: Planning}\label{sec:planeacion}
+
+At this stage, we established the general purpose of the research and defined goals, research questions, metrics, classification topics, inclusion/exclusion criteria,and quality criteria. See Fig. \ref{fig:PlanningStageOverview}.
+
+For the components ``Study Objectives'', ``Research Questions'', and ``Metrics'' of the planning stage, the {\itshape Goal-Question-Metric} (GQM) model \cite{basili1992software, caldiera1994goal} was applied. These components consider the conceptual, operational, and quantitative levels, respectively, according to \cite{Sepúlveda202141}. % !TODO Es apropiado colocar esta última cita?  
 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[scale=0.4]{resources/figures/sms-Etapa-1 overview.drawio.png}
-	\caption{Componentes de la etapa de planeación.}
+	\caption{Components of the planning stage}
 	\label{fig:PlanningStageOverview}
 \end{figure}
 
 % 4.1.1
-%sub-subseccion - objetivos del estudio
-\subsubsection{Objetivos del estudio}
-Teniendo en cuenta los aspectos descritos en la sección de motivación, se han definido dos objetivos para el estudio, detallados en la Tabla \ref{table:Goals}.
+%sub-subsection - study objectives
+\subsubsection{Study Objectives}
+Taking into account the aspects described in the motivation section, two objectives were defined for the study, detailed in Table \ref{table:Goals}.
 
 \begin{table}[htbp]
 	\centering
-	\caption{Objetivos del SMS.}
+	\caption{Objectives of the SMS}
 	\label{table:Goals}
 	\renewcommand{\arraystretch}{1}  % Increase row height globally
 	\begin{tabular}{p{1cm}p{6.8cm}}
 		\toprule
-		\textbf{Objetivo} & \textbf{Descripción}                                                                                                                                                                                                                                                                                                                                         \\
+		\textbf{Objective} & \textbf{Description}                                                                                                                                                                                                                                                                                                                      \\
 		\midrule
-		\textbf{G1}       & Clasificar trabajos relacionados con los universos de HTCondor según su aplicación e impacto en los dominios de computación distribuida y paralela, HTC, desarrollo de Software, virtualización y microservicios, redes de computadoras, infraestructura computacional, inteligencia artificial, análisis de datos y pensamiento computacional, entre otros. \\
+		\textbf{G1}        & Classify works related to HTCondor universes according to their application and impact in the domains of distributed and parallel computing, HTC, software development, virtualization, microservices, computer networks, computational infrastructure, artificial intelligence, data analysis, and computational thinking, among others. \\
 		\addlinespace[0.8em]
-		\textbf{G2}       & Identificar y categorizar trabajos vinculados con los universos de HTCondor como herramienta para fortalecer funciones esenciales universitarias como: investigación, docencia, extensión e industria.                                                                                                                                                       \\
+		\textbf{G2}        & Identify and categorize works related to HTCondor universes as a tool to strengthen essential university functions such as research, teaching, outreach, and industry.                                                                                                                                                                    \\
 		\bottomrule
 	\end{tabular}
 \end{table}
 
 % 4.1.2
-%sub-subseccion - pregunta de investigación
-\subsubsection{Pregunta de investigación}
-Para la construcción de las preguntas de investigación (RQ por sus siglas en inglés) se usó el modelo PICOC \cite{Needleman20026, Petticrew2008systematic}, que nos permite establecer los aspectos ``Población'', ``Intervención'', ``Comparación'', ``Resultados'' y ``Contexto''. Todo esto para situar el trabajo en un entorno adecuado y propender por la entrega de valor. Ver Tabla \ref{table:PICOC}.
+%sub-subsection - research question
+\subsubsection{Research Question}
+For the construction of the research questions (RQs), the PICOC model \cite{Needleman20026, Petticrew2008systematic} was used. This model allows us to establish the aspects ``Population,'' ``Intervention,'' ``Comparison,'' ``Outcomes,'' and ``Context.'' This ensures situating the study in an appropriate environment and delivering value. See Table \ref{table:PICOC}.
 
-Teniendo en cuenta la información del modelo PICOC, se definieron las preguntas de investigación (RQ por sus siglas en inglés). Ver Tabla \ref{table:RQs}.
+Drawing on the PICOC model, two research questions (RQs) were formulated, as presented in Table~\ref{table:RQs}.
 
 \begin{table}[htbp]
 	\centering
-	\caption{Objetivos del SMS.}
+	\caption{Objectives of the SMS}
 	\label{table:PICOC}
 	\renewcommand{\arraystretch}{1}  % Increase row height globally
 	\begin{tabular}{p{1.4cm}p{6.4cm}}
 		\toprule
-		\textbf{Componente}   & \textbf{Descripción}                                                                                                                                                                                                                                                                                                                                                                                                                                                                             \\
+		\textbf{Component}    & \textbf{Description}                                                                                                                                                                                                                                                                                                                                                                                                                                              \\
 		\midrule
-		\textbf{Población}    & Trabajos relacionados con los universos de HTCondor según su aplicación e impacto en los dominios de computación distribuida y paralela, HTC, desarrollo de Software, virtualización y microservicios, redes de computadoras, infraestructura computacional, inteligencia artificial, análisis de datos, pensamiento computacional, entre otros. Que potencian las funciones sustantivas universitarias de investigación, docencia y extensión.                                                  \\
+		\textbf{Population}   & Works related to HTCondor universes according to their application and impact in the domains of distributed and parallel computing, HTC, software development, virtualization and microservices, computer networks, computational infrastructure, artificial intelligence, data analysis, computational thinking, among others, which strengthen the core university functions of research, teaching, and outreach.                                               \\
 		\addlinespace[0.8em]
-		\textbf{Intervención} & Identificación y clasificación de un conjunto de trabajos relacionados con los universos de HTCondor según su aplicación e impacto en los dominios de computación distribuida y paralela, HTC, desarrollo de Software, virtualización y microservicios, redes de computadoras, infraestructura computacional, inteligencia artificial, análisis de datos, pensamiento computacional, entre otros. Que potencian las funciones sustantivas universitarias de investigación, docencia y extensión. \\
+		\textbf{Intervention} & Identification and classification of a set of works related to HTCondor universes according to their application and impact in the domains of distributed and parallel computing, HTC, software development, virtualization and microservices, computer networks, computational infrastructure, artificial intelligence, data analysis, computational thinking, among others, which strengthen the core university functions of research, teaching, and outreach. \\
 		\addlinespace[0.8em]
-		\textbf{Comparación}  & Casos de proyecto documentados; Cumplimiento de criterios de inclusión y exclusión; Aparición en bases de datos seleccionadas.                                                                                                                                                                                                                                                                                                                                                                   \\
+		\textbf{Comparison}   & Documented project cases; fulfillment of inclusion and exclusion criteria; appearance in selected databases.                                                                                                                                                                                                                                                                                                                                                      \\
 		\addlinespace[0.8em]
-		\textbf{Salidas}      & Taxonomía que organiza los trabajos relacionados con los universos de HTCondor según su aplicación e impacto en los dominios de computación distribuida y paralela, HTC, desarrollo de Software, virtualización y microservicios, redes de computadoras, infraestructura computacional, inteligencia artificial, análisis de datos, pensamiento computacional, entre otros. Que potencian las funciones sustantivas universitarias de investigación, docencia y extensión.                       \\
+		\textbf{Outcomes}     & Taxonomy that organizes works related to HTCondor universes according to their application and impact in the domains of distributed and parallel computing, HTC, software development, virtualization and microservices, computer networks, computational infrastructure, artificial intelligence, data analysis, computational thinking, among others, which strengthen the core university functions of research, teaching, and outreach.                       \\
 		\addlinespace[0.8em]
-		\textbf{Contexto}     & Universos HTCondor en dominios de computación distribuida y paralela, HTC, desarrollo de Software, virtualización y microservicios, redes de computadoras, infraestructura computacional, inteligencia artificial, análisis de datos, pensamiento computacional, entre otros. Que potencian las funciones sustantivas universitarias de investigación, docencia y extensión.                                                                                                                     \\
+		\textbf{Context}      & HTCondor universes in domains of distributed and parallel computing, HTC, software development, virtualization and microservices, computer networks, computational infrastructure, artificial intelligence, data analysis, computational thinking, among others, which strengthen the core university functions of research, teaching, and outreach.                                                                                                              \\
 		\bottomrule
 	\end{tabular}
 \end{table}
 
 \begin{table*}[htbp]
 	\centering
-	\caption{Preguntas de investigación del SMS.}
+	\caption{Research questions of the SMS}
 	\label{table:RQs}
 	\renewcommand{\arraystretch}{1}  % Increase row height globally
 	\begin{tabular}{p{1cm}p{1.7cm}p{6.8cm}p{6.8cm}}
 		\toprule
-		\textbf{Objetivo} & \textbf{Pregunta de investigación} & \textbf{Descripción}                                                                                                                                                                                                                                                                                                                     & \textbf{Motivación}                                                                                                                                                                                                                                                                                                                                                                                    \\
+		\textbf{Objective} & \textbf{Research Question} & \textbf{Description}                                                                                                                                                                                                                                                                                          & \textbf{Motivation}                                                                                                                                                                                                                                                                                                                                                             \\
 		\midrule
-		G1                & RQ1                                & ¿Qué trabajos relacionados con los universos de HTCondor tienen impacto en los dominios de computación distribuida y paralela, HTC, desarrollo de Software, virtualización y microservicios, redes de computadoras, infraestructura computacional, inteligencia artificial, análisis de datos y pensamiento computacional, entre otros?. & Reconocer cómo los universos de HTCondor que  tienen impacto en los dominios de computación distribuida y paralela, HTC, desarrollo de Software, virtualización y microservicios, redes de computadoras, infraestructura computacional, inteligencia artificial, análisis de datos, pensamiento computacional están estructurados, identificar sus aplicaciones y determinar su motivación contextual. \\
+		G1                 & RQ1                        & What works related to HTCondor universes have an impact in the domains of distributed and parallel computing, HTC, software development, virtualization and microservices, computer networks, computational infrastructure, artificial intelligence, data analysis, and computational thinking, among others? & To recognize how HTCondor universes impacting the domains of distributed and parallel computing, HTC, software development, virtualization and microservices, computer networks, computational infrastructure, artificial intelligence, data analysis, and computational thinking are structured, to identify their applications, and to determine their contextual motivation. \\
 		\addlinespace[0.8em]
-		G2                & RQ2                                & ¿Qué trabajos vinculados con los universos de HTCondor potencian las funciones esenciales universitarias como investigación, docencia, extensión e industria?.                                                                                                                                                                           & Reconocer cómo los universos de HTCondor que potencian las funciones sustantivas universitarias como investigación, docencia, extensión e industria están estructurados, identificar sus aplicaciones y determinar su motivación contextual.                                                                                                                                                           \\
+		G2                 & RQ2                        & What works related to HTCondor universes strengthen core university functions such as research, teaching, outreach, and industry?                                                                                                                                                                             & To recognize how HTCondor universes strengthening core university functions such as research, teaching, outreach, and industry are structured, to identify their applications, and to determine their contextual motivation.                                                                                                                                                    \\
 		\bottomrule
 	\end{tabular}
 \end{table*}
 
 % 4.1.3
-%sub-subseccion - metricas
-\subsubsection{Métricas}
-Se definieron las métricas del SMS usando un enfoque cuantitativo de acuerdo a la estructura de clasificación. Los detalles de las métricas están en la Tabla \ref{table:Metrics}. Los criterios determinados limitan los documentos a la validez de cinco años, buscando recursos actuales en la materia. Además, el tipo de estudios fue limitado a estudios primarios, encontrados en bases de datos indexadas y reconocidas, buscando mayor rigor en la revisión por pares.
+%sub-subsection - metrics
+\subsubsection{Metrics}
+The SMS metrics were defined using a quantitative approach in accordance with the classification structure. The details of the metrics are shown in Table \ref{table:Metrics}. The criteria established restrict documents to a validity period of 44 years because of the scarcity of documentation on HTCondor and to provide readers with a broad range of articles, from foundational works to more recent studies. In addition, the study type was limiteed to primary studies indexed in recognized databases to ensure peer-review rigor.
 
 \begin{table}[htbp]
 	\centering
-	\caption{Métricas del SMS.}
+	\caption{Metrics of the SMS}
 	\label{table:Metrics}
 	\renewcommand{\arraystretch}{1}  % Increase row height globally
 	\begin{tabular}{p{1cm}p{6.8cm}}
 		\toprule
-		\textbf{Métrica} & \textbf{Descripción}                                                                                        \\
+		\textbf{Metric} & \textbf{Description}                                                                            \\
 		\midrule
-		\textbf{M1}      & Cantidad de trabajos seleccionados en la fase final del SMS.                                                \\
+		\textbf{M1}     & Number of works selected in the final phase of the SMS.                                         \\
 		\addlinespace[0.8em]
-		\textbf{M2}      & Popularidad de cada Universo en los trabajos seleccionados en la fase final.                                \\
+		\textbf{M2}     & Popularity of each Universe in the works selected in the final phase.                           \\
 		\addlinespace[0.8em]
-		\textbf{M3}      & Porcentaje de trabajos seleccionados en la fase final respecto a la cantidad de trabajos tenidos en cuenta. \\
+		\textbf{M3}     & Percentage of works selected in the final phase with respect to the number of works considered. \\
 		\addlinespace[0.8em]
-		\textbf{M4}      & Porcentaje de trabajos seleccionados en la fase final, aportados por cada base de datos.                    \\
+		\textbf{M4}     & Percentage of works selected in the final phase, contributed by each database.                  \\
 		\bottomrule
 	\end{tabular}
 \end{table}
 
 % 4.1.4
-%sub-subseccion - topicos de investigación
-\subsubsection{Tópicos}
-Las RQs Y el modelo PICOC sirven como la linea base para seleccionar los tópicos de clasificación usados en este trabajo. Los tópicos son los siguientes: Inteligencia artificial (AI por sus siglas en inglés), Computación en la nube, Contenerización, Computación en malla, Computación de alto rendimiento (HPC por sus siglas en inglés), Java, Virtualización, Kubernetes, Redes, Paralelismo, Docker, Computación de alta productividad (HTC por sus siglas en inglés), Educación, Investigación y Extensión.
+%sub-subsection - research topics
+\subsubsection{Topics}
+The RQs and the PICOC model serve as the baseline for selecting the classification topics used in this study. The topics are as follows: Artificial Intelligence (AI), Cloud Computing, Containerization, Grid Computing, High Performance Computing (HPC), Java, Virtualization, Kubernetes, Networks, Parallelism, Docker, High Throughput Computing (HTC), Teaching, Research, and Industry.
 
 % 4.1.5
-%sub-subseccion - criterios de inclusión y exclusión
-\subsubsection{Criterios de inclusión y exclusión}
-Los criterios de inclusión y exclusión que se definieron para el estudio están en la Tabla \ref{table:Criteria}.
+%sub-subsection - inclusion and exclusion criteria
+\subsubsection{Inclusion and Exclusion Criteria}
+The inclusion and exclusion criteria defined for the study are shown in Table \ref{table:Criteria}.
 
 \begin{table*}[htbp]
 	\centering
-	\caption{Criterios de inclusión y exclusión del SMS.}
+	\caption{Inclusion and exclusion criteria of the SMS}
 	\label{table:Criteria}
 	\renewcommand{\arraystretch}{1}  % Increase row height globally
 	\begin{tabular}{p{2.7cm}p{7cm}p{7cm}}
 		\toprule
-		\textbf{Categoría}  & \textbf{Criterios de inclusión}                                                                                                                                 & \textbf{Criterios de exclusión}                                                                                                                \\
+		\textbf{Category}   & \textbf{Inclusion Criteria}                                                                                                                        & \textbf{Exclusion Criteria}                                                                                                        \\
 		\midrule
-		Campos              & Todos.                                                                                                                                                          & -                                                                                                                                              \\
+		Fields              & All.                                                                                                                                               & -                                                                                                                                  \\
 		\addlinespace[0.8em]
-		Tipo de publicación & Artículos de investigación.                                                                                                                                     & Tesis, capítulos de libros, libros, revistas, \textit{proceedings}, \textit{papers} y todo aquello no contempleado los criterios de inclusión. \\
+		Type of publication & Research articles.                                                                                                                                 & Theses, book chapters, books, journals, \textit{proceedings}, \textit{papers}, and anything not covered by the inclusion criteria. \\
 		\addlinespace[0.8em]
-		Área o disciplina   & Ciencias de la computación, Ingeniería (En la base de datos ACM se asume que todos los artículos están relacionados con estos temas ya que no permite filtrar). & Áreas no relacionadas a ciencias de la computación e ingeniería.                                                                               \\
+		Area or discipline  & Computer science, Engineering (in the ACM database it is assumed that all articles are related to these subjects since filtering is not possible). & Areas unrelated to computer science and engineering.                                                                               \\
 		\addlinespace[0.8em]
-		Periodo             & Desde 1980 hasta 2024.                                                                                                                                          & -                                                                                                                                              \\
+		Period              & From 1980 to 2024.                                                                                                                                 & -                                                                                                                                  \\
 		\addlinespace[0.8em]
-		Idioma              & Inglés.                                                                                                                                                         & -                                                                                                                                              \\
+		Language            & English.                                                                                                                                           & -                                                                                                                                  \\
 		\bottomrule
 	\end{tabular}
 \end{table*}
 
-Se definió un periodo de 44 años buscando que los estudios más relevantes en toda la historia de HTCondor sean incluidos en el mapeo de manera que (y como consecuencia de la limitada documentación encontrada en torno a esta tecnología) se haga posible para los futuros investigadores realizar una labor rigurosa tomando un periodo tan amplio y así propender por la entrega de valor del presente SMS. Adicionalmente, se limitó el tipo de estudios a artículos de revista.
+A period of 44 years was defined in order to include the most relevant studies throughout the history of HTCondor, making it possible (as a consequence of the limited documentation available on this technology) for future researchers to conduct rigorous work over such a broad time frame and thereby ensure the value of the present SMS. In addition, the study type was limited to journal articles.
 
 \begin{equation}
 	\label{equation:SCI}
 	SCI = \frac{C}{A}
 \end{equation}
 
-El tercer criterio de calidad utilizado corresponde a la relación de los estudios con las preguntas de investigación; dicho criterio tiene el nombre de IRRQ (\textit{Index of Relationship to Research Questions}) (ver Formula \ref{equation:IRRQ}) donde \textit{N} corresponde a la cantidad de RQs a las cuales el estudio está relacionado. Posteriormente \textit{N} es dividido por 2 dado que esta es la cantidad de preguntas de investigación definida.
+The third quality criterion used corresponds to the relationship of the studies with the research questions; this criterion is named IRRQ (\textit{Index of Relationship to Research Questions}) (see Formula \ref{equation:IRRQ}), where \textit{N} corresponds to the number of RQs to which the study is related. Subsequently, \textit{N} is divided by 2, as this is the number of research questions defined.
 
 \begin{equation}
 	\label{equation:IRRQ}
 	IRRQ = \frac{N}{2}
 \end{equation}
+
