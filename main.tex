@@ -1,151 +1,67 @@
-\documentclass[journal]{IEEEtran}
+% interactnlmsample.tex
+% v1.05 - August 2017
 
-% Paquete para soporte del idioma español
-% Importante para que la compilación de términos generados automaticamente se haga en español.
-\usepackage[spanish]{babel}
-% Use natbib for compressed citations
-\usepackage[numbers,compress]{natbib}
-\usepackage[utf8]{inputenc}
-\usepackage{array}
-\usepackage{booktabs}
-\usepackage{xcolor}
+\documentclass[]{interact}
 
-%Paquetes para hacer cálculos.
-\usepackage{calc}
-\usepackage{xfp} % For more precise floating point calculations
+\usepackage{epstopdf}% To incorporate .eps illustrations using PDFLaTeX, etc.
+\usepackage[caption=false]{subfig}% Support for small, `sub' figures and tables
+%\usepackage[nolists,tablesfirst]{endfloat}% To `separate' figures and tables from text if required
+%\usepackage[doublespacing]{setspace}% To produce a `double spaced' document if required
+%\setlength\parindent{24pt}% To increase paragraph indentation when line spacing is doubled
 
+\usepackage[numbers,sort&compress]{natbib}% Citation support using natbib.sty
+\bibpunct[, ]{[}{]}{,}{n}{,}{,}% Citation support using natbib.sty
+\renewcommand\bibfont{\fontsize{10}{12}\selectfont}% Bibliography support using natbib.sty
+\makeatletter% @ becomes a letter
+\def\NAT@def@citea{\def\@citea{\NAT@separator}}% Suppress spaces between citations using natbib.sty
+\makeatother% @ becomes a symbol again
 
-\usepackage{multirow, array} % para las tablas
-\usepackage{graphicx}
-\usepackage{enumitem}
+\theoremstyle{plain}% Theorem-like structures provided by amsthm.sty
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
 
-\usepackage{tabularx}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
 
-\usepackage{titlesec}
-% Force line breaks after subsubsections
-\titleformat{\subsubsection}
-  {\normalfont\normalsize\itshape}{\thesubsubsection}{1em}{}[\vspace{1ex}]
-  \titlespacing{\subsubsection}
-  {0pt} % left indentation
-  {3ex plus 1ex minus 0.5ex} % space before de subsubsection
-  {1ex plus 0.5ex minus 0.2ex} % space after de subsubsection
-  % ------ explaining the latter part: -----------
-  % 2ex = Base spacing (2 times the height of letter "x" in current font)
-  % plus 0.5ex = Maximum additional space LaTeX can add if needed
-  % minus 0.2ex = Maximum space LaTeX can remove if needed
-
-
-
-% --- PAQUETE PARA HIPERVÍNCULOS ---
-% La finalidad de su uso en este proyecto es otorgar enlaces a las citas hechas a traves del documento.
-\usepackage{hyperref} % <---- Load this package LAST!
-\hypersetup{
-    colorlinks=true,
-    linkcolor=blue,    % Color for internal links (e.g., sections)
-    citecolor=blue,    % Color for citations
-    filecolor=blue,    % Color for file links
-    urlcolor=blue,     % Color for external URLs
-}
-% ---------------------------------
-
-% Redefinir el nombre de las palabras clave a español
-\renewcommand{\IEEEkeywordsname}{Palabras Clave}
-
-% Redefinir el nombre de las tablas al español - CORRECT WAY with babel
-\addto\captionsspanish{\renewcommand{\tablename}{Tabla}}
-
-% Comando artesanal para escribir texto con dos propiedades 
-% italica y negrilla. 
-% uso -> \bolditalic{su texto aquí!!!!!!!}
-\newcommand{\bolditalic}[1]{\textbf{\textit{#1}}}
-
-% Estructura del documento como referencia para el futuro
-%\part           Optional - for very large documents
-%  \chapter      Top-level division
-%    \section
-%      \subsection
-%        \subsubsection
-%          \paragraph
-%            \subparagraph
-
-
-% !!! Importante 
-% Para la nomemclatura de archivos
-% 1) Aquellos archivos (no incluye directorios) que empiezan con "00" deben ser considerados como 
-%    el archivo "main" de esa sección
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+\newtheorem{notation}{Notation}
 
 \begin{document}
 
+\articletype{RESEARCH ARTICLE}% Specify the article type or omit as appropriate
+
 \title{
-	Universos HTCondor\\
-	Estudio de mapeo sistematico
+	HTCondor Universes\\
+	A Systematic Mapping Study
 }
+
 
 \author{
-	Juan Esteban Parra Parra,~\IEEEmembership{Estudiante de pregrado, Universidad del Quindío}, \\
-	Juan Esteban Castaño Osma,~\IEEEmembership{Estudiante de pregrado, Universidad del Quindío} \\
-	Luis Eduardo Sepúlveda Rodríguez,~\IEEEmembership{PhD, Universidad del Quindío} y \\
-    Christian Andres Candela Uribe,~\IEEEmembership{Dr, Universidad del Quindío}
+\name{Juan Esteban Parra Parra\textsuperscript{a}\thanks{CONTACT Juan Esteban Parra Parra. Email: [jep.parra.parra@uqvirtual.edu.co]}, Juan Esteban Castaño Osma\textsuperscript{a}, Luis Eduardo Sepúlveda Rodríguez\textsuperscript{a}, and Christian Andres Candela Uribe\textsuperscript{a}}\affil{\textsuperscript{a}Universidad del Quindío, Carrera 15 \#12N, Armenia, Quindío, Colombia}
 }
-
-% The paper headers
-%!TODO Colocar el nombre de la revista una vez lo sepamos.
-\markboth{Revista LA REVISTA,~Vol.~XX, No.~YY, Agosto~2025}{Header de la derecha}
-
 
 \maketitle
 
 \begin{abstract}
-	Los sistemas de computación distribuida son herramientas que han encontrado aceptación dentro del ambito de la investigación cientifica,
-	estos ayudan a los investigadores a realizar simulaciones y experimentos que requieren una capacidad de cómputo
-	dificilmente obtenible con una sola máquina. Dentro de estos sistemas se encuentra HTCondor, un sistema de planificación de trabajo el cual posee una
-	variedad de contextos de ejecución llamados  \textit{universos}. Si bien la comunidad ha hecho uso de dichos \textit{universos},
-	pocos esfuerzos se han hecho para clasificar su aplicación dentro de los distintos dominios de la computación como
-	la virtualización, inteligencia artificial, computación en la nube, entre otros,
-	así como tambien su impacto en la docencia, la extensión y la industria. Para subsanar dicha carencia, en el presente
-	trabajo se desarrolla un estudio de mapeo sistematico con el fin de clasificar los trabajos existentes que hagan uso de HTCondor y sus universos
-	en dichas áreas, proveyendo así una taxonomía que ofrece una visión estructurada del panorama actual,
-	facilitando la toma de decisiones informadas y promoviendo el uso de HTCondor.
+	Distributed computing systems such as HTCondor have gained acceptance in the scientific research space. HTCondor is a job scheduling distrubuted system with various execution contexts called universes. While widely used in the scientific community, few efforts have been made to classify its applications across IT domains and academic functions like teaching, research and industry collaboration. This work presents a systematic mapping study that seeks to classify existing HTCondor universe implementations, providing a taxonomy that offers a structured view of the current landscape and facilitates informed decision-making.
 \end{abstract}
 
+\begin{keywords}
+	HTCondor; Distributed Computing; HTCondor Universes; Condor; Systematic Mapping Study
+\end{keywords}
 
-\begin{IEEEkeywords}
-	HTCondor, Computación distribuida, Universos HTCondor, Condor, SMS (Estudio de Mapeo Sistemático).
-\end{IEEEkeywords}
 
-
-% ########################### SECCIONES ###########################
-
-%Seccion introducción
+###############################################################################################
 \input{secciones/01-introduccion/00-introduccion.tex}
 
-%Sección motivación
-\input{secciones/02-motivacion/00-motivacion.tex}
-
-%Sección trabajos relacionados
-\input{secciones/03-trabajos-relacionados/00-trabajos-relacionados.tex}
-
-%Sección método de revisión
-\input{secciones/04-metodo-revision/00-metodo-revision.tex}
-
-%Sección analisis y conclusiones
-\input{secciones/05-analisis-y-discusion/00-analisis-y-discusion.tex}
-
-%Sección amenazas a la validez
-\input{secciones/06-amenazas-a-la-validez/00-amenazas-a-la-validez.tex}
-
-%Sección conclusiones
-\input{secciones/07-conclusiones/00-conclusiones.tex}
 
 
-% --- REFERENCIAS ---
-% Estilo de la bibliografía
-\bibliographystyle{IEEEtran}
-% Archivo .bib donde se encuentran las referencias
-\bibliography{resources/references.bib}
-% -------------------
 
 
-% ########################### FIN DE LAS SECCIONES ###########################
+
 
 \end{document}

@@ -1,5 +1,5 @@
 % sub-subsetion for 4.2.3 ----- ESTRATEGIA DE BUSQUEDA POR SNOWBALL
-\subsubsection{Estrategia de Búsqueda 2: Bola de Nieve (Snowballing)}
+\subsubsection{Search Strategy 2: Snowballing}
 
 \newcommand{\csiSelected}{24} %Estudios identficados con el SCI
 \newcommand{\newSnowballStudies}{3} %Estudios obtenidos luego de aplicar criterios de inclusión y exclusión diseñados especificamente para el snowball.
@@ -15,46 +15,51 @@
 
 \newcommand{\snowballNewStudies}{\fpeval{\firstSnowballIterationStudies+\secondSnowballIterationStudies}}
 
-La estrategia de búsqueda por bola de nieve comienza con la identificación del conjunto base de documentos a utilizar, seguido de una revisión y selección de documentos. La revisión consiste en verificar la lista de referencias con el fin de identificar nuevos documentos (bola de nieve hacia atrás). De manera similar, se identifican los documentos que citan el documento revisado (bola de nieve hacia adelante), lo cual requiere el uso de un buscador que indique esta información; para dicho fin se hizo uso de Google Scholar. En todos los casos, la sección de documentos aplica los criterios de exclusión \cite{Wohlin-01}.
 
-Esta estrategia comprende dos pasos. El primer paso se denomina ``Construcción de línea base de bola de nieve'' y se enfoca en establecer estudios para iniciar el análisis de referencias y citas. Para la composición de este conjunto de estudios, utilizamos criterios basados en el SCI (Índice de Citas de Estudios). El segundo paso se denomina ``Selección de estudios'', y se enfoca en el análisis de referencias (Bola de nieve hacia atrás) y citas (Bola de nieve hacia adelante) de cada estudio.
 
+
+The snowball search strategy begins with the identification of the baseline set of documents to be used, followed by a review and selection of documents. The review consists of verifying the list of references by identifying new documents (backward snowballing). Similarly, the documents that cite the revised document are identified (forward snowball), which requires the use of a search engine that provides this information; for this purpose, Google Scholar was used. In all cases, the document section applies the exclusion criteria~\cite{Wohlin-01}.
+
+This strategy comprises two steps. The first step is termed ``Snowball baseline construction'' and focuses on establishing studies to initiate the analysis of references and citations. For the composition of this set of studies, we used criteria based on the SCI (Study Citation Index). The second step is called ``Study selection'', and focuses on the analysis of references (backward snowballing) and citations (forward snowballing) of each study.
 
 % Snowball baseline building 
 
-\bolditalic{Construcción de línea base de bola de nieve}: Basándonos en los \screenTot{} estudios seleccionados durante la fase de \textit{screening}, se realizó un análisis exhaustivo de frecuencia y relevancia académica mediante el cual se evaluó la calidad e impacto científico de cada publicación.
+\bolditalic{Snowball baseline construction}: Based on the \screenTot{} studies selected during the screening stage, an exhaustive analysis of frequency and academic relevance was conducted through which the quality and scientific impact of each publication was evaluated.
 
-A través de la aplicación sistemática del índice SCI como criterio de selección por calidad, se logró identificar y extraer \csiSelected{} estudios de alta relevancia que constituyen la base fundamental para la implementación de la estrategia de búsqueda por bola de nieve. Luego, se aplicaron los criterios de inclusión y exclusión propuestos en la Tabla \ref{table:inclusion_exclusion_criteria} para limitar la cantidad de estudios a los más recientes según el período de publicación, con esto se logró disminuir a \newSnowballStudies{} la cantidad de estudios semilla de la bola de nieve.
+Through the systematic application of the SCI index as a quality selection criterion, we were able to identify and extract \csiSelected{} high-relevance studies that constitute the fundamental basis for implementing the snowball search strategy. Subsequently, the inclusion and exclusion criteria proposed in Table~\ref{table:inclusion_exclusion_criteria} were applied to limit the number of studies to the most recent according to publication period.
 
-Estos últimos estudios, caracterizados por su alto índice de citación y reconocimiento en la comunidad científica, servirán como punto de partida para las iteraciones de \textit{snowball} hacia adelante (\textit{forward snowballing}, esto es, aquellos trabajos que citaron nuestros estudios base) y hacia atrás (\textit{backward snowballing}, es decir, aquellos trabajos citados en nuestros estudios base), permitiendo así expandir la búsqueda bibliográfica de manera dirigida en el dominio de los universos HTCondor.
+Unlike the database search strategy, for which a much broader time period was considered, in this snowballing search strategy a shorter period was chosen in order to make this systematic mapping study more precise and to foster its value delivery. This decision was made because the studies resulting from snowballing are not limited to the selected databases, nor are they required to comply with the search strings; therefore, the literature to be analyzed is extremely broad and diverse, which could limit the quality of the systematic mapping study. As a result, the number of snowballing seed studies was reduced to \newSnowballStudies{}.
+
+These latter studies, characterized by their high citation index and recognition in the scientific community, will serve as the starting point for forward snowballing iterations (that is, those works that cited our base studies) and backward snowballing (i.e., those works cited in our base studies), thus allowing the bibliographic search to be expanded in a directed manner in the domain of HTCondor universes.
+
+\bolditalic{Study selection}: For this activity, it was decided to perform two snowball iterations. We begin with the first iteration by reviewing which studies cited and which studies were cited by each of the \newSnowballStudies{} seed studies. This review allowed us to identify \firstSnowballIterationStudies{} new articles that meet new inclusion and exclusion criteria developed for this process. Subsequently, we proceed with the second snowball iteration, which is applied to each of the \firstSnowballIterationStudies{} studies extracted in the first iteration. This review allowed us to identify another \secondSnowballIterationStudies{} new studies to be included in the SMS. See Figure~\ref{figure:Snowball}.\\
 
 
-\bolditalic{Selección de estudios}: Para esta actividad se decidió hacer dos iteraciones de bola de nieve. Se comienza con la primera iteración revisando que estudios citaron y que estudios fueron citados por cada uno de los \newSnowballStudies{} estudios semilla. Esta revisión permitió identificar \firstSnowballIterationStudies{} nuevos artículos que cumplen con nuevos criterios de inclusión y exclusión fabricados para este proceso. Luego, se procede con la segunda iteración de la bola de nieve, la cual se aplica para cada uno de los \firstSnowballIterationStudies{} estudios extraídos en la primera iteración. Esta revisión permitió identificar otros \secondSnowballIterationStudies{} nuevos estudios para ser incluidos en el SMS. Ver Figura \ref{figure:Snowball}.\\
 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[scale=0.55]{resources/figures/sms-Snowball.drawio.png}
-	\caption{Estrategia de búsqueda por bola de nieve.}
+	\caption{Snowball search strategy.}
 	\label{figure:Snowball}
 \end{figure}
 
-Esta actividad se realizó a través de Google Scholar y siguiendo la práctica en el estudio \cite{Ali-01}. El resultado conseguido fueron \snowballNewStudies{} nuevos estudios. Cabe recalcar que lo presentado en esta sección y en la Figura \ref{figure:Snowball} es un resumen representativo del proceso de \textit{snowball}, sin embargo, se omiten pasos que se realizaron pero no aportan al objetivo del estudio.
+This activity was conducted through Google Scholar and following the practice in the study~\cite{Ali-01}. The result obtained was \snowballNewStudies{} new studies. It should be noted that what is presented in this section and in Figure~\ref{figure:Snowball} is a representative summary of the snowball process, however, steps that were performed but do not contribute to the study objective are omitted.
 
-% -------- Tabla : Criterios de inclusión/exclusión ------------
+% -------- Table : Inclusion/exclusion criteria ------------
 \begin{table}[htbp]
 	\centering
-	\caption{Criterios de inclusión/exclusión}
+	\caption{Inclusion/exclusion criteria}
 	\label{table:inclusion_exclusion_criteria}
 	\renewcommand{\arraystretch}{1}  % Increase row height globally
 	\begin{tabular}{p{1.5cm}p{2.2cm}p{3.9cm}}
 		\toprule
-		\textbf{Categoría}           & \textbf{Inclusión}         & \textbf{Exclusión}                                                                                                          \\
+		\textbf{Category}         & \textbf{Inclusion} & \textbf{Exclusion}                                                                                             \\
 		\midrule
-		\textbf{Tipo de publicación} & Artículos de investigación & Tesis, capítulos de libros, libros, revistas, conferencias, y todo lo demás que no esté en el tipo de publicación inclusiva \\
+		\textbf{Publication type} & Research articles  & Theses, book chapters, books, journals, conferences, and everything else not in the inclusive publication type \\
 		\addlinespace[0.8em]
-		\textbf{Período}             & Desde 2020 hasta 2024      & -                                                                                                                           \\
+		\textbf{Period}           & From 2020 to 2024  & -                                                                                                              \\
 		\addlinespace[0.8em]
-		\textbf{Idioma}              & Inglés                     & -                                                                                                                           \\
+		\textbf{Language}         & English            & -                                                                                                              \\
 		\bottomrule
 	\end{tabular}
 \end{table}
