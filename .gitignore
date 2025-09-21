@@ -328,3 +328,5 @@ TSWLatexianTemp*
 
 
 temp
+.DS_Store
+.idea
