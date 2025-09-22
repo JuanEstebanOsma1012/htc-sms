@@ -47,28 +47,20 @@ This strategy comprises two components. The first component is termed ``Study Id
 
 \textit{\textbf{Study Identification}}: in order to ensure the feasibility of the SMS given administrative decisions and resource availability, it was decided to limit the number of databases to five, including ACM, IEEE Xplore, Springer, ScienceDirect, Taylor \& Francis. In this part of the process, it was necessary to establish the keywords used subsequently in the search strings for each of the databases. Again, we used the PICOC model as a methodological guide to identify key terms or phrases that serve this purpose. We refined these terms by including synonyms (See Table~\ref{table:picoc_keywords}).
 
-% -------- Table : Keywords identified using PICOC model. ------------
-\begin{table}[htbp]
-	\centering
-	\caption{Keywords identified using the PICOC model}
+% -------- Table 6 : Keywords identified using PICOC model. ------------
+\begin{table}
+	\tbl{Keywords identified using the PICOC model}
+	{\begin{tabular}{p{3.5cm}p{6.0cm}} \toprule
+			\textbf{Component}           & \textbf{Keywords}                                                                                                                                                                                                                                                    \\
+			\midrule
+			\textbf{Population}          & Universes, HTCondor, Distributed and parallel computing, HTC, Software development, Virtualization and microservices, Computer networks, Computational infrastructure, Artificial intelligence, Data analysis, Computational thinking, Research, Teaching, Industry. \\[0.5em]
+			\textbf{Intervention}        & Identification and classification.                                                                                                                                                                                                                                   \\[0.5em]
+			\textbf{Acceptance Criteria} & Documented project cases, compliance with inclusion and exclusion criteria, and appearance in selected databases.                                                                                                                                                    \\[0.5em]
+			\textbf{Outcomes}            & Taxonomy that organizes works related to the population.                                                                                                                                                                                                             \\[0.5em]
+			\textbf{Context}             & HTCondor universes, distributed and parallel computing domains, academic functions, research, teaching, industry.                                                                                                                                                    \\
+			\bottomrule
+		\end{tabular}}
 	\label{table:picoc_keywords}
-	\renewcommand{\arraystretch}{1}  % Increase row height globally
-	\begin{tabular}{p{1.8cm}p{6cm}}
-		\toprule
-		\textbf{Component}           & \textbf{Keywords}                                                                                                                                                                                                                                                    \\
-		\midrule
-		\textbf{Population}          & Universes, HTCondor, Distributed and parallel computing, HTC, Software development, Virtualization and microservices, Computer networks, Computational infrastructure, Artificial intelligence, Data analysis, Computational thinking, Research, Teaching, Industry. \\
-		\addlinespace[0.8em]
-		\textbf{Intervention}        & Identification and classification.                                                                                                                                                                                                                                   \\
-		\addlinespace[0.8em]
-		\textbf{Acceptance Criteria} &
-		Documented project cases, compliance with inclusion and exclusion criteria, and appearance in selected databases.                                                                                                                                                                                   \\
-		\addlinespace[0.8em]
-		\textbf{Outcomes}            & Taxonomy that organizes works related to the population.                                                                                                                                                                                                             \\
-		\addlinespace[0.8em]
-		\textbf{Context}             & HTCondor universes, distributed and parallel computing domains, academic functions, research, teaching, industry.                                                                                                                                                    \\
-		\bottomrule
-	\end{tabular}
 \end{table}
 % --------------------------------------------------------------
 
@@ -78,27 +70,20 @@ The selected main keywords were \textit{HTCondor, HTC, Universe, Project, Resear
 Finally, the set of keywords selected for the construction of the search string are found in Table~\ref{table:database_search_keywords}.
 
 
-% -------- Table : Keywords for database search ------------
-\begin{table}[htbp]
-	\centering
-	\caption{Keywords for database search}
+% -------- Table 7 : Keywords for database search ------------
+\begin{table}
+	\tbl{Keywords for database search}
+	{\begin{tabular}{p{2.0cm}p{7.0cm}} \toprule
+			\textbf{Keyword}  & \textbf{Synonyms and related concepts}                     \\[0.5em]
+			\midrule
+			\textbf{HTCondor} & Condor                                                     \\[0.5em]
+			\textbf{HTC}      & HPC, High Throughput Computing, High Performance Computing \\[0.5em]
+			\textbf{Universe} & Execution Environment                                      \\[0.5em]
+			\textbf{Project}  & Work                                                       \\[0.5em]
+			\textbf{Research} & Teaching, Industry                                         \\[0.5em]
+			\bottomrule
+		\end{tabular}}
 	\label{table:database_search_keywords}
-	\renewcommand{\arraystretch}{1}  % Increase row height globally
-	\begin{tabular}{p{1.4cm}p{6.4cm}}
-		\toprule
-		\textbf{Keyword}  & \textbf{Synonyms and related concepts}                     \\
-		\midrule
-		\textbf{HTCondor} & Condor                                                     \\
-		\addlinespace[0.8em]
-		\textbf{HTC}      & HPC, High Throughput Computing, High Performance Computing \\
-		\addlinespace[0.8em]
-		\textbf{Universe} & Execution Environment                                      \\
-		\addlinespace[0.8em]
-		\textbf{Project}  & Work                                                       \\
-		\addlinespace[0.8em]
-		\textbf{Research} & Teaching, Industry                                         \\
-		\bottomrule
-	\end{tabular}
 \end{table}
 % --------------------------------------------------------------
 
@@ -106,27 +91,21 @@ Finally, the set of keywords selected for the construction of the search string 
 
 
 
-% -------- Table : Search strings used in databases ------------
-\begin{table}[htbp]
-	\centering
-	\caption{Search strings used in databases}
+% -------- Table 8 : Search strings used in databases ------------
+\begin{table}
+	\tbl{Search strings used in databases}
+	{\renewcommand{\arraystretch}{1.5}
+		\begin{tabular}{p{2.5cm}p{8cm}p{2.0cm}} \toprule
+			\textbf{Database}                        & \textbf{Search String}                                                                                                                                                                                              & \textbf{Fields} \\
+			\midrule
+			\textbf{ACM Full Text \hbox{Collection}} & ((HTCondor OR Condor) AND (HTC OR ``High Throughput Computing'' OR HPC OR ``High Performance Computing'') AND (Universe OR ``Execution Environment'') AND (Project OR Work) AND (Research OR Teaching OR Industry)) & All fields      \\
+			\textbf{IEEE Xplore}                     & ((HTCondor OR Condor) AND (HTC OR ``High Throughput Computing'' OR HPC OR ``High Performance Computing'') AND (Universe OR ``Execution Environment'') AND (Project OR Work) AND (Research OR Teaching OR Industry)) & All fields      \\
+			\textbf{Springer}                        & ((HTCondor | Condor) + (HTC | ``High Throughput Computing'' | HPC | ``High Performance Computing'') + (Universe | ``Execution Environment'') + (Project | Work) + (Research | Teaching | Industry))                 & All fields      \\
+			\textbf{ScienceDirect}                   & (HTCondor OR Condor) (HTC OR ``High Throughput Computing'' OR HPC OR ``High Performance Computing'') (Universe OR ``Execution Environment'') (Project OR Work) (Research OR Teaching OR Industry)                   & All fields      \\
+			\textbf{Taylor \& Francis}               & ((HTCondor OR Condor) AND (HTC OR ``High Throughput Computing'' OR HPC OR ``High Performance Computing'') AND (Universe OR ``Execution Environment'') AND (Project OR Work) AND (Research OR Teaching OR Industry)) & All fields      \\
+			\bottomrule
+		\end{tabular}}
 	\label{table:cadenas_de_busqueda}
-	\renewcommand{\arraystretch}{1}  % Increase row height globally
-	\begin{tabular}{p{3.2cm}p{11cm}p{2.5cm}}
-		\toprule
-		\textbf{Database}                 & \textbf{Search String}                                                                                                                                                                                              & \textbf{Fields} \\
-		\midrule
-		\textbf{ACM Full Text Collection} & ((HTCondor OR Condor) AND (HTC OR ``High Throughput Computing'' OR HPC OR ``High Performance Computing'') AND (Universe OR ``Execution Environment'') AND (Project OR Work) AND (Research OR Teaching OR Industry)) & All fields      \\
-		\addlinespace[0.8em]
-		\textbf{IEEE Xplore}              & ((HTCondor OR Condor) AND (HTC OR ``High Throughput Computing'' OR HPC OR ``High Performance Computing'') AND (Universe OR ``Execution Environment'') AND (Project OR Work) AND (Research OR Teaching OR Industry)) & All fields      \\
-		\addlinespace[0.8em]
-		\textbf{Springer}                 & ((HTCondor | Condor) + (HTC | ``High Throughput Computing'' | HPC | ``High Performance Computing'') + (Universe | ``Execution Environment'') + (Project | Work) + (Research | Teaching | Industry))                 & All fields      \\
-		\addlinespace[0.8em]
-		\textbf{ScienceDirect}            & (HTCondor OR Condor) (HTC OR ``High Throughput Computing'' OR HPC OR ``High Performance Computing'') (Universe OR ``Execution Environment'') (Project OR Work) (Research OR Teaching OR Industry)                   & All fields      \\
-		\addlinespace[0.8em]
-		\textbf{Taylor \& Francis}        & ((HTCondor OR Condor) AND (HTC OR ``High Throughput Computing'' OR HPC OR ``High Performance Computing'') AND (Universe OR ``Execution Environment'') AND (Project OR Work) AND (Research OR Teaching OR Industry)) & All fields      \\
-		\bottomrule
-	\end{tabular}
 \end{table}
 % --------------------------------------------------------------
 
@@ -135,21 +114,17 @@ To direct this research toward the intersection of these two groups of terms, th
 
 After constructing the search strings, these were submitted to each database engine. Table~\ref{table:search_results} shows the set of results obtained. We identified a total of 847 studies preliminarily, with ACM being the largest contributor, delivering the greatest number of results compared to the other databases with \acmp\% of the results.
 
-
-\begin{table}[htbp]
-	\centering
-	\caption{Search string results}
+% Table 9
+\begin{table}
+	\tbl{Search string results}
+	{\begin{tabular}{p{3.0cm}p{2.0cm}p{2.0cm}p{2.0cm}p{2.0cm}p{2.5cm}p{2.0cm}} \toprule
+			\textbf{Criteria}                         & \textbf{ACM} & \textbf{IEEE} & \textbf{ScienceDirect} & \textbf{Springer} & \textbf{Taylor\&Francis} & \textbf{Total} \\
+			\midrule
+			\textbf{Search string with keywords only} & \acm{}       & \ieee{}       & \sd{}                  & \spr{}            & \tf{}                    & \tot{}         \\[2.5em]
+			\textbf{Percentage contribution}          & \acmp{}\%    & \ieeep{}\%    & \sdp{}\%               & \sprp{}\%         & \tfp{}\%                 & 100\%          \\
+			\bottomrule
+		\end{tabular}}
 	\label{table:search_results}
-	\renewcommand{\arraystretch}{1}  % Increase row height globally
-	\begin{tabular}{p{4.8cm}p{1.7cm}p{1.7cm}p{1.7cm}p{1.7cm}p{2cm}p{1.4cm}}
-		\toprule
-		\textbf{Criteria}                         & \textbf{ACM} & \textbf{IEEE} & \textbf{ScienceDirect} & \textbf{Springer} & \textbf{Taylor\&Francis} & \textbf{Total} \\
-		\midrule
-		\textbf{Search string with keywords only} & \acm{}       & \ieee{}       & \sd{}                  & \spr{}            & \tf{}                    & \tot{}         \\
-		\addlinespace[0.8em]
-		\textbf{Percentage contribution}          & \acmp{}\%    & \ieeep{}\%    & \sdp{}\%               & \sprp{}\%         & \tfp{}\%                 & 100\%          \\
-		\bottomrule
-	\end{tabular}
 \end{table}
 % --------------------------------------------------------------
 
@@ -174,20 +149,17 @@ Therefore, we concluded the first search strategy with a total of \screenTot{} s
 	\label{fig:overview}
 \end{figure}
 
-
-\begin{table}[htbp]
-	\centering
-	\caption{Search string results with exclusion/inclusion criteria}
+% Table 10
+\begin{table}
+	\tbl{Search string results with exclusion/inclusion criteria}
+	{\begin{tabular}{p{4.8cm}p{1.7cm}p{1.7cm}p{1.7cm}p{1.7cm}p{2cm}p{1.4cm}} \toprule
+			\textbf{Criteria}                         & \textbf{ACM} & \textbf{IEEE} & \textbf{ScienceDirect} & \textbf{Springer} & \textbf{Taylor \& Francis} & \textbf{Total} \\
+			\midrule
+			\textbf{Search string with keywords only} & \iacm{}      & \iieee{}      & \isd{}                 & \ispr{}           & \itf{}                     & \itot{}        \\
+			\textbf{Percentage contribution}          & \iacmp{}\%   & \iieeep{}\%   & \isdp{}\%              & \isprp{}\%        & \itfp{}\%                  & 100\%          \\
+			\bottomrule
+		\end{tabular}}
 	\label{table:search_results_exclusion}
-	\begin{tabular}{p{4.8cm}p{1.7cm}p{1.7cm}p{1.7cm}p{1.7cm}p{2cm}p{1.4cm}}
-		\toprule
-		\textbf{Criteria}                         & \textbf{ACM} & \textbf{IEEE} & \textbf{ScienceDirect} & \textbf{Springer} & \textbf{Taylor \& Francis} & \textbf{Total} \\
-		\midrule
-		\textbf{Search string with keywords only} & \iacm{}      & \iieee{}      & \isd{}                 & \ispr{}           & \itf{}                     & \itot{}        \\
-		\addlinespace[0.8em]
-		\textbf{Percentage contribution}          & \iacmp{}\%   & \iieeep{}\%   & \isdp{}\%              & \isprp{}\%        & \itfp{}\%                  & 100\%          \\
-		\bottomrule
-	\end{tabular}
 \end{table}
 % --------------------------------------------------------------
 
