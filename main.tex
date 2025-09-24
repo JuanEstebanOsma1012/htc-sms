@@ -3,6 +3,17 @@
 
 \documentclass[]{interact}
 
+\usepackage{orcidlink}
+\usepackage{hyperref}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  urlcolor=blue,
+  citecolor=blue,
+  pdfborder={0 0 0}
+}
+
 \usepackage{epstopdf}% To incorporate .eps illustrations using PDFLaTeX, etc.
 \usepackage[caption=false]{subfig}% Support for small, `sub' figures and tables
 \usepackage{url}% Support for URLs
@@ -38,13 +49,13 @@
 \articletype{RESEARCH ARTICLE}% Specify the article type or omit as appropriate
 
 \title{
-	HTCondor Universes\\
-	A Systematic Mapping Study
+	HTCondor Universes:\\
+	a systematic mapping study
 }
 
 
 \author{
-\name{Juan Esteban Parra Parra\textsuperscript{a}\thanks{CONTACT Juan Esteban Parra Parra. Email: [jep.parra.parra@uqvirtual.edu.co]}, Juan Esteban Castaño Osma\textsuperscript{a}, Luis Eduardo Sepúlveda Rodríguez\textsuperscript{a}, and Christian Andres Candela Uribe\textsuperscript{a}}\affil{\textsuperscript{a}Universidad del Quindío, Carrera 15 \#12N, Armenia, Quindío, Colombia}
+\name{Juan Esteban Parra Parra\textsuperscript{a}\orcidlink{0009-0007-4518-1086}, Juan Esteban Castaño Osma\textsuperscript{a}\orcidlink{0009-0006-0402-4351}\thanks{CONTACT Juan Esteban Castaño Osma. Email: [juane.castanoo@uqvirtual.edu.co]}, Luis Eduardo Sepúlveda Rodríguez\textsuperscript{a}\orcidlink{0000-0003-2446-0602}, and Christian Andres Candela Uribe\textsuperscript{a}\orcidlink{0000-0002-3961-1840}}\affil{\textsuperscript{a}Universidad del Quindío, Carrera 15 \#12N, Armenia, Quindío, Colombia}
 }
 
 \maketitle
