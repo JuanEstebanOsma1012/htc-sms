@@ -1,37 +1,104 @@
 % subseccion 4.5
 \subsection{Stage 5: Study Classification}\label{subsec:clasificacion-de-estudios}
-The classification of the (SPS) was performed through grouping by topics, as shown in Table \ref{table:sps_classification_by_topic_rq}. This table presents a summary of the studies that respond to research questions RQ1, RQ2, or both.
+Following a rigorous review and analysis of the selected primary studies (SPS), a comprehensive set of research topics was identified and systematically organized. These topics, along with their corresponding identifiers, are presented in Table \ref{table:topics}. The classification of the SPS was then performed through grouping by these predefined topics, as detailed in Tables \ref{table:sps_classification_by_topic_rq1} and \ref{table:sps_classification_by_topic_rq2}. These classification tables provide a summary of the studies addressing research questions RQ1, RQ2, or both, demonstrating the distribution of research focus across the identified thematic areas.
 
-% Tabla 13 V2 ----------CLASIFICACION SPSs POR PREGUNTA DE RQs y Topicos
-\begin{table}
-	\tbl{Classification of SPSs by topics and RQs}
-	{\fontsize{7}{9}\selectfont
-		
-		\setlength{\tabcolsep}{3pt}
-		\begin{tabular}{>{\raggedright\arraybackslash}p{0.9cm}>{\raggedright\arraybackslash}p{2.0cm}>{\raggedright\arraybackslash}p{2.5cm}>{\raggedright\arraybackslash}p{3.0cm}>{\raggedright\arraybackslash}p{3.2cm}>{\raggedright\arraybackslash}p{2.3cm}>{\raggedright\arraybackslash}p{2.3cm}}\toprule
-			\textbf{RQ}                    & \textbf{Topic}          & \textbf{1996-2007}                                      & \textbf{2008-2012}                                                                                                            & \textbf{2013-2017}                                                                         & \textbf{2018-2022}                                                                  & \textbf{2023-2024}                 \\
-			\midrule
-			\multirow{12}{*}{\textbf{RQ1}} & Artificial Intelligence &                                                         & SPS106 SPS105                                                                                                                 & SPS110 SPS111                                                                              & SPS049 SPS073 SPS096 SPS109                                                         & SPS021 SPS044 SPS068               \\[3.0em]
-			                               & Cloud Computing         &                                                         & SPS078 SPS091 SPS092 SPS055 SPS058 SPS106 SPS051 SPS065 SPS023                                                                & SPS018 SPS047 SPS050 SPS063 SPS030 SPS048 SPS057 SPS062 SPS009 SPS012 SPS015 SPS022 SPS059 & SPS054 SPS056 SPS097 SPS011 SPS046 SPS053 SPS039 SPS025                             & SPS021 SPS081 SPS112               \\[3.0em]
-			                               & Containerization        &                                                         &                                                                                                                               & SPS108 SPS026                                                                              & SPS019 SPS035 SPS011 SPS053 SPS025 SPS034 SPS080 SPS084 SPS085                      & SPS037 SPS038 SPS044 SPS081 SPS004 \\[3.0em]
-			                               & Grid \hbox{Computing}   & SPS014 SPS100 SPS052 SPS001 SPS069        & SPS006 SPS098 SPS017 SPS040 SPS060 SPS089 SPS091 SPS092 SPS114 SPS055 SPS061 SPS107 SPS003 SPS008 SPS028 SPS065 SPS005 SPS087 & SPS018 SPS075 SPS048 SPS057 SPS062 SPS002 SPS009 SPS074 SPS015 SPS066                      & SPS064 SPS046 SPS053 SPS090 SPS029                                                  & SPS112                             \\[3.0em]
-			                               & HPC                     & SPS071                             & SPS006 SPS101 SPS103 SPS017 SPS077 SPS106 SPS065 SPS105 SPS024 SPS072 SPS093                                                  & SPS050 SPS075 SPS013 SPS074 SPS082 SPS066 SPS079 SPS094                                    & SPS035 SPS073 SPS046 SPS010 SPS025 SPS034 SPS080 SPS041 SPS042 SPS084 SPS085 SPS104 & SPS037 SPS038 SPS112 SPS068        \\[3.0em]
-			                               & Java                    &                                                         &                                                                                                                               &                                                                                            &                                                                                     & SPS043                             \\[3.0em]
-			                               & Virtualization          &                                                         & SPS017 SPS088 SPS065                                                                                                          & SPS062 SPS108 SPS022                                                                       & SPS097 SPS034 SPS085                                                                & SPS044 SPS081                      \\[3.0em]
-			                               & Kubernetes              &                                                         &                                                                                                                               &                                                                                            & SPS034 SPS027 SPS084                                                                & SPS081 SPS004                      \\[3.0em]
-			                               & Network                 & SPS052                                                  &                                                                                                                               & SPS047 SPS002 SPS076                                                                       &                                                                                     &                                    \\[3.0em]
-			                               & Parallel                & SPS070 SPS071                             & SPS006 SPS103 SPS092 SPS061 SPS106 SPS007 SPS105 SPS072                                                                       & SPS075 SPS110 SPS009 SPS066 SPS026 SPS032                                                  & SPS054 SPS046 SPS083 SPS010 SPS096 SPS025 SPS045 SPS041                             & SPS038 SPS043                      \\[3.0em]
-			                               & Docker                  &                                                         &                                                                                                                               & SPS036                                                                                     & SPS019 SPS053 SPS085                                                                & SPS004                             \\[3.0em]
-			                               & HTC                     & SPS070 SPS033 SPS086 SPS016 SPS095 & SPS031 SPS067 SPS103 SPS017 SPS020 SPS078 SPS089 SPS058 SPS088 SPS028 SPS113 SPS087                                           & SPS018 SPS047 SPS050 SPS063 SPS076 SPS108 SPS032 SPS111                                    & SPS049 SPS097 SPS039 SPS045 SPS080 SPS090 SPS102 SPS109 SPS027 SPS029               & SPS044 SPS099                      \\[3.0em]
-			\midrule
-			\multirow{3}{*}{\textbf{RQ2}}  & Teaching                &                                                         & SPS024                                                                                                                        & SPS057 SPS074 SPS032 SPS079                                                                & SPS109                                                                              &                                    \\
-			                               & Research                & SPS100 SPS052                                    & SPS101 SPS114 SPS107                                                                                                          & SPS110 SPS094 SPS111                                                                       & SPS097 SPS096 SPS080 SPS090 SPS102 SPS084 SPS104                                    & SPS037 SPS081 SPS099 SPS112        \\
-			                               & Industry                &                                                         &                                                                                                                               &                                                                                           SPS032 & SPS034 SPS085                                                                       & SPS068 SPS004                            \\
-			\bottomrule
-		\end{tabular}}
-	\label{table:sps_classification_by_topic_rq}
+% Tabla 13 ---------- Topico con su respectivo ID
+\begin{table}[ht]
+    \renewcommand{\arraystretch}{1.3}
+    \centering
+    \caption{Topics identifiers}
+    \begin{tabular}{p{0.5cm}>{\raggedright\arraybackslash}p{2.5cm}p{0.5cm}>{\raggedright\arraybackslash}p{2.5cm}}
+        \hline
+        \textbf{ID} & \textbf{Topic} & \textbf{ID} & \textbf{Topic} \\
+        \hline
+        T1 & Artificial Intelligence & T2 & Cloud Computing \\
+        T3 & Containerization & T4 & Grid Computing \\
+        T5 & HPC & T6 & Java \\
+        T7 & Virtualization & T8 & Kubernetes \\
+        T9 & Network & T10 & Parallel \\
+        T11 & Docker & T12 & HTC \\
+        T13 & Teaching & T14 & Research \\
+        T15 & Industry & \\
+        \hline
+    \end{tabular}
+    \label{table:topics}
 \end{table}
-% ------------------------------------------------------------------------    
+% ------------------------------------------------------------------------
+
+% Tabla 14 y 15 V2 ----------CLASIFICACION SPSs POR PREGUNTA DE RQs y Topicos
+\begin{table*}[htbp]
+    \renewcommand{\arraystretch}{1.3}
+    \setlength{\tabcolsep}{3pt} % valor por defecto 6pt
+    \centering
+	\caption{Classification of SPSs by topics related with RQ1}
+    \begin{tabular}{p{0.9cm}p{1.7cm}p{4.05cm}p{2.7cm}p{4.05cm}p{1.7cm}}
+        \hline
+        \textbf{Topic} & \textbf{1996-2007} & \textbf{2008-2012} & \textbf{2013-2017} & \textbf{2018-2022} & \textbf{2023-2024} \\
+        \hline
+        T1 & & SPS106 SPS105 & SPS110 SPS111 & SPS049 SPS073 SPS096 SPS109 & SPS021 SPS044 SPS068 \\
+        T2 &  & SPS078 SPS091 SPS092 SPS055 SPS058 SPS106 SPS051 SPS065 SPS023 & SPS018 SPS047 SPS050 SPS063 SPS030 SPS048 SPS057 SPS062 SPS009 SPS012 SPS015 SPS022 SPS059 & SPS054 SPS056 SPS097 SPS011 SPS046 SPS053 SPS039 SPS025 & SPS021 SPS081 SPS112 \\
+        T3 &  &  & SPS108 SPS026 & SPS019 SPS035 SPS011 SPS053 SPS025 SPS034 SPS080 SPS084 SPS085 & SPS037 SPS038 SPS044 SPS081 SPS004 \\
+        T4 & SPS014 SPS100 SPS052 SPS001 SPS069 & SPS006 SPS098 SPS017 SPS040 SPS060 SPS089 SPS091 SPS092 SPS114 SPS055 SPS061 SPS107 SPS003 SPS008 SPS028 SPS065 SPS005 SPS087 & SPS018 SPS075 SPS048 SPS057 SPS062 SPS002 SPS009 SPS074 SPS015 SPS066 & SPS064 SPS046 SPS053 SPS090 SPS029 & SPS112 \\
+        T5 & SPS071 & SPS006 SPS101 SPS103 SPS017 SPS077 SPS106 SPS065 SPS105 SPS024 SPS072 SPS093 & SPS050 SPS075 SPS013 SPS074 SPS082 SPS066 SPS079 SPS094 & SPS035 SPS073 SPS046 SPS010 SPS025 SPS034 SPS080 SPS041 SPS042 SPS084 SPS085 SPS104 & SPS037 SPS038 SPS112 SPS068 \\
+        T6 &  &  &  &  & SPS043 \\
+        T7 &  & SPS017 SPS088 SPS065 & SPS062 SPS108 SPS022 & SPS097 SPS034 SPS085 & SPS044 SPS081 \\
+        T8 &  &  &  & SPS034 SPS027 SPS084 & SPS081 SPS004 \\
+        T9 & SPS052 &  & SPS047 SPS002 SPS076 &  & \\
+        T10 & SPS070 SPS071 & SPS006 SPS103 SPS092 SPS061 SPS106 SPS007 SPS105 SPS072 & SPS075 SPS110 SPS009 SPS066 SPS026 SPS032 & SPS054 SPS046 SPS083 SPS010 SPS096 SPS025 SPS045 SPS041 & SPS038 SPS043 \\
+        T11 &  &  & SPS036 & SPS019 SPS053 SPS08 & SPS004 \\
+        T12 & SPS070 SPS033 SPS086 SPS016 SPS095 & SPS031 SPS067 SPS103 SPS017 SPS020 SPS078 SPS089 SPS058 SPS088 SPS028 SPS113 SPS087 & SPS018 SPS047 SPS050 SPS063 SPS076 SPS108 SPS032 SPS111 & SPS049 SPS097 SPS039 SPS045 SPS080 SPS090 SPS102 SPS109 SPS027 SPS029 & SPS044 SPS099 \\
+        \hline
+    \end{tabular}
+	\label{table:sps_classification_by_topic_rq1}
+\end{table*}
+
+\begin{table*}[htbp]
+    \renewcommand{\arraystretch}{1.3}
+    \setlength{\tabcolsep}{3pt} % valor por defecto 6pt
+    \centering
+	\caption{Classification of SPSs by topics related with RQ2}
+    \begin{tabular}{p{0.9cm}p{2.7cm}p{2.7cm}p{2.7cm}p{2.7cm}p{2.7cm}}
+        \hline
+        \textbf{Topic} & \textbf{1996-2007} & \textbf{2008-2012} & \textbf{2013-2017} & \textbf{2018-2022} & \textbf{2023-2024} \\
+        \hline
+        T13 &  & SPS024 & SPS057 SPS074 SPS032 SPS079 & SPS109 & \\
+        T14 & SPS100 SPS052 & SPS101 SPS114 SPS107 & SPS110 SPS094 SPS111 & SPS097 SPS096 SPS080 SPS090 SPS102 SPS084 SPS104 & SPS037 SPS081 SPS099 SPS112 \\
+        T15 &  &  & SPS032 & SPS034 SPS085 & SPS068 SPS004 \\
+        \hline
+    \end{tabular}
+	\label{table:sps_classification_by_topic_rq2}
+\end{table*}
+% ------------------------------------------------------------------------   
+
+% Tabla 16 ------------------- Estudios que cumplían por completo el indice IRRQ
+\begin{table*}[htbp]
+    \renewcommand{\arraystretch}{1.3}
+    \setlength{\tabcolsep}{3pt}
+    \centering
+    \caption{28 studies that fully meet the IRRQ index}
+    \begin{tabular}{p{0.8cm}p{0.9cm}p{2.7cm}p{2.7cm}p{2.7cm}p{2.7cm}p{1.7cm}}
+        \hline
+        \textbf{RQ} & \textbf{Topic} & \textbf{1996-2007} & \textbf{2008-2012} & \textbf{2013-2017} & \textbf{2018-2022} & \textbf{2023-2024} \\
+        \hline
+        \multirow{17}{*}{RQ1} & T1 &  &  & SPS111 SPS110 & SPS096 SPS109 & SPS068 \\
+        & T2 &  &  & SPS057 & SPS097 & SPS081 SPS112 \\
+        & T3 &  &  &  & SPS084 SPS085 SPS034 SPS080 & SPS081 SPS037 \\
+        & T4 & SPS100 SPS052 & SPS107 SPS114 & SPS074 SPS057 & SPS090 & SPS112 \\
+        & T5 &  & SPS101 SPS024 & SPS079 SPS094 & SPS085 SPS084 SPS104 SPS034 SPS080 & SPS037 SPS112 SPS068 \\
+        & T7 &  &  &  & SPS085 SPS097 SPS034 & SPS081 \\
+        & T8 &  &  &  & SPS084 SPS034 & SPS081 \\
+        & T9 & SPS052 &  &  &  &  \\
+        & T10 &  &  & SPS032 SPS110 & SPS096 &  \\
+        & T11 &  &  &  & SPS085 &  \\
+        & T12 &  &  & SPS032 SPS111 & SPS097 SPS080 SPS090 SPS102 SPS109 & SPS099 \\
+        \hline
+        \multirow{7}{*}{RQ2} & T13 &  & SPS024 & SPS074 SPS032 SPS079 SPS057 & SPS109 &  \\
+        & T14 & SPS100 SPS052 & SPS107 SPS101 SPS114 & SPS094 SPS111 SPS110 & SPS084 SPS104 SPS097 SPS096 SPS080 SPS090 SPS102 & SPS037 SPS081 SPS099 SPS112 \\
+        & T15 &  &  &  & SPS085 SPS034 & SPS068 \\
+        \hline
+    \end{tabular}
+    \label{table:highest_IRRQ}
+\end{table*}
 
 The grouping of studies by topics implies that the same SPS may be related to one or more topics. For example, study SPS009 is simultaneously linked to the topics ``Cloud Computing'', ``Parallel'' and ``Grid Computing''. On the other hand, there are some studies such as SPS100 that are related to both research questions.
 
@@ -44,103 +111,77 @@ Thus, for example, a reader interested in any HTCondor Universe could refer to T
 It should be clarified that it is possible that some Universe may not have a direct relationship established with any IT domain and vice versa, so the decision is made not to display it. Similarly, there may be Universes that maintain some relationship with more than one topic; therefore, we decide to show the topic with which it is most closely related. Thus, the information shown in Table \ref{table:topics_universes} is more direct and concise.
 
 % Tabla 14 ---------------- tabla de estudios clasificados por CVI y Clasificación por tópicos
+\begin{table*}[htbp]
+    \renewcommand{\arraystretch}{1.3}
+    \setlength{\tabcolsep}{3pt}
+    \centering
+    \caption{12 studies with the highest CVI indices and classified by topics}
+    \begin{tabular}{p{0.8cm}p{0.9cm}p{2.7cm}p{2.7cm}p{2.7cm}p{2.7cm}p{1.7cm}}
+        \hline
+        \textbf{RQ} & \textbf{Topic} & \textbf{1996-2007} & \textbf{2008-2012} & \textbf{2013-2017} & \textbf{2018-2022} & \textbf{2023-2024} \\
+        \hline
+        \multirow{10}{*}{RQ1} & T2 &  &  & SPS009 SPS047 & SPS011 & \\
+        & T3 &  &  & SPS108 & SPS011 SPS019 & SPS038 \\
+        & T4 &  & SPS017 &  & SPS090 & \\
+        & T5 &  & SPS017 & SPS013 SPS094 &  & SPS038 \\
+        & T7 &  & SPS017 & SPS108 &  & \\
+        & T8 &  &  &  & SPS027 & \\
+        & T9 &  &  & SPS047 &  & \\
+        & T10 & SPS070 &  & SPS009 &  & SPS038 \\
+        & T11 &  &  &  & SPS019 & \\
+        & T12 & SPS070 & SPS017 & SPS047 SPS108 & SPS027 SPS090 & \\
+        \hline
+        RQ2 & T14 &  &  & SPS094 & SPS090 & \\
+        \hline
+    \end{tabular}
+    \label{table:highest_CVI}
+\end{table*}
 
-\begin{table}
-	\tbl{12 studies with the highest CVI indices and classified by topics}
-	{\fontsize{7}{10}\selectfont
-		
-		\setlength{\tabcolsep}{3pt}
-		\begin{tabular}{>{\raggedright\arraybackslash}p{1.0cm}>{\raggedright\arraybackslash}p{2.5cm}>{\raggedright\arraybackslash}p{2.0cm}>{\raggedright\arraybackslash}p{2.0cm}>{\raggedright\arraybackslash}p{2.0cm}>{\raggedright\arraybackslash}p{3.0cm}>{\raggedright\arraybackslash}p{2.5cm}}
-			\toprule
-			\textbf{RQ}                    & \textbf{Topic}   & \textbf{1996-2007} & \textbf{2008-2012} & \textbf{2013-2017} & \textbf{2018-2022} & \textbf{2023-2024} \\
-			\midrule
-			\multirow{10}{*}{\textbf{RQ1}} & Cloud Computing  &                    &                    & SPS009 SPS047      & SPS011             &                    \\
-			                               & Containerization &                    &                    & SPS108             & SPS011 SPS019      & SPS038             \\
-			                               & Grid Computing   &                    & SPS017             & SPS009                   & SPS090             &                    \\
-			                               & HPC              &                    & SPS017             & SPS013 SPS094      &                    & SPS038             \\
-			                               & Virtualization   &                    & SPS017             & SPS108             &                    &                    \\
-			                               & Kubernetes       &                    &                    &                    & SPS027             &                    \\
-			                               & Network          &                    &                    & SPS047             &                    &                    \\
-			                               & Parallel         & SPS070             &                    & SPS009             &                    & SPS038             \\
-			                               & Docker           &                    &                    &                    & SPS019             &                    \\
-			                               & HTC              & SPS070             & SPS017             & SPS047 SPS108      & SPS027 SPS090      &                    \\
-			\midrule
-			\multirow{1}{*}{\textbf{RQ2}}  & Research         &                    &                    & SPS094             & SPS090             &                    \\
-			\bottomrule
-		\end{tabular}}
-	\label{table:highest_CVI}
-\end{table}
+% Tabla 15 ------------------------- tabla de estudios más relevantes por SCI
+\begin{table*}[htbp]
+    \renewcommand{\arraystretch}{1.3}
+    \setlength{\tabcolsep}{3pt}
+    \centering
+    \caption{29 studies corresponding approximately to the top 25\% most relevant according to the SCI index}
+    \begin{tabular}{p{0.8cm}p{0.9cm}p{2.7cm}p{2.7cm}p{2.7cm}p{2.7cm}p{1.7cm}}
+        \hline
+        \textbf{RQ} & \textbf{Topic} & \textbf{1996-2007} & \textbf{2008-2012} & \textbf{2013-2017} & \textbf{2018-2022} & \textbf{2023-2024} \\
+        \hline
+        \multirow{16}{*}{RQ1} & T1 &  &  &  & SPS096 & \\
+        & T2 &  & SPS051 SPS065 SPS023 & SPS009 SPS030 SPS057 & SPS025 & \\
+        & T3 &  &  &  & SPS085 SPS019 SPS025 SPS034 & SPS038 SPS037 \\
+        & T4 & SPS069 SPS014 SPS100 & SPS065 SPS107 SPS114 & SPS009 SPS057 SPS075 & SPS090 & \\
+        & T5 &  & SPS065 SPS101 SPS103 & SPS075 & SPS041 SPS042 SPS085 SPS025 SPS034 & SPS038 SPS037 \\
+        & T7 &  & SPS065 &  & SPS085 SPS034 & \\
+        & T8 &  &  &  & SPS034 & \\
+        & T10 &  & SPS103 & SPS009 SPS075 & SPS041 SPS083 SPS096 SPS025 & SPS038 \\
+        & T11 &  &  &  & SPS019 SPS085 & \\
+        & T12 & SPS016 SPS033 & SPS031 SPS103 &  & SPS090 & \\
+        \hline
+        \multirow{3}{*}{RQ2} & T13 &  &  & SPS057 &  & \\
+        & T14 & SPS100 & SPS101 SPS107 SPS114 &  & SPS090 SPS096 & SPS037 \\
+        & T15 &  &  &  & SPS085 SPS084 & \\
+        \hline
+    \end{tabular}
+    \label{table:highest_SCI}
+\end{table*}
 
-% Tabla 15 ------------------------- tabla de estudios más relevantes por SCI 
-\begin{table}
-	\tbl{29 studies corresponding approximately to the top 25\% most relevant according to the SCI index}
-	{\fontsize{7}{10}\selectfont
-		\setlength{\tabcolsep}{3pt}
-		\begin{tabular}{>{\raggedright\arraybackslash}p{1.0cm}>{\raggedright\arraybackslash}p{3.0cm}>{\raggedright\arraybackslash}p{2.2cm}>{\raggedright\arraybackslash}p{2.2cm}>{\raggedright\arraybackslash}p{2.2cm}>{\raggedright\arraybackslash}p{2.2cm}>{\raggedright\arraybackslash}p{2.2cm}} \toprule
-			\textbf{RQ}                    & \textbf{Topic}          & \textbf{1996-2007}   & \textbf{2008-2012}   & \textbf{2013-2017}   & \textbf{2018-2022}                 & \textbf{2023-2025} \\
-			\midrule
-			\multirow{16}{*}{\textbf{RQ1}} & Artificial Intelligence &                      &                      &                      & SPS096                             &                    \\
-			                               & Cloud Computing         &                      & SPS051 SPS065 SPS023 & SPS009 SPS030 SPS057 & SPS025                             &                    \\
-			                               & Containerization        &                      &                      &                      & SPS085 SPS019 SPS025 SPS034        & SPS038 SPS037      \\
-			                               & Grid Computing          & SPS069 SPS014 SPS100 & SPS065 SPS107 SPS114 & SPS009 SPS057 SPS075 & SPS090                             &                    \\
-			                               & HPC                     &                      & SPS065 SPS101 SPS103 & SPS075               & SPS041 SPS042 SPS085 SPS025 SPS034 & SPS038 SPS037      \\
-			                               & Virtualization          &                      & SPS065               &                      & SPS085 SPS034                      &                    \\
-			                               & Kubernetes              &                      &                      &                      & SPS034                             &                    \\
-			                               & Parallel                &                      & SPS103               & SPS009 SPS075        & SPS041 SPS083 SPS096 SPS025        & SPS038             \\
-			                               & Docker                  &                      &                      &                      & SPS019 SPS085                      &                    \\
-			                               & HTC                     & SPS016 SPS033        & SPS031 SPS103        &                      & SPS090                             &                    \\
-			\midrule
-			\multirow{4}{*}{\textbf{RQ2}}  & Teaching                &                      &                      & SPS057               &                                    &                    \\
-			                               & Research                & SPS100               & SPS101 SPS107 SPS114 &                      & SPS090 SPS096                      & SPS037             \\
-			                               & Industry                &                      &                      &                      & SPS085 SPS084                      &                    \\
-			\bottomrule
-		\end{tabular}}
-	\label{table:highest_SCI}
+% Tabla 17 -------- Relación entre topicos y universos de HTCondor
+\begin{table}[ht]
+    \renewcommand{\arraystretch}{1.3}
+    \centering
+    \caption{Relationship between topics and HTCondor universes}
+    \begin{tabular}{p{3.5cm}p{3.5cm}}
+        \hline
+        \textbf{HTCondor Universes} & \textbf{Research Topics} \\
+        \hline
+        Parallel & T1 - T5 - T10 \\
+        Vanilla & T12 \\
+        Container & T3 \\
+        Grid & T4 \\
+        Docker & T11 \\
+        Java & T6 \\
+        \hline
+    \end{tabular}
+    \label{table:topics_universes}
 \end{table}
-
-% Tabla 16 ------------------- Estudios que cumplían por completo el indice IRRQ
-\begin{table}
-	\tbl{28 studies that fully meet the IRRQ index}
-	{\fontsize{7}{10}\selectfont
-		\setlength{\tabcolsep}{3pt}
-		\begin{tabular}{>{\raggedright\arraybackslash}p{0.7cm}>{\raggedright\arraybackslash}p{2.5cm}>{\raggedright\arraybackslash}p{2.5cm}>{\raggedright\arraybackslash}p{2.5cm}>{\raggedright\arraybackslash}p{2.5cm}>{\raggedright\arraybackslash}p{2.5cm}>{\raggedright\arraybackslash}p{2.5cm}}
-			\toprule
-			\textbf{RQ}                    & \textbf{Topic}          & \textbf{1996-2007} & \textbf{2008-2012}   & \textbf{2013-2017}          & \textbf{2018-2022}                               & \textbf{2023-2025}          \\
-			\midrule
-			\multirow{18}{*}{\textbf{RQ1}} & Artificial Intelligence &                    &                      & SPS111 SPS110               & SPS096 SPS109                                    & SPS068                      \\
-			                               & Cloud Computing         &                    &                      & SPS057                      & SPS097                                           & SPS081 SPS112               \\
-			                               & Containerization        &                    &                      &                             & SPS084 SPS085 SPS034 SPS080                      & SPS081 SPS037               \\
-			                               & Grid Computing          & SPS100 SPS052      & SPS107 SPS114        & SPS074 SPS057               & SPS090                                           & SPS112                      \\
-			                               & HPC                     &                    & SPS101 SPS024        & SPS079 SPS094 SPS074              & SPS085 SPS084 SPS104 SPS034 SPS080               & SPS037 SPS112 SPS068        \\
-			                               & Virtualization          &                    &                      &                             & SPS085 SPS097 SPS034                             & SPS081                      \\
-			                               & Kubernetes              &                    &                      &                             & SPS084 SPS034                                    & SPS081                      \\
-			                               & Network                 & SPS052             &                      &                             &                                                  &                             \\
-			                               & Parallel                &                    &                      & SPS032 SPS110               & SPS096                                           &                             \\
-			                               & Docker                  &                    &                      &                             & SPS085                                           &                             \\
-			                               & HTC                     &                    &                      & SPS032 SPS111               & SPS097 SPS080 SPS090 SPS102 SPS109               & SPS099                      \\
-			\midrule
-			\multirow{7}{*}{\textbf{RQ2}} & Teaching                &                    & SPS024               & SPS074 SPS032 SPS079 SPS057 & SPS109                                           &                             \\
-			                               & Research                & SPS100 SPS052      & SPS107 SPS101 SPS114 & SPS094 SPS111 SPS110        & SPS084 SPS104 SPS097 SPS096 SPS080 SPS090 SPS102 & SPS037 SPS081 SPS099 SPS112 \\
-			                               & Industry                & SPS032                   &                      &                             & SPS085 SPS034                                    & SPS068                      \\
-			\bottomrule
-		\end{tabular}}
-	\label{table:highest_IRRQ}
-\end{table}
-
-% -------- Tabla : Relación entre topicos y universos de HTCondor ------------
-\begin{table}
-	\tbl{Relationship between topics and HTCondor universes}
-	{\fontsize{8}{10}\selectfont
-		\setlength{\tabcolsep}{3pt}
-		\begin{tabular}{>{\raggedright\arraybackslash}p{3.5cm}>{\raggedright\arraybackslash}p{5.0cm}} \toprule
-			\textbf{HTCondor Universes} & \textbf{Research Topics}                 \\ \midrule
-			Parallel                    & Artificial intelligence - HPC - Parallel \\
-			Vanilla                     & HTC                                      \\
-			Container                   & Containerization - Kubernetes            \\
-			Grid                        & Grid computing                           \\
-			Docker                      & Docker                                   \\
-			Java                        & Java                                     \\ \bottomrule
-		\end{tabular}}
-	\label{table:topics_universes}
-\end{table}
-% --------------------------------------------------------------

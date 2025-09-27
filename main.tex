@@ -1,9 +1,15 @@
-% interactnlmsample.tex
-% v1.05 - August 2017
+\documentclass[10pt]{cys}
 
-\documentclass[]{interact}
+\usepackage[utf8]{inputenc}
 
+%\usepackage[english]{babel}
+%\usepackage[spanish,mexico,es-tabla]{babel}
+\usepackage[russian,english]{babel}  % If you use other languages, use Babel package.
+
+\usepackage{graphicx}
 \usepackage{orcidlink}
+\usepackage{epstopdf} % Avoid using plain Latex, use PDFLATEX
+
 \usepackage{hyperref}
 
 \hypersetup{
@@ -14,61 +20,53 @@
   pdfborder={0 0 0}
 }
 
-\usepackage{epstopdf}% To incorporate .eps illustrations using PDFLaTeX, etc.
-\usepackage[caption=false]{subfig}% Support for small, `sub' figures and tables
 \usepackage{url}% Support for URLs
-\usepackage{multirow}% Support for multirow cells in tables
-\usepackage{array}% Support for custom column types in tables
-%\usepackage[nolists,tablesfirst]{endfloat}% To `separate' figures and tables from text if required
-%\usepackage[doublespacing]{setspace}% To produce a `double spaced' document if required
-%\setlength\parindent{24pt}% To increase paragraph indentation when line spacing is doubled
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{tabularx}
 
-\usepackage[numbers,sort&compress]{natbib}% Citation support using natbib.sty
-\bibpunct[, ]{[}{]}{,}{n}{,}{,}% Citation support using natbib.sty
-\renewcommand\bibfont{\fontsize{10}{12}\selectfont}% Bibliography support using natbib.sty
-\makeatletter% @ becomes a letter
-\def\NAT@def@citea{\def\@citea{\NAT@separator}}% Suppress spaces between citations using natbib.sty
-\makeatother% @ becomes a symbol again
+\addto\captionsenglish{%
+  \renewcommand{\figurename}{Fig.}%
+  \renewcommand{\abstractname}{Abstract.} 
+%  \renewcommand{\keywordsname}{Keywords: } 
+}
 
-\theoremstyle{plain}% Theorem-like structures provided by amsthm.sty
-\newtheorem{theorem}{Theorem}[section]
-\newtheorem{lemma}[theorem]{Lemma}
-\newtheorem{corollary}[theorem]{Corollary}
-\newtheorem{proposition}[theorem]{Proposition}
+\addto\captionsspanish{%
+  \renewcommand{\figurename}{Fig.}%
+  \renewcommand{\abstractname}{Resumen.} 
+%  \renewcommand{\keywordsname}{Palabras clave: } 
+}
 
-\theoremstyle{definition}
-\newtheorem{definition}[theorem]{Definition}
-\newtheorem{example}[theorem]{Example}
+\renewcommand{\familydefault}{\sfdefault} % Usa sans serif por defecto
+\usepackage{helvet} % Helvetica ≈ Arial
 
-\theoremstyle{remark}
-\newtheorem{remark}{Remark}
-\newtheorem{notation}{Notation}
+\title{HTCondor Universes:\\ A Systematic Mapping Study}
+
+\author{Juan Esteban Parra Parra$^1$\orcidlink{0009-0007-4518-1086}, Juan Esteban Castaño Osma$^1$\orcidlink{0009-0006-0402-4351},\\
+Luis Eduardo Sepúlveda Rodríguez$^1$\orcidlink{0000-0003-2446-0602}, Christian Andres Candela Uribe$^1$\orcidlink{0000-0002-3961-1840}}
+
+\affil{ 
+$^1$ University of Quindío, Engineering Faculty, Armenia, \authorcr   % Do not us full postal address!
+Colombia             
+\authorcr \authorcr
+juane.parrap@uqvirtual.edu.co, juane.castanoo@uqvirtual.edu.co,\\
+lesepulveda@uniquindio.edu.co, cacandela@uniquindio.edu.co
+\authorcr  \authorcr
+}
 
 \begin{document}
 
-\articletype{RESEARCH ARTICLE}% Specify the article type or omit as appropriate
-
-\title{
-	HTCondor Universes:\\
-	a systematic mapping study
-}
-
-
-\author{
-\name{Juan Esteban Parra Parra\textsuperscript{a}\orcidlink{0009-0007-4518-1086}, Juan Esteban Castaño Osma\textsuperscript{a}\orcidlink{0009-0006-0402-4351}\thanks{CONTACT Juan Esteban Castaño Osma. Email: [juane.castanoo@uqvirtual.edu.co]}, Luis Eduardo Sepúlveda Rodríguez\textsuperscript{a}\orcidlink{0000-0003-2446-0602}, and Christian Andres Candela Uribe\textsuperscript{a}\orcidlink{0000-0002-3961-1840}}\affil{\textsuperscript{a}Universidad del Quindío, Carrera 15 \#12N, Armenia, Quindío, Colombia}
-}
-
 \maketitle
 
+\renewcommand{\tablename}{Table}
+
 \begin{abstract}
-	Distributed computing systems such as HTCondor have gained acceptance in the scientific research space. HTCondor is a job scheduling distributed system with various execution contexts called universes. While widely used in the scientific community, few efforts have been made to classify its applications across IT domains and academic functions like teaching, research and industry collaboration. This work presents a systematic mapping study that seeks to classify existing HTCondor universe implementations, providing a taxonomy that offers a structured view of the current landscape and facilitates informed decision-making.
+Distributed computing systems such as HTCondor have gained acceptance in the scientific research space. HTCondor is a job scheduling distributed system with various execution contexts called universes. While widely used in the scientific community, few efforts have been made to classify its applications across IT domains and academic functions like teaching, research and industry collaboration. This work presents a systematic mapping study that seeks to classify existing HTCondor universe implementations, providing a taxonomy that offers a structured view of the current landscape and facilitates informed decision-making.
 \end{abstract}
 
-\begin{keywords}
-	HTCondor; Distributed Computing; HTCondor Universes; Systematic Mapping Study
-\end{keywords}
-
-
+\begin{keywords} 
+HTCondor, Distributed Computing, HTCondor Universes, Systematic Mapping Study.
+\end{keywords} 
 
 %################################################################################################
 
@@ -94,40 +92,23 @@
 %Sección conclusiones
 \input{secciones/07-conclusiones/00-conclusiones.tex}
 
-
-%% Taylor & Francis specific sections (add content as needed)
-\section*{Acknowledgement(s)}
+\section*{Acknowledgements} 
 We extend our deepest appreciation to the team at the University of Wisconsin-Madison for developing and maintaining HTCondor, a foundational tool for the scientific community whose history and application are central to this work. Our research was also greatly facilitated by the use of the SMS-Builder software, and we thank Professors Christian and Luis for providing an effective tool to support the systematic mapping process.
 Finally, the authors wish to extend a personal thank you to their families for their unwavering support, patience, and encouragement throughout this research endeavor.
 
-\section*{Disclosure statement}
-No potential conflict of interest was reported by the authors.
-
-\section*{Funding}
-No funding information was reported by the authors.
-% Example: This work was supported by [grant information].
-
-\section*{Notes on contributor(s)}
-No notes on contributor(s) was reported by the authors
-% Add contributor notes here if needed
-
-\section*{Nomenclature/Notation}
-No nomenclature/notations was reported by the authors
-% Add nomenclature/notation section if needed
-
-\section*{Notes}
-No notes information was reported by the authors.
-
-
-
-
-
-
-
-
-\bibliographystyle{tfnlm}
+% OBLIGATORY: use BIBTEX formatting!
+\small{
+\bibliographystyle{cys}
 \bibliography{resources/references}
+}
+\normalsize
 
+\begin{biography}[]{} % Leave this section empty
+\end{biography}
 
+{\vskip 12pt}
+\noindent
+\footnotesize {\textit{Article received on 06/12/2016; accepted on 16/01/2017.\\
+Corresponding author is XXXXX.}
 
 \end{document}

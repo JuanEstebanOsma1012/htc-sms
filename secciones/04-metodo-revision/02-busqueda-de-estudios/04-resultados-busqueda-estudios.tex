@@ -8,17 +8,19 @@
 Finally, adding the \snowballNewStudies{} studies obtained in the snowball process to the \screenTot{} previously obtained with the database search strategy, a total of \totalEtapaDos{} studies is obtained for this stage. See Table~\ref{table:resultados_etapa_2}.
 
 % -------- Table 12 : Results of stage 2: Study search ------------
-\begin{table}
-	\tbl{Results of stage 2: Search for studies}
-	{
-	\begin{tabular}{p{2.5cm}p{2.6cm}p{2.5cm}} \toprule
-		\textbf{Strategy} & \textbf{Studies}      & \textbf{\%}           \\
-		\midrule
-		Databases         & \screenTot{}          & \dbPercentEtapa{}\%   \\
+\begin{table}[ht]
+    \renewcommand{\arraystretch}{1.3}
+    \centering
+	\caption{Results of stage 2: Search for studies}
+	\begin{tabular}{p{2.4cm}p{1.8cm}p{2.0cm}}
+        \hline
+		\textbf{Strategy} & \textbf{Studies} & \textbf{Percentage} \\
+		\hline
+        Databases         & \screenTot{}          & \dbPercentEtapa{}\%   \\
 		Snowballing       & \snowballNewStudies{} & \snowPercentEtapa{}\% \\
 		Total             & \totalEtapaDos        & 100\%                 \\
-		\bottomrule
-	\end{tabular}}
+        \hline
+    \end{tabular}
 	\label{table:resultados_etapa_2}
 \end{table}
 % --------------------------------------------------------------
